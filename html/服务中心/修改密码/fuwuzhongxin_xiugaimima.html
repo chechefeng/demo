@@ -1,19 +1,27 @@
-﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title></title>
-    <link rel="stylesheet" href="../../../css/zhongguancun.css" />
-    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link rel="stylesheet" href="../../../css/zhongguancun.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css"/>
     <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
-    <link rel="stylesheet" href="../../../css/gangzi.css" />
-    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css"/>
+    <link rel="stylesheet" href="../../../css/gangzi.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css"/>
     <script src="./nav.js"></script>
 
 </head>
 <style>
+    .changePasswordContent{
+        width: 1200px;
+        background: #fff;
+        padding: 30px;
+    }
+    .passwordStyle{
+        font-size: 14px;
+    }
     .fuwuzhongxin_kk {
         padding-top: 17px;
         padding-bottom: 17px;
@@ -77,38 +85,41 @@
 </style>
 
 <body>
-    <div id="qweqwe"></div>
-    <!--导航栏-->
+<div id="qweqwe"></div>
+<!--导航栏-->
 
-    <div class="huidan zhanghu fukuan">
-        <div class="title_mianbaoxie">
-            <span class="l"></span>
-            <div class="l">
-                <img src="../../../images_box/position.png" alt="" />
-                <a href="###">服务中心</a> /
-                <a href="###">修改用户服务密码</a>
-            </div>
+<div class="huidan zhanghu fukuan">
+    <div class="title_mianbaoxie">
+        <span class="l"></span>
+        <div class="l">
+            <img src="../../../images_box/position.png" alt=""/>
+            <a href="javascript:;">服务中心</a> /
+            <a href="javascript:;">修改用户服务密码</a>
         </div>
+    </div>
+    <div class="changePasswordContent">
         <h2 class="shezhi_title" style="margin-left:60px;">
-            <span class="shezhi_title_span1 l" style="display: block;width: 2px;height: 20px;background: #384393;margin-right: 10px;"></span>
-            <span class="l" style="font-size:14px; line-height:20px;">选择操作方式</span>
+            <span class="shezhi_title_span1 l"
+                  style="display: block;width: 2px;height: 20px;background: #384393;margin-right: 10px;"></span>
+            <span class="l" style="font-size:16px; line-height:20px;">选择操作方式</span>
         </h2>
         <!-- 标签切换页面 -->
 
-        <ul class="nav nav-tabs" id="myTab" style="margin-left:120px; margin-bottom:40px; margin-top:30px;">
-            <li class="active">
-                <a href="#home" data-toggle="tab" style="color:#8a8a8a;">修改密码</a>
-            </li>
-            <li class="tabli">
-                <a href="#profile" data-toggle="tab" style="color:#8a8a8a;">重置密码</a>
-            </li>
-        </ul>
+        <div style="margin-left:120px; margin-bottom:40px; margin-top:30px;">
+            <label class="checkbox-inline passwordStyle" id="modifyPassword">
+                <input type="radio" name="option" value="option1" checked> 修改密码
+            </label>
+            <label class="checkbox-inline passwordStyle" id="resetPassword">
+                <input type="radio" name="option" value="option2"> 重置密码
+            </label>
+        </div>
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane active" id="home">
                 <h2 class="shezhi_title" style="margin-left:60px;">
-                    <span class="shezhi_title_span1 l" style="display: block;width: 2px;height: 20px;background: #384393;margin-right: 10px;"></span>
-                    <span class="l" style="font-size:14px; line-height:20px; ">输入修改密码</span>
+                    <span class="shezhi_title_span1 l"
+                          style="display: block;width: 2px;height: 20px;background: #384393;margin-right: 10px;"></span>
+                    <span class="l" style="font-size:16px; line-height:20px;">输入修改密码</span>
                 </h2>
                 <!-- 修改密码页面 -->
                 <div class="skf_box">
@@ -116,23 +127,22 @@
                         <div class="shoukuan_wh" style="width:600px; margin:0 auto">
                             <div class="form_int">
                                 <label>原密码：</label>
-                                <input style="box-sizing: border-box;" type="text" class="form-control nobg" style="width: 378px;" value="">
+                                <input style="box-sizing: border-box;" type="text" class="form-control nobg"
+                                       style="width: 378px;" value="">
                             </div>
                             <div class="form_int">
                                 <label>新密码：</label>
-                                <input style="box-sizing: border-box;" type="text" class="form-control nobg" style="width: 378px;" value="">
+                                <input style="box-sizing: border-box;" type="text" class="form-control nobg"
+                                       style="width: 378px;" value="">
                                 <br>
-                                <!-- <span class="color-red" style="font-size:14px;">至少两种字符以上，长度8-20位</span> -->
                             </div>
-                            <!-- <div class="form_int">
-                                                <label><b class="color-red">*</b>请再次输入新密码：</label>
-                                                <input style="box-sizing: border-box;" type="text" class="form-control nobg" style="width: 378px;" value="">
-                                            </div> -->
+
                             <div class="form_int" style="width:100%;padding-top:15px;">
                                 <label></label>
                                 <div class="but pdnone">
-                                    <a href="###" class="tc_keep" style="width:100ox; height:34px; line-height:34px;">保存</a>
-                                    <!-- <a href="###">返回</a> -->
+                                    <a href="javascript:;" class="tc_keep"
+                                       style="width:100ox; height:34px; line-height:34px;">保存</a>
+                                    <!-- <a href="javascript:;">返回</a> -->
                                 </div>
                             </div>
                         </div>
@@ -142,7 +152,8 @@
             </div>
             <div class="tab-pane" id="profile">
                 <h2 class="shezhi_title" style="margin-left:60px;">
-                    <span class="shezhi_title_span1 l" style="display: block;width: 2px;height: 20px;background: #384393;margin-right: 10px;"></span>
+                    <span class="shezhi_title_span1 l"
+                          style="display: block;width: 2px;height: 20px;background: #384393;margin-right: 10px;"></span>
                     <span class="l" style="font-size:14px; line-height:20px;">选择操作人员</span>
                 </h2>
                 <div class="czry_box" style="margin-top:30px;margin-left:120px;">
@@ -161,126 +172,139 @@
                     </div>
                 </div>
                 <div class="shezhi_btn">
-                    <a href="###" class="btn_okl">重置密码</a>
+                    <a href="javascript:;" class="btn_okl" id="resetPasswordBtn">重置密码</a>
                 </div>
             </div>
-
         </div>
-
-
-
     </div>
-    <!--弹出框确定-->
-    <div class="tanchu fukuan" id="tc_d" style="display:none;">
-        <div class="xq_tab" id="tc_cont">
-            <h1 style="font-weight:bold;">
-                成功提示
-                <a href="javascript:void(0);" class="gz_close">&#215;</a>
-            </h1>
-            <div class="pd10">
-                <div class="shoukuan_wh">
-                    <div class="form_int" style="text-align: left;">
-                        <img src="../../../images_box/succ.png" alt="对勾" style="margin:10px 20px 0 50px;" />
-                        <span>保存成功！</span>
-                    </div>
+</div>
+<!--弹出框确定-->
+<div class="tanchu fukuan" id="tc_d" style="display:none;">
+    <div class="xq_tab" id="tc_cont1">
+        <h1 style="font-weight:bold;">
+            成功提示
+            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+        </h1>
+        <div class="pd10">
+            <div class="shoukuan_wh">
+                <div class="form_int" style="text-align: left;">
+                    <img src="../../../images_box/succ.png" alt="对勾" style="margin:10px 20px 0 50px;"/>
+                    <span>保存成功！</span>
                 </div>
             </div>
-            <!-- 按钮盒子 -->
-            <div class="but">
-                <a href="##" class="butConfirm">确定</a>
-                <a href="###" class="gclose">取消</a>
+        </div>
+        <!-- 按钮盒子 -->
+        <div class="but">
+            <a href="##" class="butConfirm gclose">确定</a>
+            <a href="javascript:;" class="gclose">取消</a>
+        </div>
+    </div>
+</div>
+<!-- 系统信息查看start -->
+<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+    <div class="xq_tab systeminfo" id="tc_cont">
+        <h1>
+            系统消息
+            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+        </h1>
+        <div class="sy_tanchu_info">
+            <div class="sy_tanchu_content">
+                <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                <p class="sy_tanchu_time">2014-11-12</p>
             </div>
         </div>
-    </div>
-    <!-- 系统信息查看start -->
-    <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
-        <div class="xq_tab systeminfo" id="tc_cont">
-            <h1>
-                系统消息
-                <a href="javascript:void(0);" class="gz_close">&#215;</a>
-            </h1>
-            <div class="sy_tanchu_info">
-                <div class="sy_tanchu_content">
-                    <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
-                    <p class="sy_tanchu_time">2014-11-12</p>
-                </div>
-            </div>
-            <!-- 按钮盒子 -->
-            <div class="but">
-                <a href="###" class="gclose">返回</a>
-            </div>
+        <!-- 按钮盒子 -->
+        <div class="but">
+            <a href="javascript:;" class="gclose">返回</a>
         </div>
     </div>
-    <!--回到顶部-->
-    <div class="fanhuidingbu">
-        <img src="../../../images_box/huidaodingbu.png" alt="" />
+</div>
+<!--回到顶部-->
+<div class="fanhuidingbu">
+    <img src="../../../images_box/huidaodingbu.png" alt=""/>
+</div>
+<!--底部-->
+<div class="ht-footer">
+    <div class="ht-footer-info">
+        <ul>
+            <li class="one">门户官网</li>
+            <li class="ht-footer-fg">|</li>
+            <li class="two">客户热线：400-010-8858</li>
+        </ul>
     </div>
-    <!--底部-->
-    <div class="ht-footer">
-        <div class="ht-footer-info">
-            <ul>
-                <li class="one">门户官网</li>
-                <li class="ht-footer-fg">|</li>
-                <li class="two">客户热线：400-010-8858</li>
-            </ul>
-        </div>
-        <div class="ht-footer-bt">
-            &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
-        </div>
+    <div class="ht-footer-bt">
+        &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
     </div>
-    <script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../../../js/huidaodingbu.js"></script>
-    <!--<script type="text/javascript" src="../../../js/global.js"></script>-->
-    <!--树形结构-->
+</div>
+<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/huidaodingbu.js"></script>
+<!--<script type="text/javascript" src="../../../js/global.js"></script>-->
+<!--树形结构-->
 
-    <script type="text/javascript">
-        $(".fuwuzhongxin_kk").click(function (event) {
-            $(this).addClass('fuwuzhongxin_kk_active').siblings().removeClass('fuwuzhongxin_kk_active');
-            $(this).children('span').addClass('gou1')
-            $(this).siblings().children('span').removeClass('gou1');
+<script type="text/javascript">
+    $(".fuwuzhongxin_kk").click(function (event) {
+        $(this).addClass('fuwuzhongxin_kk_active').siblings().removeClass('fuwuzhongxin_kk_active');
+        $(this).children('span').addClass('gou1')
+        $(this).siblings().children('span').removeClass('gou1');
+    });
+//    修改密码 和 重置密码
+    $("#resetPassword").click(function (e) {
+        $('#home').removeClass('active');
+        $('#profile').addClass('active');
+    })
+    $("#modifyPassword").click(function (e) {
+        $('#home').addClass('active');
+        $('#profile').removeClass('active');
+    })
+    //  重置密码button 点击
+    $("#resetPasswordBtn").click(function () {
+        $('#tc_d').css({
+            'display': 'block'
         });
-        //弹出层效果
-        $(document).ready(function () {
-
-            $('.gz_close,.gclose').click(function () {
-                $('#tc_c').css({
-                    'display': 'none'
-                });
+    })
+    //弹出层效果
+    $(document).ready(function () {
+        $('.gz_close,.gclose').click(function () {
+            $('#tc_c').css({
+                'display': 'none'
             });
-
-            //保存修改
-            $('.tc_keep').click(function () {
-                $('#tc_d').css({
-                    'display': 'block'
-                });
-                $('.xq_tab').css({
-                    "top": "35%",
-                    "width": "30%"
-                });
+            $('.xq_tab').css({
+                "top": "35%",
+                "width": "30%"
             });
-            var ulW = $(".ul_c").height();
-            //console.log(ulW);
-            $(".ul_c_l").css({
-                'height': ulW - 25
-            });
-
-            $('.fz_name').click(function () {
-                var fzn = $(this).attr("class");
-                if (fzn == "fz_name") {
-                    $('.fz_name').removeClass("art").stop().fadeIn();
-                    $(this).addClass("art").stop().fadeIn();
-                } else {
-                    $(this).removeClass("art").stop().fadeIn();
-                }
-            });
-
         });
-    </script>
-    <script>$("#qweqwe").html(nav)</script>
+
+        //保存修改
+        $('.tc_keep').click(function () {
+            $('#tc_d').css({
+                'display': 'block'
+            });
+            $('.xq_tab').css({
+                "top": "35%",
+                "width": "30%"
+            });
+        });
+        var ulW = $(".ul_c").height();
+        //console.log(ulW);
+        $(".ul_c_l").css({
+            'height': ulW - 25
+        });
+
+        $('.fz_name').click(function () {
+            var fzn = $(this).attr("class");
+            if (fzn == "fz_name") {
+                $('.fz_name').removeClass("art").stop().fadeIn();
+                $(this).addClass("art").stop().fadeIn();
+            } else {
+                $(this).removeClass("art").stop().fadeIn();
+            }
+        });
+
+    });
+</script>
+<script>$("#qweqwe").html(nav)</script>
 </body>
 
-</html><!--w����{�}��H��3<�p�J!j�|_t��s�tq퓳���^oR�;��̘|��t����&��X0=]Dg[��a���K�+P�P6H�NZ�K�Ш:KB�B4�;���O$��j݀����I�B ���δF�*,VKw�[X���}IԘ�m��cZE,ȕ�F�]��p,�����+e��_�j��҂�x���W��|
-�A4�2��c����V(�<�Y��j���������3#�ٔ�!-��0���޻$������f拐5 ��a��� ���i����/W���lTl�88���$�)����	�;tx��A�q*�ʏ��c{Xt�wM�Ї��m���@�am'i��qjD�4z9����	�癭�3iH�T:F݇"-B��,�,*r4���jdj2�A��Á�'��a')T4�� �R������O
-�X/� �-->
+</html>
