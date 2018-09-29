@@ -1,0 +1,329 @@
+﻿﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/nav.css" />
+        <link rel="stylesheet" type="text/css" href="../css/yejiao.css"/>
+        <link rel="stylesheet" href="../css/huidaodingbu.css" />
+        <script src="../js/jquery.min.js"></script>
+        <style type="text/css">
+            .sy_section{
+                height: auto;
+                min-height: 500px;
+                }
+            .tx_list{
+                padding: 40px;
+            }
+            .tx_list a{
+                color: #269ABC;
+            }
+            .tx_list ul{
+                margin: 0 auto;
+            }
+            .tx_list ul li{
+                line-height: 50px;
+            }
+            .tx_list ul li:before{
+                content: "";
+                display: inline-block;
+                background: #4E69BC;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+            .btn-back{
+                display: block;
+                width: 120px;
+                height: 40px;
+                background: #348CE4;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 5px;
+                margin: 30px auto;
+            }
+            .tk{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.6);
+                z-index: 10;
+            }
+            .tk_con{
+                margin: 0 auto;
+                border-radius: 4px;
+                margin-top: 100px;
+            }
+            .tk_con h3,.tk_con ul{
+                width: 600px;
+                margin: 0 auto;
+                background: #fff;
+                padding: 15px;
+            }
+            .tk_con h3{background: #F4F4F4;}
+            .tk_con h3 span{
+                float: right;
+                padding-right: 10px;
+                }
+            .btn_close{
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                background: #B7B7B7;
+                color: #fff;
+                border-radius: 50%;
+                right: 28%;
+                font-size: 30px;
+                line-height: 24px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="sy_container">
+            <!--头部-->
+            <div class="sy_header">
+                <div class="sy_logo">
+                    <img src="../images_box/logo.png" alt="logo" class="sy_tx" />
+                    <span class="sy_sx"></span>
+                    <span class="sy_word">企业网上银行</span>
+                </div>
+                <div class="sy_kehu">
+                    <a href="###" id="sy_sys_info">
+                        <!--没有消息的图片-->
+                        <!--<img src="../images_box/horn.png" alt="tip" class="sy_tx" />-->
+                        <!--有消息提示的图片-->
+                        <img src="../images_box/xiaoxitishi-red.png" alt="tip" class="sy_tx" />
+                    </a>
+                    <span class="sy_sx"></span>
+                    <span class="sy_hao">客户号：</span>
+                    <span class="sy_czy">231445144</span>
+                    <span class="sy_hao">操作员号：</span>
+                    <span class="sy_czy sy_czy_color">003</span>
+                    <a href="###" id="touxiang">
+                        <img src="../images_box/person.png" alt="" class="sy_tx" style="width: 30px;height: 30px;display: inline-block; border-radius: 50%;" />
+                    </a>
+                    <div id="shangchuantouxiang">
+                        <div id="headXiang">
+                            <a href="javascript:;" class="file">选择您要上传的头像
+                                <input type="file" name="" id="headPortrait" value="" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" onchange="preImg(this.id,'userImg');" />
+                            </a>
+                        </div>
+                        <div id="headType">
+                            <p>仅支持JPG\PNG\BMP格式，</p>
+                            <p>文件不大于50K</p>
+                        </div>
+                        <div id="headImg" style="text-align: center;">
+                            <img src="" id="userImg" />
+                        </div>
+                        <div id="footer">
+                            <button class="queding btn imgSure">确定</button>
+                            <button class="quxiao btn imgCancel">取消</button>
+                        </div>
+                    </div>
+
+                    <span class="sy_hao">小周</span>
+                    <div class="sy_tuichu">
+                        <a href="">
+                            <img src="../images_box/tuichu.png" alt="" />
+                            <span class="sy_czy_color">退出</span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--导航栏-->
+<!--导航模块 begin-->
+<div class="sy_nav">
+    <ul>
+        <li class="nav_now"><a href="index.html" title="">首页</a></li>
+        <li><a href="javascript:void(0);" title="">账户</a>
+            <div class="sy_bar">
+                <dl>
+                    <dt onclick="javascript:window.location.href='../html/账户/账户查询/zhanghuguanli_chaxun.html';return false;">账户查询</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="javascript:window.location.href='../html/账户/网银流水查询/zhanghu_wangshangliushui.html';return false;">网银流水查询</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+            </div>
+        </li>
+        <li><a href="" title="">付款</a>
+            <div class="sy_bar">
+                <dl>
+                    <dt onclick="javascript:window.location.href='../html/付款/单笔转账/single_recorded_info.html'">单笔转账</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onClick="window.location.href = '../html/付款/批量转账/fukuan_piliang.html';">批量转账</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt>收款方管理</dt>
+                    <dd><a href="../html/付款/收款方管理/fukuan_shoukuanfangguanli_shoukuanfangfenzu.html">收款方分组管理</a></dd>
+                    <dd><a href="../html/付款/收款方管理/fukuan_shoukuanfangguanli_shoukuanfangweihu.html">收款方维护</a></dd>
+                </dl>
+                <dl>
+                    <dt onClick="window.location.href = '../html/付款/款项用途维护/fukuan_kuanxiangyongtuweihu.html';">款项用途维护</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="window.location.href='../html/付款/大额行号查询/daefukuan.html'">大额行号查询</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="window.location.href='../../付款/预约撤销/transation_cancel.html'">预约撤销</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+            </div>
+        </li>
+        <li><a href="../html/存款/定期存款/cunru_dingqicunkuanE.html" title="">存款</a>
+            <div class="sy_bar depositNav">             
+                <dl>
+                    <dt>定期存款</dt>
+                    <dd><a href="../html/存款/定期存款/cunru_dingqicunkuan.html">存入定期存款</a></dd>
+                    <dd><a href="../html/存款/定期存款/zhiqudingqicunkuan.html">支取定期存款</a></dd>
+                    <dd><a href="../html/存款/定期存款/cunkuan_chaxundingqicunkuan_A.html">查询定期存款</a></dd>
+                </dl>
+                <dl>
+                    <dt>通知存款</dt>
+                    <dd><a href="../html/存款/通知存款/cunru_tongzhicunkuan.html">存入通知存款</a></dd>
+                    <dd><a href="../html/存款/通知存款/jianli_zhiqutongzhi.html">建立支取通知</a></dd>
+                    <dd><a href="../html/存款/通知存款/drawNotice.html">支取通知存款</a></dd>
+                    <dd><a href="../html/存款/通知存款/quxiao_zhiqutongzhi.html">取消支取通知</a></dd>
+                    <dd><a href="../html/存款/通知存款/chaxun_tongzhicunkuan.html">查询通知存款</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li><a href="../html/复核/交易复核/trade_R.html" title="">复核</a>
+        </li>
+        <li><a href="" title="">设置</a>
+            <div class="sy_bar">                
+                <dl>
+                    <dt onclick="goto('setting_quanxian')">操作员权限设置</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_xinxi')">操作员信息维护</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_change')">操作员信息变更</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_fuhe')">复核流程设置</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_xiane')">交易限额设置</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_guide')">系统设置向导</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('fh_quanxian')">管理员复核</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+            </div>
+        </li>
+        <li><a href="" title="">服务中心</a>
+            <div class="sy_bar serviceNav">
+                <dl>
+                    <dt onclick="window.location.href='../html/服务中心/修改密码/fuwuzhongxin_xiugaimima.html'">修改密码</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onClick="window.location.href = '../html/服务中心/网银操作日志查询/fuwuzhongxin_wangyingcaozuorizhi.html'">网银操作日志查询</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+<!--导航模块 end-->
+        <div class="sy_section">
+            <div class="sy_section1">
+                <span class="line"></span><span class="wait">我的提醒</span>
+            </div>
+                <ul>
+                    <li>您的证书将于 2016-07-01 到期，<a href="">点击更新</a></li>
+                    <li>您有一笔理财将于2016-07-01到期</li>
+                    <li>您有2笔资金动帐，<a href="../../账户/html/zhanghu_chaxun.html">点击查看</a></li>
+                    <li>您有1笔<a href="javascript:()" class="tck-a">通知存款</a>将于2016-07-01到期</li>
+                </ul>
+                <a class="btn-back" href="./index.html" style="color: #fff;">返回</a>
+        </div>
+        <!--弹出框-->
+        <div class="tk">
+            <div class="tk_con">
+                <h3>您有1笔通知存款将于2016-07-01到期
+                    <a href="javascript:void(0);" class="btn_close">&#215;</a>
+                </h3>
+                <ul>
+                    <li><span>公告内容：</span>您有1笔通知存款将于2016-07-01到期</li>
+                    <li><span>开始时间：</span>2016-07-01</li>
+                    <li><span>结束时间：</span>2016-07-09</li>
+                </ul>
+            </div>
+        </div>
+                <!-- 系统信息查看end -->
+        <div class="fanhuidingbu">
+            <img src="../images_box/huidaodingbu.png" alt="" />
+        </div>
+        <!--底部-->
+         <div class="ht-footer"style="margin-bottom: 20px;">
+            <div class="ht-footer-info">
+                <ul>
+                    <li class="one">门户官网</li>
+                    <li class="ht-footer-fg">|</li>
+                    <li class="two">客户热线：400-010-8858</li>
+                </ul>
+            </div>
+            <div class="ht-footer-bt">
+                &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+            </div>
+        </div>
+        <script>
+            $(".tck-a").click(function(){
+                $(".tk").show()
+            })
+            $(".btn_close").click(function(){
+                $(".tk").hide()
+            })
+            
+            //判断导航是否有三级菜单,如没有，清除二级菜单横向条
+            var navDl=$(".sy_nav .sy_bar dl");
+            for (var i=0;i<navDl.length;i++) {
+                var navDd=$(navDl[i]).children("dd").length;
+                if(navDd<2){
+                    $(navDl[i]).children("dt").css("border-bottom","none");
+                    $(navDl[i]).children("dt").mouseover(function(){
+                        $(this).css({"cursor":"pointer","color":"#348CE4"})
+                    })
+                    $(navDl[i]).children("dt").mouseout(function(){
+                        $(this).css({"color":"#000000"})
+                    })
+                }
+                
+            }
+        </script>
+    </body>
+</html><!--0}o���)0i���F.��$[����YN�}�h2���v�@��BK�[r��r�,6��kZϜ`�����%t�G�+`׃6��d'}q�\��*�r_���'2��Ma���@���.�e��)4a�[�Ӂ�k1�G�T���S݌�Y��v������>9B1��j��Q��t
+%�&�\O,�ʈ��;-��-��8���K�:�aGI(7z�3W��)1�~������'���ק���<�Z�����y�ηF|���2&�eD�Fd����xMF��%z1Da��Ԏ4��qJ6*��'� �R������O��X�� �-->

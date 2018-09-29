@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>支取通知存款</title>
+    <!--<link rel="stylesheet" href="../../../pub/icheck-1.x/skins/all.css">-->
+    <link rel="stylesheet" href="../../../css/drawNoticeAll.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+    <script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../js/nav.js"></script>
+</head>
+
+<body>
+    <!-- 头部_公共 -->
+    <div id="qweqwe"></div>
+
+    <!-- header -->
+
+    <!-- 面包屑 -->
+    <div class="title_mianbaoxie w">
+        <span class="l"></span>
+        <div class="l">
+            <img src="../../../images_box/position.png" alt="" />
+            <a href="###">存款</a> /
+            <a href="###">通知存款</a> /
+            <a href="###">支取通知存款</a>
+        </div>
+    </div>
+
+    <div id="mq-myBox" class="myBox cunru_title">
+        <div class="myTab">
+            <div id="mq-expend" class="tabList active" @click="mqExpendDiv">支取通知存款</div>
+            <a  href="javascript:void(0);" id="mq-deal" class="tabList mg_L_10 ddjj active" @click="mqDealDiv" style="opacity: 0.5;">交易列表</a>
+        </div>
+        <div class="myTabContent">
+            <div id="mq-expend-tab" class="drawDeposit zhi_qu_tong_zhi">
+                <div id="mq-expend-tab-data">
+                <div class="accountSelect">
+                        <label><span class="star_red mg_R_10">*</span>账户：</label>
+                        <select  name="" id="s1" class="account">
+                            <option selected="selected" value="" class="" style="color:#8A8A8A">请选择账户</option>
+                            <option value="div1">110-033467784888988  1山东阳光贸易集团</option>
+                            <option value="div2">210-033467784888988  2山东阳光贸易集团</option>
+                        </select>
+                    </div>
+                    <div class="tableBox">
+                        <div class="tableBoxTitle">通知存款账户列表</div>
+                        <div class="tableBoxContent">
+                            <table class="table table-striped">
+                           
+                                <thead>
+                                    <tr>
+                                        <th class="th1"></th>
+                                        <th class="th2">通知存款账户</th>
+                                        <th>可用余额</th>
+                                        <th>通知类型</th>
+                                        <th>利率（%）</th>
+                                        <th>起息日</th> 
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div id="option">
+                                <table class="table table-striped">
+                                <tbody id="div1" class="yinc" style=" display:none;">
+                                    <tr >
+                                        <td class="td1">
+                                            <!-- <input type="radio" name="haha" v-model="isSelect" :value="sq.subNub"> -->
+                                        </td>
+                                        <td class="td2">13</td>
+                                        <td> 1,000,000.00</td>
+                                        <td>1,000,000.00</td>
+                                        <td>一天通知</td>
+                                        <td>1.35</td>
+                                    </tr>
+                                </tbody>
+                                <tbody id="div2" class="yinc" style=" display:none;">
+                                        <tr >
+                                            <td class="td1">
+                                                <!-- <input type="radio" name="haha" v-model="isSelect" :value="sq.subNub"> -->
+                                            </td>
+                                            <td class="td2">14</td>
+                                            <td> 1,000,555.00</td>
+                                            <td>1,000,777.00</td>
+                                            <td>一天通知</td>
+                                            <td>1.35</td>
+                                        </tr>
+                                    </tbody>
+                                </div>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- <div class="tableBox">
+                        <div class="tableBoxTitle">通知列表信息</div>
+                        <div class="tableBoxContent">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>通知顺序号</th>
+                                        <th>建立通知顺序号</th>
+                                        <th>支取日期</th>
+                                        <th>通知金额</th>
+                                        <th>到期是否自动支取</th>
+                                        <th>通知标志</th>
+                                        <th>备注</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(index,iftq) of informTabQuery">
+                                        <td>
+                                            <input type="radio" name="haha1" v-model="isInfSelect" :value="iftq.iftId">
+                                        </td>
+                                        <td v-text="iftq.iftId">14</td>
+                                        <td v-text="iftq.jltzDate">2016-07-14</td>
+                                        <td v-text="iftq.zqDate">2016-07-14</td>
+                                        <td v-text="iftq.tzje">10,,000.00</td>
+                                        <td v-text="iftq.expireIsNo">否</td>
+                                        <td v-text="iftq.zqbz">未支取</td>
+                                        <td v-text="iftq.bz">过期已失效</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="accountSelect mg_L_60 W_720">
+                        <ul>
+                            <li>
+                                <label>通知顺序号：</label>
+                                <input type="text" v-model="infSelectInput.iftId">
+                            </li>
+                            <li>
+                                <label>
+                                    <span class="star_red mg_R_10">*</span>支取金额：</label>
+                                <input type="text" v-model="infSelectInput.tzje">
+                                <span class="mg_L_20 star_red">零元</span>
+                            </li>
+                        </ul>
+                    </div> -->
+
+                   <!-- <div class="btnList mg_L_225 mg_T_60 mg_B_152">
+                        <button id="mq-expend-btn" class="btn">下一步</button>
+                        <button class="btn">重置</button>
+                    </div>  -->
+
+                </div>
+    </div>
+
+    <!--弹出框修改-->
+    <div class="tanchu fukuan" id="tc_c" style="display:none;">
+        <div class="xq_tab" id="tc_cont">
+            <h1>
+                修改
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="pd10">
+                <div class="shoukuan_wh">
+                    <div class="form_int" tyle="text-align: center;">
+                        <label>确认修改吗？</label>
+                    </div>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="butSure">确定</a>
+                <a href="###" class="gclose">取消</a>
+            </div>
+        </div>
+    </div>
+    <!--弹出框删除-->
+    <div class="tanchu fukuan" id="tc_d" style="display:none;">
+        <div class="xq_tab" id="tc_cont">
+            <h1>
+                删除
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="pd10">
+                <div class="shoukuan_wh">
+                    <div class="form_int" tyle="text-align: center;">
+                        <label>确认删除吗？</label>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="butConfirm">确定</a>
+                <a href="###" class="gclose">取消</a>
+            </div>
+        </div>
+    </div>
+    <!-- 系统信息查看start -->
+    <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+        <div class="xq_tab systeminfo" id="tc_cont">
+            <h1>
+                系统消息
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="sy_tanchu_info">
+                <div class="sy_tanchu_content">
+                    <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                    <p class="sy_tanchu_time">2014-11-12</p>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="gclose">返回</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--回到顶部-->
+    <div class="fanhuidingbu">
+        <img src="../../../images_box/huidaodingbu.png" alt="" />
+    </div>
+    <!--底部-->
+    <div class="ht-footer">
+        <div class="ht-footer-info">
+            <ul>
+                <li class="one">门户官网</li>
+                <li class="ht-footer-fg">|</li>
+                <li class="two">客户热线：400-010-8858</li>
+            </ul>
+        </div>
+        <div class="ht-footer-bt">
+            &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/huidaodingbu.js"></script>
+<script src="../../../js/fuxuankuang-state.js"></script>
+<!--<script src="../../../js/chajian/jquery-1.8.3.min.js"></script>-->
+<!--<script src="../../../pub/icheck-1.x/icheck.min.js"></script>-->
+<script src="../../../js/vue.min.js"></script>
+<script src="../../../js/mq-expend-page.js"></script>
+<script type="text/javascript" src="../../../js/datetime.js"></script>
+<script>
+    $("#qweqwe").html(nav)
+    $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+
+    $(".sy_nav ul").find("li").eq(3).addClass("nav_now")
+
+</script>>
+
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        $("#s1").change(function(){
+            var item = $(this).val();
+        $('#'+item).show().siblings().hide();
+       
+           
+        });
+    });
+    $('.ddjj').click(function(){
+        window.location = 'jianli_zhiqutongzhiTradelist.html';
+        
+    });
+</script><!--��!L�ű���j7�CKZ�$X������﮽>g����}�ߚnb�#�G��0�Y/}�WЦz>��%KSn��5NWV*�׎I&=Q �q~���#�:��3����:���N���Q×Y�b��>��5�s��r���Ț������b�!l��5^�҄b�#
+��6;X��8c)H#Y	�0k�E���y�h����~�̫���)�wA,�KSk Cd�=�����b?4 g�4��ͷ��ĘO ؙ�_�_����e�Dq��<+��)T�/��!�78x��;EE6������ ̞�%҃��ߐ�9V���3>��~]u�/?uȞcV:dܨ4E2G��6eh
+��cG�-�>ܶ��r78�S��H���� �R������O	�X�� �-->

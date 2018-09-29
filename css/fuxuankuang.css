@@ -1,0 +1,41 @@
+.fuxuankuang-xuanzhong{
+    font-size: 15px;
+    font-style: normal;
+    display: inline-block;
+    width: 13px;
+    border-radius: 2px;
+    height: 13px;
+    text-align: center;
+    line-height: 13px;
+    color: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #348CE4;
+    border: 1px solid #348CE4;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.fuxuankuang-dis-none{
+    display: none;
+}
+.fuxuankuang-weixuanzhong{
+    font-size: 15px;
+    font-style: normal;
+    display: inline-block;
+    width: 13px;
+    border-radius: 2px;
+    height: 13px;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

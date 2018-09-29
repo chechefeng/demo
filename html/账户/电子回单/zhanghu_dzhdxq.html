@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>账户/电子回单/电子回单打印</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../bootstrap_checkbox/flat/_all.css" rel="stylesheet">
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/gangzi.css">
+    <link rel="stylesheet" href="../../../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/fuxuankuang.css"/>
+    <script src="../../../js/nav.js"></script>
+
+</head>
+
+<body>
+
+<div id="navWraper"></div>
+<!-- 内容部分 -->
+<div class="content zhanghuguanli_mingxi">
+    <div class="w">
+
+        <img src="../../../images_box/elecReply.png" alt="" style="width: 1200px">
+        <!-- 按钮盒子 -->
+        <div class="search_date pull-left hana1" id="hezi" >
+            <button type="button" class="blue-btn" style="width:64px; margin-top:40px;">下载</button>
+            <button type="button" class="blue-btn" style="width:64px; margin-top:40px;">打印</button>
+            <button type="button " class="blue-btn sendemail" style="width:104px; margin-top:40px;">发送至邮箱</button>
+            <a onclick="window.history.back()">返回</a>
+        </div>
+    </div>
+</div>
+
+<!--模态框-->
+<div id="maymodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="gridSystemModalLabel">发送至邮箱</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" id="group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">请输入邮箱号</label>
+                    <div class="col-sm-6">
+                        <input type="email" style="width: 90%" class="form-control" id="inputEmail3" placeholder="请输入邮箱号">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">发送</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div style="display: none">
+    <div class="form-group  group1" >
+        <label for="inputEmail3" class="col-sm-3 control-label"></label>
+        <div class="col-sm-6">
+            <input type="email" style="width: 90%" class="form-control" id="inputEmail3" placeholder="请输入邮箱号">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/global.js"></script>
+
+<!-- bootstrap 主要js -->
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<!-- datetimepicker 主要js -->
+<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+<!-- datetimepicker 中文包 -->
+<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+<!--<<script src="../../../bootstrap_checkbox/icheck.js"></script>-->
+<script src="../../../js/fuxuankuang-state.js"></script>
+<script src="../../../bootstrap_checkbox/custom.js"></script>
+<script>
+    $("#navWraper").html(nav);
+    $(".cx").click(function(){
+        $("#biaoge").show();
+        $("#hezi").show();
+    })
+    $(".sendemail").click(function () {
+        $("#maymodal").modal({
+            show: true
+        })
+    })
+    $(".glyphicon-plus").click(function () {
+
+        if($(".modal-body").children().length>=3){
+            return false
+        }
+        $(".modal-body").append($(".group1")[0].outerHTML)
+    })
+    $("body").on("click",".glyphicon-minus",function () {
+        $(this).parents(".group1").remove()
+    })
+</script>
+</html>

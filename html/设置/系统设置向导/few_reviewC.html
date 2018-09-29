@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>多人_配置完成</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link href="../../../css/_all.css" rel="stylesheet">
+    <link href="../../../css/nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../css/chushihua_global.css">
+    <script src="../../../js/nav.js"></script>
+</head>
+
+<body>
+<div id="qweqwe"></div>
+<!-- 内容部分开始 -->
+<div class="content chushihuashezhi_danren_shezhigejibiefuherenshu duoren_fuherenshu">
+    <div class="w">
+        <div class="title_mianbaoxie">
+            <span class="l"></span>
+            <div class="l">
+                <a href="###">设置</a>
+                /
+                <a href="###">系统设置向导</a>
+            </div>
+        </div>
+        <!-- 设置各级别复核人数 -->
+        <div class="duoren_fuherenshu">
+            <div class="duoren_fuherenshu_box peizhiwancheng">
+                <div class="buzhou_title sige">
+                    <div class="buzhou_title_a buzhou_title_active">
+                        <span class="l">1</span>
+                        <i class="l">选择业务复核模式</i>
+                    </div>
+                    <div class="buzhou_title_b">
+                        <span class="l">2</span>
+                        <i class="l">设置操作员账户操作权限</i>
+                    </div>
+                    <div class="buzhou_title_c">
+                        <span class="l">3</span>
+                        <i class="l">设置操作员功能操作权限</i>
+                    </div>
+                    <div class="buzhou_title_d">
+                        <span class="l">4</span>
+                        <i class="l">开通用户名登录</i>
+                    </div>
+                </div>
+                <!-- 配置完成 -->
+                <div class="pzwc">
+                    <div class="pzwc_box">
+                        <img src="../../../images_box/zhengque.png" class="l">
+                        <span class="l">保存成功</span>
+                    </div>
+                    <p>如需设置其他业务，请点击<a href="javascript:window.history.go(-1);">“继续设置”；</a></p>
+                    <p>如已设置完成，请点击<a href="./few_reviewD.html">“下一步”。</a></p>
+                </div>
+                <div class="chushihuashezhi_btn" style="padding-top: 50px; width:330px;">
+                    <a href="javascript:window.history.go(-1);" class="btn_ok l">继续设置</a>
+                    <!-- <a href="###" class="btn_ok l">返回</a> -->
+                    <a href="./few_reviewD.html" class="btn_cancel r">下一步</a>
+                </div>
+            </div><!-- duoren_fuherenshu_box -->
+        </div><!-- duoren_fuherenshu -->
+    </div>
+</div>
+</body>
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/global.js"></script>
+<script src="../../../js/reset/shezhi_global.js"></script>
+<script>
+    $("#qweqwe").html(nav)
+    $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+    $(".sy_nav ul").find("li").eq(5).addClass("nav_now")
+</script>
+</html>

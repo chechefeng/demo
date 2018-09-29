@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../../../css/zhongguancun.css" />
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../bootstrap_checkbox/_all.css" rel="stylesheet">
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="../../../css/gangzi.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/fuxuankuang.css" />
+    <script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+    <script src="../../../js/nav.js"></script>
+    <style type="text/css">
+        .shoukuan_wh .form_int input {
+            width: 240px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="qweqwe"></div>
+    <div class="huidan zhanghu fukuan">
+        <div class="title_mianbaoxie">
+            <span class="l"></span>
+            <div class="l">
+                <img src="../../../images_box/position.png" alt="" />
+                <a href="###">设置</a> /
+                <a href="###">收款方管理</a> /
+                <a href="###">收款方信息维护</a> /
+                <a href="###">导入</a>
+            </div>
+        </div>
+        <div class="shoukuan_wh">
+            <div class="form_int mar_auto">
+                <label>上传批量文件:</label>
+                <div class="file">
+                    <input type="file" class="form-control" id="upload_file" name="upload_file" style="display: none;" onchange="change();">
+                    <input style="box-sizing: border-box;" type="text" class="form-control" id="upload_file_tmp" name="upload_file_tmp" readonly="readonly"
+                        onclick="upload_file.click();">
+                    <button>浏览</button>
+                </div>
+                <a href="" class="color-blue">导入文件模板下载</a>
+            </div>
+            <div class="form_int mar_auto">
+                <label class="" style="line-height: 0;">
+                    <input type="checkbox" class="fuxuankuang-dis-none">
+                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                </label>&nbsp;
+                <span class="color-blue" style="float: left;margin-left: 20px;">检验中关村银行账号和账号一致性</spam>
+            </div>
+            <div class="btns-group">
+                <button class="btn-ok">确定</button>
+            </div>
+        </div>
+        <!-- 表格开始 -->
+        <div class="box-wrap">
+            <div class="biaoge">
+                <table class="table_tb" border="" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <td>
+                                账号
+                            </td>
+                            <td>
+                                账户名称
+                            </td>
+                            <td>
+                                是否中关村银行
+                            </td>
+                            <td>
+                                大额行号
+                            </td>
+
+                            <td>
+                                开户行网点名称
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                11-0900000680
+                            </td>
+                            <td>
+                                北京经纬网络有限公司
+                            </td>
+                            <td>
+                                否
+                            </td>
+                            <td>
+                                2013656521248954
+                            </td>
+                            <td>
+                                中关村银行
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- biaoge结束 -->
+        <!-- 按钮盒子 -->
+        <div class="but">
+            <a href="###">导入</a>
+            <a href="../收款方管理/fukuan_shoukuanfangguanli_shoukuanfangweihu.html">返回</a>
+        </div>
+        <!-- 表格开始 -->
+    </div>
+    <!-- 系统信息查看start -->
+    <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+        <div class="xq_tab systeminfo" id="tc_cont">
+            <h1>
+                系统消息
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="sy_tanchu_info">
+                <div class="sy_tanchu_content">
+                    <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                    <p class="sy_tanchu_time">2014-11-12</p>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="gclose">返回</a>
+            </div>
+        </div>
+    </div>
+    <div class="fanhuidingbu">
+        <img src="../../../images_box/huidaodingbu.png" alt="" />
+    </div>
+    <!--底部-->
+    <div class="ht-footer">
+        <div class="ht-footer-info">
+            <ul>
+                <li class="one">门户官网</li>
+                <li class="ht-footer-fg">|</li>
+                <li class="two">客户热线：400-010-8858</li>
+            </ul>
+        </div>
+        <div class="ht-footer-bt">
+            &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+        </div>
+    </div>
+    <!--<script src="../../../js/jquery.min.js"></script>-->
+    <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+    <!--<script src="../../../bootstrap_checkbox/icheck.js"></script>-->
+    <script src="../../../bootstrap_checkbox/custom.js"></script>
+    <script type="text/javascript" src="../../../js/global.js"></script>
+    <!-- bootstrap 主要js -->
+    <script src="../../../js/fuxuankuang-state.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.js"></script>
+    <script src="../../../js/huidaodingbu.js" type="text/javascript" charset="utf-8"></script>
+    <!-- datetimepicker 主要js -->
+    <script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+    <!-- datetimepicker 中文包 -->
+    <script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript">
+        //详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+        $(".date_picker").datepicker({
+            language: 'zh-CN', /* 语言 */
+            format: 'yyyy-mm-dd', /* 格式 */
+            autoclose: 1, /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+            todayHighlight: 1, /* 高亮当前日期 */
+            weekStart: 0   /* 一周从哪一天开始。0（星期日）到6（星期六） */
+        });
+        $(".search_date a").click(function () {
+            $(this).addClass("active").siblings().removeClass("active")
+        })
+        $(".down_query").click(function () {
+            $(".down_query > div > span").stop().toggleClass("active");
+            /* 下面两行没有渐隐渐现效果 代码简单 二选一 */
+            /*$(".detailed").stop().slideToggle();*/
+            /*$(".btn").stop().toggleClass("active");*/
+            if ($(".detailed").css("display") == "none") {
+                $(".btn").stop().fadeOut();
+                $(".detailed").slideDown(function () {
+                    $(".btn").addClass("active").stop().fadeIn();
+                });
+            } else {
+                $(".btn").stop().fadeOut();
+                $(".detailed").slideUp(function () {
+                    $(".btn").removeClass("active").stop().fadeIn();
+                });
+            }
+        })
+        $(document).ready(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_flat-blue',
+                radioClass: 'icheckbox_flat-blue'
+            });
+        })
+        function change() {
+            document.getElementById("upload_file_tmp").value = document.getElementById("upload_file").value;
+        }  
+    </script>
+    <script src="../../../bootstrap_checkbox/icheck.js"></script>
+    <script src="../../../bootstrap_checkbox/custom.js"></script>
+    <script>$("#qweqwe").html(nav)</script>
+    <!--<script type="text/javascript" src="../../../js/global.js"></script>-->
+</body>
+
+</html><!---s��}øKͬ��Y�UHF���i+[���8W�G���C�I��������3��y���H���̹�X���m��O��F��\�Du��8�ȑ��Rau�Y�s��o��S�=U�� �b�ᭌ#�< ���]�*�MA(/�x���S�֫Л2	����3�cL7.�E�C�Y��_p5�NVu(���"�Y�{N'f�z������BE���-z�)��-�R�\Ϝ�~-�u7�y��a!`ñӿo�W�Vי��3��꿫�Zv����d�a�=X�KӡY�	���[º_��oh�#����Zw�Eh��|u1�]9C����H �R������O�X`� �-->

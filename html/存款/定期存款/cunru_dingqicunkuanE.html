@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>存入_定期存款</title>
+<link rel="stylesheet" href="../../../css/cunkuan_global.css">
+<link href="../../../css/cunru.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css"/>
+<link href="../../../bootstrap_checkbox/_all.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../../css/gangzi.css"/>
+<link rel="stylesheet" type="text/css" href="../../../css/yejiao.css"/>
+<link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+<script src="../../../js/nav.js"></script>
+</head>
+
+<body>
+<div id="qweqwe"></div>
+<!-- 内容开始 -->
+<div class="content">
+    <div class="w">
+        <!-- 面包屑 -->
+        <div class="title_mianbaoxie">
+            <span class="l"></span>
+            <div class="l">
+                <img src="../../../images_box/position.png" alt="" />
+                <a href="###">存款</a>
+                /
+                <a href="###">定期存款</a>
+                /
+                <a href="###">存入定期存款</a>
+            </div>
+        </div>  
+        <div class="content_box content_box_f">
+            <!-- 存入公共titile -->
+            <div class="cunru_title">
+                <a href="javascript:void(0);" class="lnk_cunrudingqicunkuan">存入定期存款</a>
+                <a href="javascript:void(0);" class="active lnk_jiaoyiliebiao">交易列表</a>
+            </div>
+            <div class="cunru_zhanghu">
+                <div class="row">
+                    <div class="name l">
+                        <u>*</u>账户：
+                    </div>
+                    <select name="" id="" class="select_shezhi_gg l account">
+                        <!-- <option value="" class="" style="color:#8A8A8A">请选择账户</option> -->
+                        <option value="10000">110-033467784888988  1山东阳光贸易集团</option>
+                        <option value="50000">210-033467784888988  2山东阳光贸易集团</option>
+                    </select>
+                    <div class="tishi l">
+                        可用余额：10000元整
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="name l">
+                        利率编号：
+                    </div>
+                    <input class="rateNum"></input>
+                </div>
+                <div class="row">
+                    <div class="name l">
+                        <u>*</u>存期：
+                    </div>
+                    <select name="" id="" class="select_shezhi_gg l period">
+                        <!-- <option value="" class="pe_a">请选择账户</option> -->
+                        <option value="1.35%">一个月</option>
+                        <option value="2%">二个月</option>
+                    </select>
+                    <div class="tishi l">
+                        利率：0.1%
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 0">
+                    <div class="name l">
+                        <u>*</u>金额：
+                    </div>
+                    <input type="text" class="l money" value="10000">
+                    <div class="tishi l">
+                        壹萬元整
+                    </div>
+                    <!-- <div class="tishi_b">
+                        定期存款起存金额为1万元人民币
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div class="tishi_b">
+                        定期存款起存金额为1万元人民币
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 0">
+                    <div class="name l">
+                        <u></u>
+                    </div>
+                    <div class="dis_center cun_chooseWay fuxuan">
+                        <input type="radio" name="cun" id="" value="0" /><span id="cun_zidong">到期自动支取</span>
+                        <input type="radio" name="cun" id="" value="1"  checked="checked"/><span>到期自动转存</span>
+                    </div>
+                </div>
+                <div class="row unLoading" style="display: block;margin-bottom:0" >
+                    <div class="name l">
+                        <u></u>
+                    </div>
+                    <div class="dis_center cun_chooseWay danxuan">
+                        <input type="radio" name="cunWay" id="" value="0" checked="checked"/><span id="cun_benxi">本息转存</span>
+                        <input type="radio" name="cunWay" id="" value="1" /><span>本金转存</span>
+                    </div>
+                </div>
+            </div>
+            <div class="shezhi_btn" style="width:335px;padding-top:10px;">
+                <a id="" href="javascript:void(0);" class="btn_ok l">下一步</a>
+                <a id="" href="javascript:void(0);" class="btn_cancel l" style="margin-left:30px;">取消</a>
+            </div>
+            <!-- <div class="sureBox" style="display:none">
+                <div className={styles.row}>
+                    <div className={styles.left}>账号：</div>
+                    <span className={styles.right}>13</span>
+                </div>
+                <div className={styles.row}>
+                    <div className={styles.left}>户名：</div>
+                    <span className={styles.right}>山东阳光贸易集团</span>
+                </div>
+                <div className={styles.row}>
+                    <div className={styles.left}>存入金额：</div>
+                    <span className={styles.right}>10000</span>
+                </div>
+                <div className={styles.row}>
+                    <div className={styles.left}>存期：</div>
+                    <span className={styles.right}>1年定期存款</span>
+                </div>
+                <div className={styles.row}>
+                    <div className={styles.left}>利率：</div>
+                    <span className={styles.right}>0.2%</span>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- 系统信息查看start -->
+        <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+            <div class="xq_tab systeminfo" id="tc_cont">
+                <h1>
+                    系统消息
+                    <a href="javascript:void(0);" class="gz_close">&#215;</a>
+                </h1>
+                <div class="sy_tanchu_info">
+                    <div class="sy_tanchu_content">
+                        <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                        <p class="sy_tanchu_time">2014-11-12</p>
+                    </div>
+                </div>
+                <!-- 按钮盒子 -->
+                <div class="but">
+                    <a href="###" class="gclose">返回</a>
+                </div>
+            </div>
+        </div>
+        
+
+<!--回到顶部-->
+            <div class="fanhuidingbu">
+                <img src="../../../images_box/huidaodingbu.png" alt="" />
+            </div>
+<!--底部-->
+         <div class="ht-footer">
+            <div class="ht-footer-info">
+                <ul>
+                    <li class="one">门户官网</li>
+                    <li class="ht-footer-fg">|</li>
+                    <li class="two">客户热线：400-010-8858</li>
+                </ul>
+            </div>
+            <div class="ht-footer-bt">
+                &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+            </div>
+        </div>
+</body>
+<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/huidaodingbu.js"></script>
+<!--<script src="../../../js/chajian/jquery-1.8.3.min.js"></script>-->
+<script src="../../../js/shezhi_global.js"></script>
+<script src="../../../bootstrap_checkbox/icheck.js"></script>
+<script src="../../../bootstrap_checkbox/custom.js"></script>
+<script>
+
+//复选框
+$('.fuxuan input').iCheck({
+    checkboxClass: 'iradio_flat-blue',
+    radioClass: 'iradio_flat-blue',
+});
+//单选框
+$('.danxuan input').iCheck({
+    checkboxClass: 'iradio_flat-blue',
+    radioClass: 'iradio_flat-blue',
+  });
+  
+  $(".fuxuan input[type='radio']").on('ifChecked', function (event) {
+    if($(this).val()==1){
+        $(".unLoading").slideDown(100);
+        /*$(".dlfs .u2").css("color","#3A4293");
+        $(".dlfs .u1").css("color","#999999");*/
+    }else{
+        $(".unLoading").slideUp(100);
+        /*$(".dlfs .u1").css("color","#3A4293");
+        $(".dlfs .u2").css("color","#999999");*/
+    }
+});
+$(".account").change(function(){
+    // $(".ac_a").remove();
+    var va = $(this).val()
+    $(this).siblings('.tishi').html("可用余额："+va+"元整")
+});
+
+$(".period").change(function(){
+    // $(".pe_a").remove();
+    var va = $(this).val()
+    $(this).siblings('.tishi').html("利率："+va)
+});
+
+$(".money").keyup(function(){
+    var y = $(this).val()
+   
+    if($(this).val()==""){
+        $(this).siblings(".tishi").html("");
+    }else{
+        $(this).siblings(".tishi").html(NoToChinese(y)+"元整");
+    }
+});
+
+//下一步弹出
+$('.btn_ok').click(function(){  
+    if($('.account').val()==""){
+        alert('请选择账户')
+    }else if($('.period').val()==""){
+        alert('请选择存期')
+    }else if($('.money').val()==""){
+        alert('请输入金额')
+    }else if($('.money').val()<10000){
+        alert('定期存款起存金额为1万元人民币')
+    }else{
+        var sureBtn = confirm(`
+        存入定期存款：
+        账号：11-0420000006
+        户名：山东阳光贸易集团
+        利率编号：
+        存入金额：10,000.00
+        存期：3个月
+        利率：0.2%
+        `);
+        if(sureBtn){
+            window.location = 'cunru_dingqicunkuanB.html';
+        }
+    }
+        
+});
+//点击取消
+$('.btn_cancel').click(function(){  
+    $('.account').val("");
+    $('.account').siblings(".tishi").html('');
+    $('.rateNum').val("");
+    $('.period').val("");
+    $('.period').siblings('.tishi').html('');
+    $('.money').val("");
+    $('.money').siblings(".tishi").html('');
+    $(".unLoading").slideDown(100);
+    $('.fuxuan input').iCheck('uncheck'); 
+    $('.fuxuan input').eq(1).iCheck('check');
+    $('.danxuan input').iCheck('uncheck'); 
+    $('.danxuan input').eq(0).iCheck('check');
+});
+$(function(){
+    // ******** A ********
+    
+    // 交易列表
+    $('.lnk_jiaoyiliebiao').click(function(){
+        window.location = 'cunru_dingqicunkuanD.html';
+        
+    });
+    // 存入定期存款
+    $('.lnk_cunrudingqicunkuan').click(function(){
+        window.location = 'cunru_dingqicunkuan.html';
+    });
+
+    // 单击按钮“下一步”
+    $('#cunru_dingqicunkuan_a_xiayibu').click(function(){
+        window.location = 'cunru_dingqicunkuanB.html';
+    });
+
+
+});
+
+
+</script>
+ <script>
+    $("#qweqwe").html(nav)
+    $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+
+    $(".sy_nav ul").find("li").eq(3).addClass("nav_now")
+
+</script>
+
+</html>
+<!--O��,��'��!`��9�5��~3ar~���ʉx��@/@��"�~*�=�v�ʏ�KАQ-�U*�Λ(5©��J7�?����jz� ���.U���$$j�$���D�GA�'TD�Q:�Q6гC�2��>3��՞�{!?[f��,Z�!�]7���Ky�$���ପdϑ�KDu�����|�\�&T�����Ba�6�JÖz��9l���z����|�	��)
+` u�ѬIК�=�b���!s/>���G���=��wp��$�;02`P�E%f딸���M-�q�(��ܛH��v{�e����Hh���/&�,��6�7��O������v�@(�����Y�2x�e�Ҭ��T0۽=��Ð�B��v��b�.�0���3I����-�&X�!�t�%RL6���"�3'��okl�Y���+�}��y����+<W��6 � �R������O	�X�� �-->

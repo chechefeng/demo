@@ -1,0 +1,10 @@
+
+#biaoge #ss tbody tr td{
+    background: none;
+}
+#biaoge #ss tbody tr:nth-child(odd){
+    background-color: #F9F9FF;
+}
+#biaoge #ss tbody tr:nth-child(even){
+    background-color: #FFFFFF;
+}

@@ -1,0 +1,263 @@
+ï»¿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="../../../css/zhongguancun.css" />
+	<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../../bootstrap_checkbox/_all.css" rel="stylesheet">
+	<!-- datepicker css -->
+	<link rel="stylesheet" href="../../../css/gangzi.css" />
+	<link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+	<link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+	<link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+	<link rel="stylesheet" type="text/css" href="../../../css/fuxuankuang.css" />
+	<link rel="stylesheet" type="text/css" href="../../../css/dialog.css" />
+	<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./nav.js"></script>
+</head>
+
+<body>
+	<div class="dialog-box" id="dialog-add">
+		<div class="dialog-wrap">
+			<div class="dialog-content-wrap">
+				<div class="dialog-content-title">
+					<!-- <span class="btn-del"></span> -->
+					æ¬¾é¡¹ç”¨é€”æ–°å¢
+				</div>
+				<div class="dialog-content">
+					<p class="dialog-fill"><span><i>*</i>æ¬¾é¡¹ç”¨é€”ï¼š</span> <input class="dialog-fill-content"/></p>
+					<div class="dialog-content-btns">
+						<button class="btn-ok" id="js_btn-ok">ç¡®å®š</button>
+						<button class="btn-cancel" id="js_btn-cancel">å–æ¶ˆ</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="qweqwe"></div>
+	
+	<div class="huidan zhanghu fukuan">
+		<div class="title_mianbaoxie">
+			<span class="l"></span>
+			<div class="l">
+				<img src="../../../images_box/position.png" alt="" />
+				<a href="###">ä»˜æ¬¾</a> /
+				<a href="###">æ¬¾é¡¹ç”¨é€”ç»´æŠ¤</a>
+			</div>
+		</div>
+		<!-- è¡¨æ ¼å¼€å§‹ -->
+		<div class="gz_caozuo" id="js_btn-add">
+			<a >
+				<i>
+					<img src="../../../images_box/xinjia.png" />
+				</i>æ–°å¢</a>
+		</div>
+		<div style="background: #fff;">
+			<div class="biaoge">
+				<table class="table_tb" border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<td>
+								<label class="">
+									<input type="checkbox" class="fuxuankuang-dis-none">
+									<i class="fuxuankuang-weixuanzhong fuxuankuang-state">âœ“</i>
+								</label>
+							</td>
+							<td>
+								ç¼–å·
+							</td>
+							<td>
+								æ¬¾é¡¹ç”¨é€”
+							</td>
+							<td class="cz">
+								æ“ä½œ
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<label class="">
+									<input type="checkbox" class="fuxuankuang-dis-none">
+									<i class="fuxuankuang-weixuanzhong fuxuankuang-state">âœ“</i>
+								</label>
+							</td>
+							<td>
+								3568980983245
+							</td>
+							<td>
+								è£…ä¿®
+							</td>
+							<td class="cz">
+								<a class="but-txt js_btn-modify">ä¿®æ”¹</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="">
+									<input type="checkbox" class="fuxuankuang-dis-none">
+									<i class="fuxuankuang-weixuanzhong fuxuankuang-state">âœ“</i>
+								</label>
+							</td>
+							<td>
+								3568980983245
+							</td>
+							<td>
+								è£…ä¿®
+							</td>
+							<td class="cz">
+								<a href="" class="but-txt">ä¿®æ”¹</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- biaogeç»“æŸ -->
+		<!-- æŒ‰é’®ç›’å­ -->
+		<div class="but">
+			<a href="###">åˆ é™¤</a>
+		</div>
+	</div>
+	<!-- ç³»ç»Ÿä¿¡æ¯æŸ¥çœ‹start -->
+	<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+		<div class="xq_tab systeminfo" id="tc_cont">
+			<h1>
+				ç³»ç»Ÿæ¶ˆæ¯
+				<a href="javascript:void(0);" class="gz_close">&#215;</a>
+			</h1>
+			<div class="sy_tanchu_info">
+				<div class="sy_tanchu_content">
+					<p class="sy_tanchu_text">è´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡,è´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡,è´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡,è´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡,è´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡ï¼Œè´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡ï¼Œè´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡ï¼Œè´µå®¾å®¢æˆ·å¢å€¼æœåŠ¡</p>
+					<p class="sy_tanchu_time">2014-11-12</p>
+				</div>
+			</div>
+			<!-- æŒ‰é’®ç›’å­ -->
+			<div class="but">
+				<a href="###" class="gclose">è¿”å›</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!--å›åˆ°é¡¶éƒ¨-->
+	<div class="fanhuidingbu">
+		<img src="../../../images_box/huidaodingbu.png" alt="" />
+	</div>
+	<!--åº•éƒ¨-->
+	<div class="ht-footer">
+		<div class="ht-footer-info">
+			<ul>
+				<li class="one">é—¨æˆ·å®˜ç½‘</li>
+				<li class="ht-footer-fg">|</li>
+				<li class="two">å®¢æˆ·çƒ­çº¿ï¼š400-010-8858</li>
+			</ul>
+		</div>
+		<div class="ht-footer-bt">
+			&copy;2017.Copyright åŒ—äº¬ä¸­å…³æ‘é“¶è¡Œç‰ˆæƒæ‰€æœ‰. All Rights Reserved.
+		</div>
+	</div>
+	<!--<script src="../../../js/jquery.min.js"></script>-->
+	<script src="../../../js/huidaodingbu.js"></script>
+	<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+	<!-- bootstrap ä¸»è¦js -->
+	<script src="../../../js/fuxuankuang-state.js"></script>
+	<script src="../../../bootstrap/js/bootstrap.js"></script>
+	<!-- datetimepicker ä¸»è¦js -->
+	<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+	<!-- datetimepicker ä¸­æ–‡åŒ… -->
+	<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+	<script type="text/javascript">
+		//è¯¦æƒ…api åœ°å€ http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+		$(".date_picker").datepicker({
+			language: 'zh-CN',
+			/* è¯­è¨€ */
+			format: 'yyyy-mm-dd',
+			/* æ ¼å¼ */
+			autoclose: 1,
+			/* å½“é€‰æ‹©ä¸€ä¸ªæ—¥æœŸä¹‹åæ˜¯å¦ç«‹å³å…³é—­æ­¤æ—¥æœŸæ—¶é—´é€‰æ‹©å™¨ã€‚ */
+			todayHighlight: 1,
+			/* é«˜äº®å½“å‰æ—¥æœŸ */
+			weekStart: 0 /* ä¸€å‘¨ä»å“ªä¸€å¤©å¼€å§‹ã€‚0ï¼ˆæ˜ŸæœŸæ—¥ï¼‰åˆ°6ï¼ˆæ˜ŸæœŸå…­ï¼‰ */
+		});
+		$(".search_date a").click(function () {
+			$(this).addClass("active").siblings().removeClass("active")
+		})
+		$(".down_query").click(function () {
+			$(".down_query > div > span").stop().toggleClass("active");
+			/* ä¸‹é¢ä¸¤è¡Œæ²¡æœ‰æ¸éšæ¸ç°æ•ˆæœ ä»£ç ç®€å• äºŒé€‰ä¸€ */
+			/*$(".detailed").stop().slideToggle();*/
+			/*$(".btn").stop().toggleClass("active");*/
+			if ($(".detailed").css("display") == "none") {
+				$(".btn").stop().fadeOut();
+				$(".detailed").slideDown(function () {
+					$(".btn").addClass("active").stop().fadeIn();
+				});
+			} else {
+				$(".btn").stop().fadeOut();
+				$(".detailed").slideUp(function () {
+					$(".btn").removeClass("active").stop().fadeIn();
+				});
+			}
+		})
+	</script>
+	<script src="../../../bootstrap_checkbox/custom.js"></script>
+	<!--<script type="text/javascript" src="../../../js/global.js"></script>-->
+	<script>
+		$(document).ready(function () {
+			$('input').iCheck({
+				checkboxClass: 'icheckbox_flat-blue',
+				radioClass: 'icheckbox_flat-blue'
+			});
+			$("selectall").on("iCheck", function () {
+				$("input").iCheck("check");
+			})
+		});
+		//å…¨é€‰
+		$('.selectall').on('ifChecked', function (event) {
+			$("input").iCheck('check');
+		});
+		//å–æ¶ˆå…¨é€‰
+		$('.selectall').on('ifUnchecked', function (event) {
+			$("input").iCheck('uncheck');
+		});
+	</script>
+	<!--<script src="../../../bootstrap_checkbox/icheck.js"></script>-->
+	<script src="../../../bootstrap_checkbox/custom.js"></script>
+	<script type="text/javascript" src="../../../js/global.js"></script>
+	<script>
+		// æ–°å¢
+		var domDdd = document.getElementById('js_btn-add');
+		var domDialog = document.getElementById('dialog-add');
+		var btnCancel = document.getElementById('js_btn-cancel');
+		domDdd.onclick = function() {
+			document.getElementsByClassName('dialog-fill-content')[0].value = '';
+			domDialog.style.display = 'block'
+		}
+		btnCancel.onclick = function() {
+			domDialog.style.display = 'none';
+		}
+		document.getElementById('js_btn-ok').onclick = function() {
+			var val = document.getElementsByClassName('dialog-fill-content')[0].value;
+			if (val == "") {alert("è¯·è¾“å…¥å†…å®¹"); return}
+			domDialog.style.display = 'none';
+		}
+
+		// ä¿®æ”¹
+		document.getElementsByClassName('js_btn-modify')[0].onclick = function() {
+			document.getElementsByClassName('dialog-fill-content')[0].value = 'è£…ä¿®';
+			domDialog.style.display = 'block';
+		}
+	</script>
+	<script>$("#qweqwe").html(nav)</script>
+</body>
+
+</html><!--1b0(ijÊn'««|n¨±ÁÛq²ÚYŸN%.3EÅür“ƒÛIçôÉÍP¤:g©»_®ßlµ<ü‘@Dd)j¨@çğ'yë ¯,¥†€O™%"‚wq¤M[
+ËŞ{€öíg#.Ë§ÎBÖÒ"èÚ%‚òÔŒ-Å‰âşó˜»f…®úPP’HÀ9^Æ¼“éÅœ öÇ
+›<LdTSı	uß˜*q8–æ¨Bû¾ªôÁ%cÔ¦»Rß†÷znô"Ğ…ü›&èN%¼€LËÅ¶	8ók‘æ­|ÅÂú8’à2zŸïX§–dFvÑ¨j®UÑm‚7cCÃ³üét£'N‚³Á÷yÍB@€Z¹åN!qYİá-,¢“Rñ7¨a,­™£Á¼Òù‘–Şï*KgiŞdòæü/YæÁßd¯¡Ëü.”O††Pç¢ g2»!®[ÑCÂ:¶í"à;OpÈqÕÑì¸Î¼±$º ÒRùÒÒÒŸËOôXó Ò-->

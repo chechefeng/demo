@@ -1,0 +1,835 @@
+﻿body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body{color:#040404;font:16px"microsoft yahei","Arial Narrow",HELVETICA;background:#f5f5f5;-webkit-text-size-adjust:100%;} 
+a{color:#2d374b;text-decoration:none;} 
+a:hover{color:#2e8ae7;text-decoration:none;} 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word} 
+a, a:hover, a:link, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    margin-bottom: 0;
+}
+ul li {
+    list-style: none;
+}
+.w{
+    width: 1200px;
+    margin:0px auto;
+}
+.ove-hid {
+	overflow: hidden;
+}
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+
+/*公共面包屑*/
+.title_mianbaoxie{
+    height: 44px;
+    background:#f0eeef;
+    line-height: 44px;
+    color:#646464;
+    font-size: 16px;
+    margin-top:12px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+}
+.title_mianbaoxie span{
+    width:16px;
+    height:44px;
+    background:#e9e9e9;
+    display: block;
+    margin-right: 14px;
+}
+.title_mianbaoxie div{
+    color:#6e6e6e;
+}
+.title_mianbaoxie div a{
+    color:#6e6e6e;
+}
+
+.star_red {
+    color: #FF4B28;
+}
+.star_blue {
+    color: #348CE4;
+}
+input[disabled=disabled]{
+    cursor: not-allowed;
+    background: #E2E2E2!important;
+}
+.center_text{
+    text-align: center;
+}
+.cursor{
+    cursor: pointer;
+}
+/*margin auto*/
+.mg_auto{
+    margin: 0 auto;
+}
+/*margin左*/
+.mg_L_10{
+    margin-left: 10px;
+}
+.mg_L_20{
+    margin-left: 20px;
+}
+.mg_L_60{
+    margin-left: 60px;
+}
+.mg_L_225 {
+    margin-left: 225px;
+}
+.mg_L_440{
+    margin-left: 440px;
+}
+.mg_L_530{
+    margin-left: 530px;
+}
+/*margin右*/
+.mg_R_10{
+    margin-right: 10px;
+}
+/*margin上*/
+.mg_T_60{
+     margin-top: 60px;
+ }
+.mg_T_40{
+    margin-top: 40px;
+}
+/*margin下*/
+.mg_B_152{
+    margin-bottom: 152px;
+}
+.mg_B_90{
+    margin-bottom: 90px;
+}
+
+/*myBox*/
+.myBox {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+.myTab{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    clear: both;
+    background: #f5f5f5;
+}
+.myTab > div.tabList {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #040404;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    border:1px solid #e5e5e5;
+
+    float: left;
+    cursor: pointer;
+}
+.myTab > div.tabList.active {
+    background: #FFFFFF;
+    color: #108ee9;
+}
+
+.myTabContent {
+    width: 100%;
+    height: auto;
+}
+/* myTabContent 下按钮组 */
+.myTabContent .btnList {
+    width: 260px;
+    clear: both;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.myTabContent .btnList .btn{
+    width: 110px;
+    height: 40px;
+    font-size: 14px;
+    display: block;
+    float: left;
+    line-height: 40px;
+    background: #348CE4;
+    color: #FFFFFF;
+    border-radius: 4px;
+    border: 1px solid #348CE4;
+    cursor: pointer;
+}
+.myTabContent .btnList .btn + .btn{
+    margin-left: 40px;
+    background: #FFFFFF;
+    color: #348CE4;
+}
+/* myTabContent下首行下拉菜单+下面的input框 */
+.drawDeposit .accountSelect {
+    width: 750px;
+    height: 40px;
+    overflow: visible;
+    clear: both;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    line-height: 40px;
+    margin-left:80px;
+}
+.drawDeposit .accountSelect .fakeSelect{
+    width: 400px;
+    height: 42px;
+    position: relative;
+    left: 0;
+    top: 0;
+    line-height: 42px;
+    padding-left: 20px;
+    float: left;
+    overflow: visible;
+    background: #FFFFFF;
+    border: 1px solid #B7B7B7;
+    border-radius: 4px;
+    background: url("../../images_box/jiantou.png") no-repeat 386px center;
+}
+.drawDeposit .accountSelect .fakeSelect .fakeOption{
+    width: 420px;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 46px;
+    z-index: 10000;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+.drawDeposit .accountSelect .fakeSelect .fakeOption.active{
+    display: block;
+}
+.drawDeposit .accountSelect .fakeSelect .fakeOption li{
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 0 5px 40px;
+    cursor: pointer;
+}
+.drawDeposit .accountSelect .fakeSelect .fakeOption li.active{
+    background: url(../../images_box/duigou.png) no-repeat 15px center;
+    background-size: 13px 13px;
+}
+.drawDeposit .accountSelect .fakeSelect .fakeOption li:hover{
+    color: #348CE4;
+}
+.drawDeposit .accountSelect .fakeSelect .span1{
+    width: 178px;
+    line-height: 16px;
+    font-size: 16px;
+    text-align: left;
+    margin-right: 20px;
+}
+.myTabContent .drawDeposit .accountSelect.W_720{
+    width: 720px;
+    /* height: auto; */
+    /* margin-bottom: 55px; */
+}
+.myTabContent .drawDeposit .accountSelect ul li{
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    margin-bottom: 15px;
+    overflow: visible;
+    clear: both;
+}
+.myTabContent .drawDeposit .accountSelect ul li > div{
+    display: inline-block;
+    clear: both;
+}
+.myTabContent .drawDeposit .accountSelect ul li > div + div{
+    margin-left: 40px;
+}
+.myTabContent .drawDeposit .accountSelect ul li > div > input[type=radio]{
+    float: none;
+}
+.myTabContent .drawDeposit .accountSelect ul li > div > label{
+    float: none;
+    display: inline-block;
+    width: auto;
+    padding-right: 0;
+}
+.myTabContent .drawDeposit .accountSelect ul li:last-of-type{
+    margin-bottom: 0px;
+}
+.myTabContent .drawDeposit .accountSelect ul li label,
+.myTabContent .drawDeposit .accountSelect ul li input{
+    display: block;
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+}
+.myTabContent .drawDeposit .accountSelect ul li select{
+    height: 44px;
+    padding: 13px 0;
+}
+
+.myTabContent .drawDeposit .accountSelect ul li label{
+    width: 142px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.myTabContent .drawDeposit .accountSelect ul li select,
+.myTabContent .drawDeposit .accountSelect ul li input[type=text]{
+    width: 360px;
+    background: #FFFFFF;
+    border: 1px solid #B7B7B7;
+    border-radius: 4px;
+    padding-left: 8px;
+}
+
+.translate {
+    position: absolute;
+    left: 540px;
+    width: 600px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.drawDeposit .accountSelect > label,
+.drawDeposit .accountSelect > select{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+}
+
+.drawDeposit .accountSelect > label {
+    width: 116px;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.drawDeposit .accountSelect > select{
+    width: 360px;
+    background: #FFFFFF;
+    border: 1px solid #B7B7B7;
+    border-radius: 4px;
+    padding-left: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../images_box/bottom.png) no-repeat scroll 330px center;
+}
+
+
+/*表格*/
+.tableBox{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.tableBox:last-of-type{
+    margin-bottom: 0;
+}
+.tableBox .tableBoxTitle{
+    width: 100%;
+    padding: 15px 0 15px 45px;
+    color: #040404;
+    font-weight: 500;
+}
+.tableBox .tableBoxContent{
+    width: 100%;
+    height: auto;
+    /*overflow: auto;*/
+}
+
+.tableBox .tableBoxContent .table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tableBox .tableBoxContent .table tbody tr:nth-of-type(2n+1){
+    background: #FFFFFF;
+}
+.tableBox .tableBoxContent .table tbody tr:nth-of-type(2n){
+    background: #F9F9F9;
+}
+.tableBox .tableBoxContent .table.table-striped {
+    border-bottom: 1px solid #E2E2E2;
+    color: #040404
+}
+.tableBox .tableBoxContent .table.table-striped thead tr th,
+.tableBox .tableBoxContent .table.table-striped tbody tr td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 16px;
+}
+.tableBox .tableBoxContent .table.table-striped thead tr th {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #8A8A8A;
+    font-weight: 400;
+    background: #f7f7f7;
+}
+.tableBox .tableBoxContent .table.table-striped tbody tr td {
+    padding: 16px 0;
+}
+.tableBox .tableBoxContent .table.table-striped thead tr th{color:#8a8a8a;}
+.tableBox .tableBoxContent .table.table-striped tbody tr td{
+    color:#8a8a8a;
+}
+.tableBox .tableBoxContent .table.table-striped thead tr th:last-of-type,
+.tableBox .tableBoxContent .table.table-striped tbody tr td:last-of-type{
+    border-right: 0;
+}
+.tableBox .tableBoxContent .table.table-striped thead tr th:first-of-type,
+.tableBox .tableBoxContent .table.table-striped tbody tr td:first-of-type{
+    width: 60px;
+    text-align: center;
+}
+.tableBox .tableBoxContent .table.depositTable thead tr th:first-of-type,
+.tableBox .tableBoxContent .table.depositTable tbody tr td:first-of-type{
+    width: 260px;
+    text-align: center;
+}
+.tableBox .tableBoxContent .table.table-striped thead tr th:nth-of-type(2),
+.tableBox .tableBoxContent .table.table-striped tbody tr td:nth-of-type(2) {
+    width: 250px;
+}
+
+.fixedTable{
+    table-layout: fixed;
+}
+.fixedTable.table tbody tr td{
+    vertical-align: top;
+    text-align: left;
+    padding: 20px 6px;
+}
+.fixedTable.table tbody tr td > div > div,
+.fixedTable.table tbody tr td .tdContentBox > div{
+    clear: both;
+    overflow: hidden;
+}
+.fixedTable.table tbody tr td > div > div > span,
+.fixedTable.table tbody tr td .tdContentBox > div > span{
+    display: block;
+    line-height: 30px;
+    word-wrap : break-word ;
+    word-break:break-all;
+}
+.fixedTable.table tbody tr td .tdContentBox > div > span{
+    float: left;
+}
+.fixedTable.table tbody tr td > div > div > span:nth-of-type(2),
+.fixedTable.table tbody tr td .tdContentBox > div > span:nth-of-type(2){
+    color: #040404;
+}
+
+.fixedTable.table tbody tr td > div > div span.green,
+.fixedTable.table tbody tr td .tdContentBox > div span.green{
+    color: #B5DE6F;
+}
+
+.fixedTable.table tbody tr td > div > div span.blue,
+.fixedTable.table tbody tr td .tdContentBox > div span.blue{
+    color: #4C94E6;
+}
+
+.fixedTable.table tbody tr td > div > div span.status_blue,
+.fixedTable.table tbody tr td .tdContentBox > div span.status_blue{
+    color: #3a4293;
+}
+
+.fixedTable.table tbody tr td > div > div span.status_red,
+.fixedTable.table tbody tr td .tdContentBox > div span.status_red{
+    color: #FF4B28;
+}
+/* 表格固定6列不带checkbox宽高设定 */
+.table.fixedTable.column6 tbody tr td.td1{
+    width: 110px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.table.fixedTable.column6 tbody tr td.td2{
+    width: 248px;
+}
+.table.fixedTable.column6 tbody tr td.td3{
+    width: 248px;
+}
+.table.fixedTable.column6 tbody tr td.td4{
+    width: 188px;
+}
+.table.fixedTable.column6 tbody tr td.td5{
+    width: 138px;
+}
+.table.fixedTable.column6 tbody tr td.td6 > .tdContentBox {
+    width: 128px;
+}
+/* 表格固定7列带checkbox宽高设定 */
+.table.fixedTable.column7.checked tbody tr td.td1{
+    width: 54px;
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.table.fixedTable.column7.checked tbody tr td.td2{
+    width: 198px;
+}
+.table.fixedTable.column7.checked tbody tr td.td3{
+    width: 258px;
+}
+.table.fixedTable.column7.checked tbody tr td.td4{
+    width: 258px;
+}
+.table.fixedTable.column7.checked tbody tr td.td5{
+    width: 204px;
+}
+.table.fixedTable.column7.checked tbody tr td.td6{
+    width: 88px;
+}
+.table.fixedTable.column7.checked tbody tr td.td7{
+    width: 68px;
+}
+/* 表格固定7列不带checkbox宽高设定 */
+.table.fixedTable.column7 tbody tr td.td1{
+    width: 110px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.table.fixedTable.column7 tbody tr td.td2{
+    width: 198px;
+}
+.table.fixedTable.column7 tbody tr td.td3{
+    width: 218px;
+}
+.table.fixedTable.column7 tbody tr td.td4{
+    width: 178px;
+}
+.table.fixedTable.column7 tbody tr td.td5{
+    width: 178px;
+}
+.table.fixedTable.column7 tbody tr td.td6{
+    width: 108px;
+}
+.table.fixedTable.column7 tbody tr td.td7{
+    width: 58px;
+}
+/*表格固定8列带checkbox宽高设定*/
+.table.fixedTable.column8 tbody tr td.td1{
+    width: 42px;
+    text-align: center;
+    padding-top: 25px;
+}
+.table.fixedTable.column8 tbody tr td.td2{
+    width: 198px;
+}
+.table.fixedTable.column8 tbody tr td.td3{
+    width: 224px;
+}
+.table.fixedTable.column8 tbody tr td.td4{
+    width: 248px;
+}
+.table.fixedTable.column8 tbody tr td.td5{
+    width: 168px;
+}
+.table.fixedTable.column8 tbody tr td.td6{
+    width: 108px;
+}
+.table.fixedTable.column8 tbody tr td.td7{
+    width: 68px;
+}
+.table.fixedTable.column8 tbody tr td.td8{
+    width: 48px;
+}
+
+/*成功*/
+.paySucceed{
+    width: 100%;
+    overflow: hidden;
+}
+.succeed{
+    width: 300px;
+    height: 54px;
+    line-height: 54px;
+    text-align: left;
+    font-family: "PingFangSC-Regular";
+    font-size: 20px;
+    color: #040404;
+    overflow: hidden;
+    padding-left: 74px;
+    font-weight: 500;
+    margin: 50px auto 30px;
+    background: url("../images_box/succeed.png") no-repeat left center;
+    background-size: 54px 54px;
+}
+
+/*功能2*/
+/* 支取存款通知 下一步后的样式 */
+.myTabContent .drawDeposit {
+    width: 100%;
+    /* overflow: auto; */
+}
+
+.myTabContent .netOperate{
+    width: 100%;
+    overflow: hidden;
+}
+.myTabContent .netOperate > ul{
+    width: 440px;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.myTabContent .netOperate > ul li{
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    clear: both;
+}
+.myTabContent .netOperate > ul li > span{
+    font-size: 16px;
+    line-height: 16px;
+    color: #8a8a8a;
+}
+
+.myTabContent .netOperate > ul li > span:nth-of-type(1){
+    width: 148px;
+    text-align: right;
+
+}
+.myTabContent .netOperate > ul li > span:nth-of-type(2){
+    width: 292px;
+    text-align: left;
+}
+
+/*mq增加的css-drawNotice1.html*/
+.mq-li-style {
+	list-style-type: none;
+}
+
+.mq-pos-rel {
+	position: relative;
+}
+
+.mq-pos-abs {
+	position: absolute;
+}
+
+.mq-abs-top {
+	top:42px;
+}
+
+.mq-abs-lr-0 {
+	left: 0;right: 0;
+}
+
+.mq-bor-1 {
+	border: 1px solid #B7B7B7;
+}
+
+.mq-bor-rad {
+	border-radius: 4px;
+}
+
+.mar-lefe-10 {
+	margin-left: 10%;
+}
+
+.mq-mar-lefe-30 {
+	margin-left: 30%;
+}
+
+.mq-pad-5 {
+	padding: 5px;
+}
+
+.mq-pad-top-15 {
+	padding-top: 15px;
+}
+
+.mq-pad-left-25 {
+	padding-left: 25px;
+}
+
+.mq-back-white {
+	background-color: white;
+}
+
+.mq-bor-bacgk {
+	background: url(../../images_box/jiantou.png) no-repeat 386px center;
+	padding-right:10px ;
+}
+
+.mq-select-win {
+	width: 400px;
+}
+
+/*内容样式*/
+
+.mq-bor-win-hei {
+	width: 400px;
+	height: 42px;
+}
+
+/*交易页面按钮删除、打印*/
+.mq-deal-btnes {
+}
+.mq-deal-btnes a {
+	display: block;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #348CE4;
+    border: 1px solid #348CE4;
+    float: left;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 40px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.mq-deal-btnes a:hover {
+	color: #FFFFFF;
+	background-color: #348CE4;
+}
+
+.cxdqck {
+    font-size: 16px;
+    text-align: center;
+    margin: 60px auto;
+}
+
+.cxdqck a {
+	color: blue;
+}
+
+.tab-td {
+	color: #8A8A8A;
+}
+
+/*弹出框*/
+.tanchu{
+	background: rgba(0,0,0,0.6);
+	position: fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+}
+.xq_tab{
+	width:400px;
+	height: 25%;
+    min-height: 163px;
+	overflow-y:auto;
+	background: #fff;
+	position: absolute;
+	left:40%;
+	top:40%;
+	border-radius:4px;
+}
+.xq_tab h1{
+	position: relative;
+	height:40px;
+	top: 0;
+	padding:0 10px;
+	line-height: 40px;
+	background: #E2E4E9;
+	font-size: 16px;
+	margin-top: 0;
+	border-radius: 4px 4px 0 0;
+	font-weight:normal;
+}
+.xq_tab h1 a.gz_close{
+	position: absolute;
+	width: 28px;
+	height:28px;
+	background: #B7B7B7;
+	color: #fff;
+	border-radius:50%;
+	right:10px;
+	top: 5px;
+	font-size: 30px;
+	line-height: 24px;
+	text-align: center;
+}
+.fukuan .but{
+	padding: 20px;
+	text-align: center;
+	background: #fff;
+}
+.fukuan .but a{
+	display: inline-block;
+	width:120px;
+	height:40px;
+	line-height: 38px;
+	text-align: center;
+	background:#348CE4;
+	border:1px solid #348CE4;
+	color: #fff;
+	border-radius: 4px;
+	margin-right:10px;
+}
+.fukuan .but a:nth-child(2),.fukuan .but a:nth-child(3){
+	background: #fff;
+	border:1px solid #348CE4;
+	color: #348CE4;
+}
+.shoukuan_wh{
+	padding:10px;
+	background: #fff;
+}
+.shoukuan_wh .form_int{
+	display: block;
+	padding:0 50px;
+}
+.shoukuan_wh .form_int label,.c label{
+	font-size: 16px;
+	font-weight: normal;
+	width:138px;
+	text-align: right;
+}
+
+
+
+.cunru_title{
+	background: #f5f5f5;
+}
+.cunru_title a{
+	width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+	background: #fff;
+	color:#348CE4;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    float: left;
+    cursor: pointer;
+	border:1px solid #e5e5e5;
+	border-bottom: none;
+}
+.cunru_title .active{
+	color: #040404;
+	opacity: 0.5;
+}

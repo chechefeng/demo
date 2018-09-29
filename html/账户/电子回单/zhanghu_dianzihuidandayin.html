@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>账户/电子回单/电子回单打印</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../bootstrap_checkbox/flat/_all.css" rel="stylesheet">
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/gangzi.css">
+    <link rel="stylesheet" href="../../../css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/fuxuankuang.css"/>
+    <script src="../../../js/nav.js"></script>
+
+</head>
+
+<body>
+
+<div id="navWraper"></div>
+<!-- 内容部分 -->
+<div class="content zhanghuguanli_mingxi">
+    <div class="w">
+        <!-- 查询 大盒子-->
+        <div class="chaxun">
+            <div class="title_mianbaoxie"><span class="l"></span>
+
+                <div class="l">
+                    <img src="../../../images_box/position.png" alt=""/>
+                    <a href="###">账户</a> / <a href="###">电子回单</a> / <a href="###">电子回单打印</a></div>
+            </div>
+            <!-- 坑货 -->
+            <p style="padding:20px; font-size:18px; font-weight:normal; color:#666;">请输入查询条件</p>
+            <div>
+                <div class="luru" style="text-align:center;">
+                    <div class="form-group per50">
+                        <label class="label1" style="color:#666; font-weight:normal;">回单类型：</label>
+                        <input type="text" class="iptRange" placeholder="请输入电子回单编号" style="width: 400px; height:32px;">
+                    </div>
+                    <div class="form-group per50">
+                        <label class="label1" style="color:#666; font-weight:normal;"><span
+                                style="color:#f03202; width:10px;">*</span>账户：</label>
+                        <select type="text" class="iptRange" placeholder="请输入电子回单编号" style="width: 400px; height:32px;">
+                            <option>12213123123213</option>
+                            <option>12213123123213</option>
+                        </select>
+                    </div>
+                    <div class="form-group per50">
+
+                        <input type="checkbox">
+                        <label style="color:#666; font-weight:normal;">收款方：</label>
+                        <input type="checkbox" style="border: 1px solid #e5e5e5;">
+                        <label style="color:#666; font-weight:normal;">付款方：</label>
+                    </div>
+                    <div class="form-group per50" style="margin-left:6px;">
+                        <label style="color:#666; font-weight:normal;">起止日期：</label>
+                        <input type="text" id="dataStart" class="form-control dataWidth" value="2018-8-31"
+                               style=" text-align:left; width: 180px; background:url(../../../images_box/rli.png) no-repeat 150px center;padding:0;">
+                        <span class="MG_LR7">-</span>
+                        <input type="text" id="dataEnd" class="form-control dataWidth" value="2018-8-31"
+                               style=" text-align:left; width: 180px; border-radius: 4px;  background:url(../../../images_box/rli.png) no-repeat 150px center;padding:0;">
+
+                    </div>
+                    <div class="form-group per50" style="margin-left:6px;">
+                        <div class="search_date pull-left hana">
+                            <span>最近：</span>
+                            <a href="javascript:;">今天</a>
+                            <a href="javascript:;">近一周</a>
+                            <a href="javascript:;">近半月</a>
+                            <a href="javascript:;">近一月</a>
+                        </div>
+                    </div>
+                    <div class="form-group per50">
+                        <label class="label1" style="color:#666; font-weight:normal;">金额范围：</label>
+                        <input type="text" class="iptRange" placeholder="请输入金额" style="width: 195px; height:32px;">
+                        <span class="MG_LR7">-</span>
+                        <input type="text" class="iptRange" placeholder="请输入金额" style="width: 195px; height:32px;">
+                    </div>
+                    <button type="button" class="blue-btn cx" style="width:64px; margin-top:40px;">查询</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- 表格开始 -->
+        <div class="biaoge" id="biaoge" style="display:none;">
+            <table id="ss">
+                <thead>
+                <tr>
+                    <td><label class="">
+                        <input type="checkbox" class="fuxuankuang-dis-none">
+                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                    </label>&nbsp;全选
+                    </td>
+                    <td>交易时间</td>
+                    <td>付款方账号</td>
+                    <td>付款方户名</td>
+                    <td>收款方账户</td>
+                    <td>收款方户名</td>
+                    <td>交易余额</td>
+                    <td>查看明细</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><label class="">
+                        <input type="checkbox" class="fuxuankuang-dis-none">
+                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                    </label></td>
+                    <td>2016-08-05<br>14:09:23</td>
+                    <td>0394101080150028</td>
+                    <td>上海经纬网讯有限公司</td>
+                    <td>0394101080150075</td>
+                    <td>上海阳刚贸易集团</td>
+                    <td>1000.00</td>
+                    <td><a onclick="javascript:window.location.href='zhanghu_dzhdxq.html';return false;">详情</a></td>
+                </tr>
+                <tr>
+                    <td><label class="">
+                        <input type="checkbox" class="fuxuankuang-dis-none">
+                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                    </label></td>
+                    <td>2016-08-05<br>14:09:23</td>
+                    <td>0394101080150028</td>
+                    <td>上海经纬网讯有限公司</td>
+                    <td>0394101080150075</td>
+                    <td>上海阳刚贸易集团</td>
+                    <td>1000.00</td>
+                    <td><a onclick="javascript:window.location.href='zhanghu_dzhdxq.html';return false;">详情</a></td>
+                </tr>
+                <tr>
+                    <td><label class="">
+                        <input type="checkbox" class="fuxuankuang-dis-none">
+                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                    </label></td>
+                    <td>2016-08-05<br>14:09:23</td>
+                    <td>0394101080150028</td>
+                    <td>上海经纬网讯有限公司</td>
+                    <td>0394101080150075</td>
+                    <td>上海阳刚贸易集团</td>
+                    <td>1000.00</td>
+                    <td><a onclick="javascript:window.location.href='zhanghu_dzhdxq.html';return false;">详情</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- biaoge结束 -->
+        <!-- 按钮盒子 -->
+        <div class="search_date pull-left hana1" id="hezi" style="display:none;">
+            <button type="button" class="blue-btn" style="width:64px; margin-top:40px;">下载</button>
+            <button type="button" class="blue-btn" style="width:64px; margin-top:40px;">打印</button>
+            <button type="button" class="blue-btn sendEmail" style="width:104px; margin-top:40px;">发送至邮箱</button>
+            <a href="###">返回</a>
+        </div>
+    </div>
+</div>
+
+<!--模态框-->
+<div id="maymodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="gridSystemModalLabel">发送至邮箱</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" id="group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">请输入邮箱号</label>
+                    <div class="col-sm-6">
+                        <input type="email" style="width: 90%" class="form-control" id="inputEmail3" placeholder="请输入邮箱号">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">发送</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div style="display: none">
+    <div class="form-group  group1" >
+        <label for="inputEmail3" class="col-sm-3 control-label"></label>
+        <div class="col-sm-6">
+            <input type="email" style="width: 90%" class="form-control" id="inputEmail3" placeholder="请输入邮箱号">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/global.js"></script>
+
+<!-- bootstrap 主要js -->
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<!-- datetimepicker 主要js -->
+<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+<!-- datetimepicker 中文包 -->
+<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript">
+    //详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+    $(".date_picker").datepicker({
+        language: 'zh-CN', /* 语言 */
+        format: 'yyyy-mm-dd', /* 格式 */
+        autoclose: 1, /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+        todayHighlight: 1, /* 高亮当前日期 */
+        weekStart: 0   /* 一周从哪一天开始。0（星期日）到6（星期六） */
+    });
+
+    $(".search_date a").click(function () {
+        $(this).addClass("active").siblings().removeClass("active")
+    })
+
+    $(".down_query").click(function () {
+        $(".down_query > div > span").stop().toggleClass("active");
+        /* 下面两行没有渐隐渐现效果 代码简单 二选一 */
+        /*$(".detailed").stop().slideToggle();*/
+        /*$(".btn").stop().toggleClass("active");*/
+        if ($(".detailed").css("display") == "none") {
+            $(".btn").stop().fadeOut();
+            $(".detailed").slideDown(function () {
+                $(".btn").addClass("active").stop().fadeIn();
+            });
+        } else {
+            $(".btn").stop().fadeOut();
+            $(".detailed").slideUp(function () {
+                $(".btn").removeClass("active").stop().fadeIn();
+            });
+        }
+    })
+    //  自动填充时间
+    var dateStar = document.getElementById("dateStart");
+    var dateEn = document.getElementById("dateEnd");
+
+    function GetDateStr(AddDayCount) {
+        var dd = new Date();
+        dd.setDate(dd.getDate() + AddDayCount);//获取AddDayCount天后的日期
+        var y = dd.getFullYear();
+        var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1);//获取当前月份的日期，不足10补0
+        var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();//获取当前几号，不足10补0
+        return y + "-" + m + "-" + d;
+    }
+
+    function fun() {
+        var dd = new Date;
+        var y = dd.getFullYear();
+        var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1);
+        var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();
+        return y + "-" + m + "-" + d;
+    }
+
+    $(".date_30").on("click", function () {
+        $("#dataEnd").val(fun());
+        $("#dataStart").val(GetDateStr(-30));
+    })
+    $(".date_15").on("click", function () {
+        $("#dataEnd").val(fun());
+        $("#dataStart").val(GetDateStr(-15));
+    })
+    $(".date_7").on("click", function () {
+        $("#dataEnd").val(fun());
+        $("#dataStart").val(GetDateStr(-7));
+    })
+    $(".date_1").on("click", function () {
+        $("#dataEnd").val(fun());
+        $("#dataStart").val(GetDateStr(-1));
+    })
+</script>
+<!--<<script src="../../../bootstrap_checkbox/icheck.js"></script>-->
+<script src="../../../js/fuxuankuang-state.js"></script>
+<script src="../../../bootstrap_checkbox/custom.js"></script>
+<script>
+    $("#navWraper").html(nav);
+    $(".cx").click(function () {
+        $("#biaoge").show();
+        $("#hezi").show();
+    })
+    $(".sendEmail").click(function () {
+        $("#maymodal").modal({
+            show: true
+        })
+    })
+    $(".glyphicon-plus").click(function () {
+        console.log( $(".group1").clone())
+
+        if($(".modal-body").children().length>=3){
+            return false
+        }
+        $(".modal-body").append($(".group1")[0].outerHTML)
+    })
+    $("body").on("click",".glyphicon-minus",function () {
+        console.log(123)
+        $(this).parents(".group1").remove()
+    })
+</script>
+</html>

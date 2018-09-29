@@ -1,0 +1,307 @@
+﻿/*公共*/
+/*公共按钮*/
+.chushihuashezhi_btn{
+	margin:0px auto;
+	width:141px;
+}
+.chushihuashezhi_btn a{
+	display: block;
+	width: 70px;
+	height: 32px;
+	background-color: #fff;
+	border-color: #e5e5e5;
+	border: 1px solid #e6e6e6;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 4px;
+	color:#666;
+	font-size: 14px;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.chushihuashezhi_btn a:hover{
+	background: #348CE3 4px;
+	color:#FFF;
+}
+/*步骤 盒子 标题*/
+.buzhou_title{
+	width:565px;
+	margin:0px auto;
+	padding-top: 55px;
+	padding-bottom: 40px;
+}
+.buzhou_title div{
+	float: left;
+	margin-right: 30px;
+	color:#999999;
+	line-height: 21px;
+	padding-bottom:10px;
+}
+.buzhou_title div span{
+	width:21px;
+	height:21px;
+	border-radius: 100%;
+	background:#E2E2E2;
+	color:#B7B7B7;
+	text-align: center;
+	line-height: 21px;
+	margin-right: 10px;
+}
+.buzhou_title .buzhou_title_active{
+	border-bottom: 2px solid #3A4293;
+	color:#3A4293;
+}
+.buzhou_title .buzhou_title_border{
+	border-bottom:0px;
+}
+.buzhou_title .buzhou_title_active i{
+	color:#3A4293;
+}
+.buzhou_title .buzhou_title_active span{
+	color:#FFF;
+	background:#3A4293;
+}
+.buzhou_title .buzhou_title_a{
+	/*width: 174px;*/
+}
+.buzhou_title .buzhou_title_b{
+	/*width:125px;*/
+}
+.buzhou_title .buzhou_title_c{
+	margin-right: 0px;
+}
+/*多人配置完成*/
+.pzwc{
+	width:470px;
+	margin:0px auto;
+}
+.pzwc .pzwc_box{
+	font-size: 24px;
+	line-height: 64px;
+	padding-bottom: 12px;
+}
+.pzwc .pzwc_box img{
+	margin-right:25px;
+	margin-left:40px;
+}
+.pzwc p{
+	color:#8A8A8A;
+}
+.pzwc p a{
+	color:#348ce4;
+}
+.peizhiwancheng{
+	padding-bottom:280px !important;
+	margin-bottom: 80px  !important;
+}
+
+
+/*=========业务复核模式============*/
+.yewufuhemoshi{
+
+}
+.yewufuhemoshi .yewufuhemoshi_box{
+	background:#FFF;
+	padding-bottom:120px;
+	margin-bottom:80px;
+	overflow: hidden;
+}
+.yewufuhemoshi .yewufuhemoshi_box h4{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 25px;
+	font-size: 18px;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_p{
+	text-align: center;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_box{
+	width:620px;
+	margin:40px auto;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_box .left{
+	width:289px;
+	height:240px;
+	border-radius: 4px;
+	cursor:pointer;
+	background:url('../images_box/danrenhui.png') no-repeat center;
+	background-size: cover;
+	color:#bbb;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_box .right{
+    width:289px;
+    height:240px;
+    border-radius: 4px;
+    cursor:pointer;
+    background:url('../images_box/duorenhui.png') no-repeat center;
+    background-size: cover;
+    color:#bbb;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_box>div .title{
+	text-align: center;
+	padding-top: 98px;
+	padding-bottom:22px;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_box>div p{
+	text-align: center;
+	padding:0px 20px;
+	line-height: 28px;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_box .yewufuhemoshi_box_box_active_danren{
+	background:url('../images_box/danrenlan.png') no-repeat center;
+	color:#348CE4;
+}
+.yewufuhemoshi .yewufuhemoshi_box .yewufuhemoshi_box_box .yewufuhemoshi_box_box_active_duoren{
+    background:url('../images_box/duorenlan.png') no-repeat center;
+    color:#348CE4;
+}
+.zuanzhongzhuangtai{
+    margin-left: 260px;
+    margin-top: 15px;
+}
+.dis-none{
+    display: none; 
+}
+/*============设置各级别复核人数==================*/
+.chushihuashezhi_danren_shezhigejibiefuherenshu{
+
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box{
+
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .chushihuashezhi_danren_shezhigejibiefuherenshu_box_a{
+	background:#FFF;
+	margin-bottom: 10px;
+}
+/*设置账户操作权限*/
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .zhczqx .zhczqx_title{
+	background:#FFF;
+	padding:10px 0px;
+	margin-bottom: 10px;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .zhczqx .zhczqx_title i.l{
+	color:#FF4B28 ;
+	font-size: 14px;
+	padding-top: 2px;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .zhczqx .zhczqx_content{
+	background:#FFF;
+}
+
+/*设置特殊业务办理权限*/
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .tsyw{
+	background:#FFF;
+	padding-top: 20px;
+	padding-bottom: 65px;
+	margin-bottom: 50px;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .tsyw h2 i{
+	font-size: 14px;
+	color: #FF4B28;
+	padding-top: 2px;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .tsyw .tsyw_s{
+	float:left;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .tsyw .tsyw_s .tsyw_box .tsyw_box_block{
+	padding:6px 40px;
+	border:1px solid #B7B7B7;
+	float: left;
+	border-radius: 100px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	cursor:pointer;
+	color:#8A8A8A;
+	position: relative;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .tsyw .tsyw_s .tsyw_box .tsyw_box_block .gou{
+	bottom: -1px;
+	right: -1px;
+	display: block;
+	width: 38px;
+	height: 16px;
+	background: url('../images_box/fuheduigou.png') no-repeat center;
+	display: none;
+	position: absolute;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .tsyw .tsyw_s .tsyw_box .tsyw_box_block_active{
+	border:1px solid #348CE4;
+	color:#348CE4;
+}
+.chushihuashezhi_danren_shezhigejibiefuherenshu .chushihuashezhi_danren_shezhigejibiefuherenshu_box .chushihuashezhi_btn{
+	width:160px;
+	padding-top: 30px;
+}
+
+
+/*===========设置_多人_复核人数=================*/
+.duoren_fuherenshu{
+
+}
+.duoren_fuherenshu .duoren_fuherenshu_box{
+	background:#FFF;
+	padding-bottom: 70px;
+	margin-bottom:60px;
+}
+.duoren_fuherenshu .buzhou_title{
+	width:760px;
+}
+.duoren_fuherenshu .buzhou_title .buzhou_title_d{
+	margin-right:0px;
+	/*float: right;*/
+}
+.duoren_fuherenshu .chushihuashezhi_btn{
+	width:160px;
+}
+.duoren_fuherenshu .chushihuashezhi_btn .btn_ok{
+}
+
+
+.sige{
+	width:825px !important;
+}
+.sige .buzhou_title_c{
+	margin-right: 30px;
+}
+.sige .buzhou_title_d{
+	margin-right: 0px;
+}
+.pzwc{
+	width:315px;
+}
+.h145{
+	height:145px !important;
+	min-height:auto !important;
+}
+.gygn{
+	width:420px;
+	margin:0px auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color:#888888;
+}
+.gygn .left{
+	/*margin-right: 10px;*/
+}
+.gygn .right div{
+	margin-left: 13px;
+}
+.gygn .right span{
+	margin-left: 5px;
+}
+.yzyhm{
+	width:92px;
+	height:38px;
+	line-height: 38px;
+	text-align: center;
+	border-radius: 4px;
+	background:#348CE4;
+	margin-left:20px;
+	display: block;
+	color:#FFF;
+	float: left;
+	outline:none;
+	border:none;
+}

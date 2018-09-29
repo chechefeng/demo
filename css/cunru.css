@@ -1,0 +1,184 @@
+﻿/* 存入公共titile */
+.cunru_title{
+	background: #f5f5f5;
+}
+.cunru_title a{
+	width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+	background: #fff;
+	color:#348CE4;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    float: left;
+    cursor: pointer;
+	border:1px solid #e5e5e5;
+	border-bottom: none;
+}
+.cunru_title .active{
+	color: #040404;
+	opacity: 0.5;
+}
+
+/* 存入账户 */
+.cunru_zhanghu{
+	padding-left:244px;
+	padding-top: 47px;
+}
+.cunru_zhanghu .row{
+	line-height: 42px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.cunru_zhanghu .row .name{
+	color:#666;
+	margin-right: 8px;
+	width: 80px;
+    text-align: right;
+}
+.cunru_zhanghu .row .name u{
+	color:#F00;
+	margin-right:12px;
+}
+.cunru_zhanghu .row .tishi{
+	color:#FF4B28;
+	font-size: 14px;
+	margin-left:14px;
+}
+.cunru_zhanghu .row .tishi_b{
+	color:#FF4B28;
+	font-size: 14px;
+	position: absolute;
+	bottom:-37px;
+	left:86px;
+}
+.cunru_zhanghu input{
+	display: block;
+	border:1px solid #B7B7B7;
+	border-radius: 4px;
+	height:34px;
+	line-height: 34px;
+	font-size: 14px;
+	width: 360px;
+	padding-left: 15px;
+	/* font-weight: 600; */
+	background: #FFF;
+}
+
+/* 交易列表 */
+.jiaoyiliebiao{
+	padding-top: 45px;
+	padding-bottom: 15px;
+}
+.jiaoyiliebiao .row{
+	width: 100%;
+	line-height: 40px;
+}
+.jiaoyiliebiao .row .left{
+	text-align: right;
+	width: 49.5%;
+	color:#8A8A8A;
+}
+.jiaoyiliebiao .row .right{
+	text-align: left;
+	width: 50%;
+}
+
+/*操作成功*/
+.caozuochenggong{
+	line-height: 64px;
+	width: 335px;
+	margin:45px auto;
+}
+.caozuochenggong p{
+	font-weight: 500;
+	font-size: 20px;
+	color: #040404;
+	margin-left:14px;
+}
+
+.content_box_d{
+	/* padding-top: 35px; */
+}
+.content_box_d h4{
+	width: 270px;
+	margin:30px auto;
+	line-height: 64px;
+}
+.content_box_d table{
+	width:100%;
+	/* table-layout: fixed; */
+	padding-left: 20px;
+}
+.content_box_d table tr td{
+	vertical-align: middle;
+	text-align: center;
+	background: #F9F9FF;
+	padding-top:15px;
+	padding-bottom: 15px;
+}
+.content_box_d table tr .padding-left{
+	padding-left: 35px;
+}
+.content_box_d table tr .td_a{
+	width: 220px;
+}
+.content_box_d table tr .td_b{
+	width: 290px;
+}
+.content_box_d table tr .td_c{
+	width: 105px;
+}
+.content_box_d table tr .td_d{
+	width: 105px;
+}
+.content_box_d table tr .td_e{
+	width: 150px;
+	text-align: left;
+}
+.content_box_d table tr td a{
+	color:#B5DE6F;
+}
+.content_box_d table tr td p{
+	text-align: left;
+	line-height: 30px;
+}
+.cxdqck{
+	font-size: 18px;
+	text-align: center;
+	margin:60px auto;
+}
+
+.cunrudingqicunkuan_biaoge{
+	width:100%;
+}
+.cunrudingqicunkuan_biaoge table{
+	width:100%;
+	border-bottom:1px solid #E2E2E2;
+}
+.cunrudingqicunkuan_biaoge table tr td{
+	vertical-align: middle;
+	text-align: left;
+	padding:25px 0px;
+}
+.cunrudingqicunkuan_biaoge table tr .padding-left{
+	padding-left: 20px;
+	padding-right: 7px;
+	vertical-align: top;
+	padding-top:30px;
+}
+.cunrudingqicunkuan_biaoge table tr .padding-right{
+	padding-right: 15px;
+}
+.cunrudingqicunkuan_biaoge table tr td p{
+	line-height: 30px;
+}
+/* 已录入 */
+.ylr{
+	color:#3A4293;
+}
+/*被拒绝*/
+.bjj{
+	color:#FF4B28;
+}

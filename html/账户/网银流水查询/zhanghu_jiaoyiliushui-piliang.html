@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>批量转账交易流水</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<link rel="stylesheet" href="../../../css/global.css">
+		<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../../bootstrap_checkbox/flat/_all.css" rel="stylesheet">
+		<link rel="stylesheet" href="../../../css/nav.css" />
+		<!-- datepicker css -->
+		<link rel="stylesheet" href="../../../bootstrap/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/gangzi.css">
+		<script src="../../../js/nav.js"></script>
+	</head>
+	
+	<body>
+		
+		<div id="qweqwe"></div>
+		<!-- 内容部分 -->
+		<div class="content zhanghuguanli_mingxi">
+			<div class="w">
+				<!-- 查询 大盒子-->
+				<div class="chaxun">
+					<div class="title_mianbaoxie"><span class="l"></span>
+						<div class="l">
+							<img src="../../../images_box/position.png" alt="" />
+							<a href="###">账户</a> / <a href="###">网银流水查询</a></div>
+					</div>
+					<!-- 坑货 -->
+						<div class="query_box c" style="background-color: #fff;">
+						<form class="form-inline search_form">
+								<div class="row-list">
+									<div class="form-group date_picker input-daterange pull-left per50">
+										<label class="label1">录入日期：</label>
+										<select name="" id="" class="form-control">
+											<option value="">录入日期</option>
+											<option value="">复核日期</option>
+										</select>
+							
+										<input type="text" id="dataStart" class="form-control dataWidth" value="" style="margin-left:10px;">
+										<span class="MG_LR7">-</span>
+										<input type="text" id="dataEnd" class="form-control dataWidth" value="">
+									</div>
+									
+								</div>
+							<div class="row-list">
+								<div class="form-group">
+									<label class="label1">业务类型：</label>
+									<select class="form-control" id="serverType">
+                                     <option>请选择</option>
+								
+                                </select>
+								</div>
+								<div class="form-group">
+									<label class="label1">交易名称：</label>
+									<select class="form-control" id="serverName">
+                                    <option value="">请选择</option>
+                                </select>
+								</div>
+                            </div>
+							<div class="row-list" id="ceshi" style="display:none">
+								<div class="form-group">
+									<label class="label1" >收款人户名：</label>
+									<input type="text" class="iptRange" value="">
+								</div>
+								<div class="form-group">
+									<label class="label1" >收款人账号：</label>
+									<input type="text" class="iptRange" value="">
+								</div>		
+							</div>
+							<div class="row-list">
+								<div class="form-group per50">
+									<label class="label1">金额范围：</label>
+									<input type="text" class="iptRange" value="">
+									<span class="MG_LR7">-</span>
+									<input type="text" class="iptRange" value="">
+								</div>
+							</div>
+							<div class="topShow">
+								<div class="date_picker input-daterange pull-left">
+									<label class="label1">交易状态：</label>
+									<a href="javascript:;" class="active">全部</a>
+									<a href="javascript:;">交易成功</a>
+									<a href="javascript:;">交易失败</a>
+									<a href="javascript:;">交易状态不确定</a>
+									<a href="javascript:;">银行处理中</a>
+									<a href="javascript:;">待复核</a>
+									<a href="javascript:;">复核未通过</a>
+									<a href="javascript:;">其他状态</a>
+								</div>
+							</div>
+							<div class="text-center row-list" style="width: 1000px;">
+								<button type="button" class="blue-btn">查&nbsp;询</button>
+								<button type="button" class="blue-btn">重&nbsp;置</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				<!-- 表格开始 -->
+				<div class="tjsj">
+					<div class="f-l">自2017-02-01至2017-02-07</div>
+					<div class="f-r">
+						<!--<button type="button" class="btn1 blue-btn zdybtn">自定义列</button>-->
+						
+					</div>
+				</div>
+
+				<div class="biaoge">
+					<table id="ss">
+						<thead>
+							<tr>
+								<td>录入日期</td>
+								<td>复核日期</td>
+								<td>发送日期</td>
+								<td>流水号</td>
+								<td>业务类型</td>
+								<td>用途</td>
+								<td>总笔数</td>
+								<td>成功笔数</td>
+								<td>失败笔数</td>
+								<td>总金额</td>
+								<td>成功金额</td>
+								<td>失败金额</td>
+								<td>交易状态</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2016-08-05</td>
+								<td>2016-08-05</td>
+								<td>2016-08-05</td>
+								<td>294339779808088</td>
+								<td>批量代付</td>
+								<td>贷款</td>
+								<td class="allNum">2</td>
+								<td class="successNum">2</td>
+								<td class="defeatedNum">0</td>
+								<td>4000</td>
+								<td>4000</td>
+								<td>0.00</td>
+								<td>批量交易成功</td>
+							</tr>
+							<tr>
+								<td>2016-08-05</td>
+								<td>2016-08-05</td>
+								<td>2016-08-05</td>
+								<td>294339779808088</td>
+								<td>批量代付</td>
+								<td>贷款</td>
+								<td>2</td>
+								<td>2</td>
+								<td>0</td>
+								<td>4000</td>
+								<td>4000</td>
+								<td>0.00</td>
+								<td>批量交易成功</td>
+							</tr>
+							<tr>
+								<td>笔数</td>
+								<td>4</td>
+								<td>合计金额</td>
+								<td>8000</td>
+								<td colspan="10"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- biaoge结束 -->
+				<!-- 按钮盒子 -->
+				<div class="butPrint">
+					<a href="###" class="print">打印</a>
+					<a href="###" class="download">下载</a>
+					<a href="###">返回</a>
+				</div>
+			</div>
+		</div>
+		<!-- 弹出框 -->
+
+	</body>
+	<script src="../../../js/jquery.min.js"></script>
+
+	<!-- bootstrap 主要js -->
+	<script src="../../../bootstrap/js/bootstrap.js"></script>
+	<!-- datetimepicker 主要js -->
+	<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+	<!-- datetimepicker 中文包 -->
+	<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+	<script type="text/javascript">
+		//详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+		$(".date_picker").datepicker({
+			language: 'zh-CN',
+			/* 语言 */
+			format: 'yyyy-mm-dd',
+			/* 格式 */
+			autoclose: 1,
+			/* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+			todayHighlight: 1,
+			/* 高亮当前日期 */
+			weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+		});
+		$(".input-daterange a").click(function() {
+				if($(this).hasClass("active")){
+					$(this).removeClass("active");
+				}else{
+					$(this).addClass("active");
+				}
+			})
+		
+			// 弹出框
+		$(".zdybtn").click(function() {
+			$(".pop_tanchu").css("display", "block");
+		})
+		$(".pop_cancel").click(function() {
+				$(".pop_tanchu").css("display", "none");
+			})
+			// 按钮
+		$(".anniuhe").mouseover(function() {
+			$(this).css({
+					"background": "#348CE4",
+					"color": "#FFFFFF"
+				})
+				.siblings().css({
+					"background": "#FFFFFF",
+					"color": "#348CE4"
+				});
+		});
+		$(".anniuhe").mouseout(function() {
+			$(this).css({
+					"background": "#FFFFFF",
+					"color": "#348CE4"
+				})
+				.siblings().css({
+					"background": "#FFFFFF",
+					"color": "#348CE4"
+				});
+		});
+		//失败总笔数
+		$(".defeatedNum").on("click",function(){
+			location.href="piliangzhuanzhangmingxi2.html"
+		})
+		//成功总笔数
+		$(".successNum").on("click",function(){
+			location.href="piliangzhuanzhangmingxi2.html"
+		})
+		//总笔数
+		$(".allNum").on("click",function(){
+			location.href="piliangzhuanzhangmingxi1.html"
+		})
+	</script>
+	<script src="../../../bootstrap_checkbox/icheck.js"></script>
+	<script src="../../../bootstrap_checkbox/custom.js"></script>
+	<script type="text/javascript" src="../../../js/global.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('input').iCheck({
+				checkboxClass: 'icheckbox_flat-blue',
+				radioClass: 'icheckbox_flat-blue'
+			});
+			var appoints=$(".appointtime");
+			for(var i=0;i<appoints.length;i++){
+				if(appoints[i].innerHTML==""){
+					$(appoints[i]).siblings("td").children(".repeal").css("display","none");
+				}else{
+					$(appoints[i]).siblings("td").children("repeal").css("display","block");
+				}
+			}
+		});
+		gexingbianse();
+		//  gexingbianse2();
+		//  gexingbianse3();
+		
+		//		业务选择
+		var server = new Array();
+		server['付款业务'] = [ '单笔转账', '批量转账'];
+		server['定期存款'] = [ '存入定期存款', '支取定期存款'];
+		server['通知存款'] = ['存入通知存款', '建立支取通知', '取消支取通知', '支取通知存款'];
+		
+		var st = document.getElementById("serverType");
+		var sn = document.getElementById("serverName");
+		for (var i in server) {
+			st.add(new Option(i, i), null);
+
+		}
+		st.onchange = function() {
+			if(st.value=='付款业务'){
+				$("#ceshi").show();
+			}else{
+				$("#ceshi").hide();
+			}
+			
+			sn.options.length = 0;
+			if (st.value == "请选择") {
+				sn.add(new Option('请选择'));
+			}
+
+			for (var i in server) {
+				if (st.value == i) {
+					for (var j in server[i]) {
+						sn.add(new Option(server[i][j], server[i][j]), null);
+					}
+				}
+			}
+		}
+
+		$(function() {
+			$(".blue-btn").click(function() {
+				if ($("#serverName").val() == "存入定期存款" || $("#serverName").val() == "支取定期存款" || $("#serverName").val() == "存入通知存款") {
+					$(".serverTab1").css("display", "table");
+					$(".serverTab2").css("display", "none");
+					$(".fenye").css("display", "block");
+					$(".anniuhezi1").css("display", "block");
+					$(".tjsj").css("display", "block");
+				}
+				if ($("#serverName").val() == "建立支取通知" || $("#serverName").val() == "取消支取通知" || $("#serverName").val() == "支取通知存款") {
+					$(".serverTab1").css("display", "none");
+					$(".serverTab2").css("display", "table");
+					$(".fenye").css("display", "block");
+					$(".anniuhezi1").css("display", "block");
+					$(".tjsj").css("display", "block");
+				}
+				if ($("#serverName").val() == "存入定期存款") {
+					$(".tradeSta").click(function() {
+						location.href = "zhanghu_cunrudingqidetail.html";
+					})
+				}
+				
+				if ($("#serverName").val() == "支取定期存款") {
+					$(".tradeSta").click(function() {
+						location.href = "zhanghu_zhiqudingqidetail.html";
+					})
+				}
+				if ($("#serverName").val() == "存入通知存款") {
+					$(".tradeSta").click(function() {
+						location.href = "zhanghu_cunrutongzhidetail.html";
+					})
+				}
+				if ($("#serverName").val() == "建立支取通知") {
+					$(".tradeSta").click(function() {
+						location.href = "zhanghu_jianlizhiqudetail.html";
+					})
+				}
+				if ($("#serverName").val() == "取消支取通知") {
+					$(".tradeSta").click(function() {
+						location.href = "zhanghu_quxiaozhiqudetail.html";
+					})
+				}
+				if ($("#serverName").val() == "支取通知存款") {
+					$(".tradeSta").click(function() {
+						location.href = "zhanghu_zhiqutongzhidetail.html";
+					})
+				}
+			})
+		})
+
+
+	</script>
+	<script>
+        $("#qweqwe").html(nav)
+	</script>
+
+</html><!--�ƽ�?����/赇�����s����OЀ^��	3��H�M�Q�$��!L�B��f��ާ��X�w ��2
+����4eؐOa���9D��P�g����qt>��w��)��|r����o�4j�v~�*&7A��N�{����7�c��t?uZ)��
+p�[��T���5j>G�C�7�
+f��hQ��{�˄ю��퀑¸X#�?�Èu��	�nA����n��	��?ה}��]�+s�*1CC��>��c1LE�	>�;B��]�gd����@V�s�م�@�'?���~��N+�^��`�>��h�V�2�yK�*K�(�=���R������vk��̨fQ߮�\sI�t]՜Au��UY�z�	��TQ|1��;�4�����%#ͩН\G�̤��~��3�z^�#Yd�(�O�!����N� |Ϗ�&����w�z�*�+����g2�)pM�-r� \}���Y�� �R
+������O�Xf� �-->

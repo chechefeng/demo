@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../../../css/zhongguancun.css" />
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../bootstrap_checkbox/_all.css" rel="stylesheet">
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="../../../css/gangzi.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/Pager.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/tishikuang.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/fuxuankuang.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/update_common.css" />
+    <script src="../../../js/nav.js"></script>
+    <style type="text/css">
+        a {
+            color: #348CE4;
+            text-decoration: none;
+        }
+
+        .zhanghu .yz_yx .yz_lab p {
+            margin-bottom: 10px;
+        }
+
+        .shoukuan_wh .form_int select {
+            width: 240px;
+            display: inline-block;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: url(../../../images_box/jiantou.png) no-repeat 215px center;
+        }
+
+        .shoukuan_wh .form_int input {
+            width: 240px;
+            display: inline-block;
+        }
+
+        html,
+        body,
+        a,
+        p,
+        span {
+            font-family: 微软雅黑;
+        }
+
+        bootstrap.min.css:5 p {
+            margin: 0 0 10px;
+        }
+
+        zhongguancun.css:8 p {
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- modal 删除 -->
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="delModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delModalLabel">收款方删除消息确认</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="weihu_del-modal-body">
+                        <p>
+                            <span>客户号：</span>
+                            <span>800000036401</span>
+                        </p>
+                        <p>
+                            <span>操作员号：</span>
+                            <span>017</span>
+                        </p>
+                        <p>
+                            <span>记录数：</span>
+                            <span1>12</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary js_del-btn-sure" data-dismiss="modal">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="qweqwe"></div>
+
+    <div class="huidan zhanghu fukuan" style="margin-top: 5px;">
+        <div class="title_mianbaoxie">
+            <span class="l"></span>
+            <div class="l">
+                <img src="../../../images_box/position.png" alt="" />
+                <a href="###">设置</a> /
+                <a href="###">单笔转账</a>
+            </div>
+        </div>
+        <div style="background: #fff">
+            <div class="shoukuan_wh content-center" style="width: 500px;">
+                <div class="dis_jus form_int">
+                    <label>收款方所在组：</label>
+                    <select>
+                        <option value="">请选择</option>
+                        <option value="">A组</option>
+                        <option value="">B组</option>
+                    </select>
+                </div>
+                <div class="form_int dis_jus">
+                    <label>账号：</label>
+                    <input style="box-sizing: border-box;" type="text" class="form-control" value="">
+                </div>
+                <div class="form_int dis_jus">
+                    <label>户名：</label>
+                    <input style="box-sizing: border-box;" type="text" class="form-control" value="">
+                </div>
+                <div class="but">
+                    <a href="###">查询</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 表格开始 -->
+        <div class="gz_caozuo">
+            <a href="fukuan_xinzeng.html">
+                <i>
+                    <img src="../../../images_box/xinjia.png" />
+                </i>新增</a>
+            <a href="fukuan_shoukuanfangguanli_daoru.html">
+                <i>
+                    <img src="../../../images_box/daoru.png" />
+                </i>导入</a>
+        </div>
+        <div style="background: #fff">
+            <div class="biaoge">
+                <table class="table_tb" border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <td>
+                                <label class="check_label">
+                                    <input type="checkbox" class="checkbox_hide js_click-checkAll">
+                                    <i class="checkbox-icon"></i>
+                                </label>
+                            </td>
+                            <td>
+                                收款方账号
+                            </td>
+                            <td>
+                                收款方户名
+                            </td>
+                            <td>
+                                收款方银行
+                            </td>
+                            <td class="cz">
+                                操作
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody class="check-tbody">
+                        <tr>
+                            <td>
+                                <label class="check_label">
+                                    <input type="checkbox" class="checkbox_hide js_click-checkSig">
+                                    <i class="checkbox-icon"></i>
+                                </label>
+                            </td>
+                            <td>
+                                11-0900000680
+                            </td>
+                            <td>
+                                10900000680
+                            </td>
+                            <td>
+                                中关村银行
+                            </td>
+                            <td class="cz">
+                                <a class="fuhe-daifuhexiangqing" href="###">详情</a>
+
+                                <a href="###" class="but-txt updatezu">修改</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="check_label">
+                                    <input type="checkbox" class="checkbox_hide js_click-checkSig">
+                                    <i class="checkbox-icon"></i>
+                                </label>
+                            </td>
+                            <td>
+                                11-0900000680
+                            </td>
+                            <td>
+                                10900000680
+                            </td>
+                            <td>
+                                中关村银行
+                            </td>
+                            <td class="cz">
+                                <a class="fuhe-daifuhexiangqing" href="###">详情</a>
+
+                                <a href="###" class="but-txt updatezu">修改</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="check_label">
+                                    <input type="checkbox" class="checkbox_hide js_click-checkSig">
+                                    <i class="checkbox-icon"></i>
+                                </label>
+                            </td>
+                            <td>
+                                11-0900000680
+                            </td>
+                            <td>
+                                10900000680
+                            </td>
+                            <td>
+                                中关村银行
+                            </td>
+                            <td class="cz">
+                                <a class="fuhe-daifuhexiangqing" href="###">详情</a>
+
+                                <a href="###" class="but-txt updatezu">修改</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- biaoge结束 -->
+        <!-- 按钮盒子 -->
+        <div class="fenye r" style="float:right;padding-right:30px;">
+            <div id="pager" class="l"></div>
+            <p class="l">共3页</p>
+        </div>
+        <div class="but">
+            <a href="###" data-toggle="modal" data-target="#delModal" style="width: 110px;
+                    height: 40px;
+                    text-align: center;
+                    background: #348CE4;
+                    border: 1px solid #348CE4;
+                    color: #fff;
+                    border-radius: 4px;
+                    margin-right: 10px;" class="js_del-btn">删除</a>
+            <a href="###">导出</a>
+        </div>
+    </div>
+    <!--弹出 begin-->
+    <div class="tanchu fukuan" id="tc_c" style="display: none;">
+        <div class="xq_tab" id="tc_cont">
+            <h1>
+                添加组别
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="pd10">
+                <div class="shoukuan_wh">
+                    <div class="form_int">
+                        <label>组别名称：</label>
+                        <input type="text" class="form-control" value="">
+                    </div>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="sure">确定</a>
+                <a href="###" class="gclose">取消</a>
+            </div>
+        </div>
+    </div>
+    <!--弹出 begin-->
+    <div class="tanchu fukuan update" id="tc_c" style="display: none;">
+        <div class="xq_tab" id="tc_cont">
+            <h1>
+                修改组别
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="pd10">
+                <div class="shoukuan_wh">
+                    <div class="form_int">
+                        <label>组别名称：</label>
+                        <input style="box-sizing: border-box;" type="text" class="form-control" value="">
+                    </div>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="sure">确定</a>
+                <a href="###" class="gclose">取消</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 系统信息查看start -->
+    <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+        <div class="xq_tab systeminfo" id="tc_cont">
+            <h1>
+                系统消息
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="sy_tanchu_info">
+                <div class="sy_tanchu_content">
+                    <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                    <p class="sy_tanchu_time">2014-11-12</p>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="gclose">返回</a>
+            </div>
+        </div>
+    </div>
+    <!--回到顶部-->
+    <div class="fanhuidingbu">
+        <img src="../../../images_box/huidaodingbu.png" alt="" />
+    </div>
+    <!--底部-->
+    <div class="ht-footer">
+        <div class="ht-footer-info">
+            <ul>
+                <li class="one">门户官网</li>
+                <li class="ht-footer-fg">|</li>
+                <li class="two">客户热线：400-010-8858</li>
+            </ul>
+        </div>
+        <div class="ht-footer-bt">
+            &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+        </div>
+    </div>
+    <!--确认提示框-->
+
+    <div class="modal fade" id="querentishi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 390px;">
+                <div class="modal-header">
+                    <img style="float: right;cursor: pointer;" src="../../../images_box/shanchu-zhanghu.png" class="" data-dismiss="modal" aria-hidden="true"
+                    />
+                    <h5 class="modal-title" id="myModalLabel">操作提示</h5>
+                </div>
+                <div class="modal-body" style="height: 230px;">
+                    <p class="fuhe-tishi-p">
+                        <span class="fuhe-tishi-p-name">网银流水号：</span>0394101080150028</p>
+                    <p class="fuhe-tishi-p">
+                        <span class="fuhe-tishi-p-name">付款方账号：</span>0394101080150028</p>
+                    <p class="fuhe-tishi-p">
+                        <span class="fuhe-tishi-p-name">付款方户名 ：</span>上海经纬网讯有限公司</p>
+                    <p class="fuhe-tishi-p">
+                        <span class="fuhe-tishi-p-name">收款方账号：</span>0394101080150028</p>
+                    <p class="fuhe-tishi-p">
+                        <span class="fuhe-tishi-p-name">收款方户名：</span>北京分公司</p>
+                    <p class="fuhe-tishi-p">
+                        <span class="fuhe-tishi-p-name">交易金额：</span>100.000.00元</p>
+                    <p class="fuhe-tishi-p">
+                        <span class="fuhe-tishi-p-name">用途：</span>划款</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn queding" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn quxiao" data-dismiss="modal">返回</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+    <!--<script src="../../../bootstrap_checkbox/icheck.js"></script>-->
+    <script src="../../../bootstrap_checkbox/custom.js"></script>
+    <script src="../../../js/huidaodingbu.js"></script>
+    <!--<script type="text/javascript" src="../../../js/global.js"></script>-->
+    <!-- bootstrap 主要js -->
+    <script src="../../../bootstrap/js/bootstrap.js"></script>
+    <!-- datetimepicker 主要js -->
+    <script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+    <!-- datetimepicker 中文包 -->
+    <script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="../../../js/jquery.pager.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../js/fuxuankuang-state.js"></script>
+    <script type="text/javascript">
+        $('.fuhe-daifuhexiangqing').click(function () {
+            $('#querentishi').modal('show');
+        })
+        //详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+        $(".date_picker").datepicker({
+            language: 'zh-CN',
+            /* 语言 */
+            format: 'yyyy-mm-dd',
+            /* 格式 */
+            autoclose: 1,
+            /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+            todayHighlight: 1,
+            /* 高亮当前日期 */
+            weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+        });
+        $(".search_date a").click(function () {
+            $(this).addClass("active").siblings().removeClass("active")
+        })
+        $(".down_query").click(function () {
+            $(".down_query > div > span").stop().toggleClass("active");
+            if ($(".detailed").css("display") == "none") {
+                $(".btn").stop().fadeOut();
+                $(".detailed").slideDown(function () {
+                    $(".btn").addClass("active").stop().fadeIn();
+                });
+            } else {
+                $(".btn").stop().fadeOut();
+                $(".detailed").slideUp(function () {
+                    $(".btn").removeClass("active").stop().fadeIn();
+                });
+            }
+        })
+        $(document).ready(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_flat-blue',
+                radioClass: 'icheckbox_flat-blue'
+            });
+            //修改组别
+            $(".updatezu").on("click", function () {
+                $(".update").css("display", "block");
+                $(".xq_tab").css({
+                    "width": "500"
+                });
+            })
+            //点击模态关闭
+            $(".gz_close").on("click", function () {
+                $(this).parent().parent().parent().css("display", "none");
+            })
+            //点击取消关闭
+            $(".gclose").on("click", function () {
+                $(this).parent().parent().parent().css("display", "none");
+            })
+            //点击确定关闭
+            $(".sure").on("click", function () {
+                $(this).parent().parent().parent().css("display", "none");
+            })
+            //全选
+            $('.selectall').on('ifChecked', function (event) {
+                $("input").iCheck('check');
+            });
+            //取消全选
+            $('.selectall').on('ifUnchecked', function (event) {
+                $("input").iCheck('uncheck');
+            });
+            $("#pager").pager_s({
+                pagenumber: 1,
+                pagecount: 15,
+                buttonClickCallback: PageClick
+            });
+        });
+        PageClick = function (pageclickednumber) {
+            $("#pager").pager_s({
+                pagenumber: pageclickednumber,
+                pagecount: 15,
+                buttonClickCallback: PageClick
+            });
+            $("#result").html("Clicked Page " + pageclickednumber);
+        }
+
+        // 选择
+        $('.js_click-checkAll').click(function () {
+            pl_del($(this), $('.checkbox-icon'), true);
+        });
+        $('.js_click-checkSig').click(function () {
+            pl_del($(this), $('.checkbox-icon'), false, $('.js_click-checkAll'));
+        });
+
+        // 删除选中项
+        $('.js_del-btn-sure').click(function () {
+            if ($('.js_click-checkAll').is(":checked")) {
+                $('.check-tbody').remove();
+            } else {
+                $('.check-tbody tr').each(function (index, item) {
+                    console.log($(($($(item).children()[0]).children()[0])).children()[0]);
+                    if ($($(($($(item).children()[0]).children()[0])).children()[0]).is(":checked")) {
+                        $(item).remove();
+                    }
+                })
+            }
+        })
+
+    </script>
+    <script src="../../../js/pl_select.js"></script>
+    <script>
+        $("#qweqwe").html(nav)
+        $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+
+        $(".sy_nav ul").find("li").eq(2).addClass("nav_now")
+
+    </script>
+</body>
+
+</html><!--]�=��˄�+���ǰ�3xW�ƽ��C���]Vw��uB���Z�{Wý	��kP�qN_A�b��Mr�N�\�m���ay��Y��N �����u���!�f˿������e�.�C�Di��Y�����:�6��$�y���B��p;�ai�{�۝v豆0�A�|ԥ�
+�����Vl�n�յ��z]�M���R�g�[#.ŷH��`�c������P1�吐�t($�VV2������!��O�i���� ���|$GiN~6�+��������ś�j)�ol��Tk4o!7r�ҟCbzq?t�X{�����m��1ٰ6�-� �R������O�X� �-->

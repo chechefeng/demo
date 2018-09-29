@@ -1,0 +1,1115 @@
+﻿﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/yejiao.css"/>
+    <link rel="stylesheet" href="../css/huidaodingbu.css"/>
+</head>
+
+<body>
+<div class="sy_container">
+    <!--头部-->
+    <div class="sy_header">
+        <div class="sy_logo">
+            <img src="../images_box/logo.png" alt="logo" class="sy_tx"/>
+            <span class="sy_sx"></span>
+            <span class="sy_word">企业网上银行</span>
+        </div>
+        <div class="sy_kehu">
+            <a href="###" id="sy_sys_info">
+                <!--没有消息的图片-->
+                <!--<img src="../images_box/horn.png" alt="tip" class="sy_tx" />-->
+                <!--有消息提示的图片-->
+                <img src="../images_box/xiaoxitishi-red.png" alt="tip" class="sy_tx"/>
+            </a>
+            <span class="sy_sx"></span>
+            <span class="sy_hao">客户号：</span>
+            <span class="sy_czy">231445144</span>
+            <span class="sy_hao">操作员号：</span>
+            <span class="sy_czy sy_czy_color">003</span>
+            <div href="###" id="touxiang" style="display: inline-block;">
+                <img src="../images_box/person.png" alt="" class="sy_tx" style="width: 30px;"/>
+                <div id="shangchuantouxiang">
+                    <div id="headXiang">
+                        <a href="javascript:;" class="file">选择您要上传的头像
+                            <input type="file" name="" id="headPortrait" value=""
+                                   accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"
+                                   onchange="preImg(this.id,'userImg');"/>
+                        </a>
+                    </div>
+                    <div id="headType">
+                        <p>仅支持JPG\PNG\BMP格式，</p>
+                        <p>文件不大于50K</p>
+                    </div>
+                    <div id="headImg" style="text-align: center;">
+                        <img src="" id="userImg"/>
+                    </div>
+                    <div id="footer">
+                        <button class="queding btn imgSure">确定</button>
+                        <button class="quxiao btn imgCancel">取消</button>
+                    </div>
+                </div>
+            </div>
+            <span class="sy_hao">小周</span>
+            <div class="sy_tuichu">
+                <a href="">
+                    <img src="../images_box/tuichu.png" alt=""/>
+                    <span class="sy_czy_color"><a href="login.html">退出</a></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<div class="sy_navbar">
+    <!-- 系统信息 start -->
+    <div class="sy_sysmess">
+        <div class="sysinfo">系统消息</div>
+        <ul class="sy_sys_ul">
+            <li>
+                <a href="###" class="sy_sys_details">
+                    <span class="sy_sys_content">贵宾客户增值服务</span>
+                    <span class="sy_sys_time">20141213</span>
+                </a>
+            </li>
+            <li>
+                <a href="###" class="sy_sys_details">
+                    <span class="sy_sys_content">贵宾客户增值服务</span>
+                    <span class="sy_sys_time">20141213</span>
+                </a>
+            </li>
+            <li>
+                <a href="###" class="sy_sys_details">
+                    <span class="sy_sys_content">贵宾客户增值服务</span>
+                    <span class="sy_sys_time">20141213</span>
+                </a>
+            </li>
+            <li>
+                <a href="###" class="sy_sys_details">
+                    <span class="sy_sys_content">贵宾客户增值服务</span>
+                    <span class="sy_sys_time">20141213</span>
+                </a>
+            </li>
+            <li>
+                <a href="###" class="sy_sys_details">
+                    <span class="sy_sys_content">贵宾客户增值服务</span>
+                    <span class="sy_sys_time">20141213</span>
+                </a>
+            </li>
+        </ul>
+        <a href="../html/shouye_systeminfo.html" class="sy_sys_more">
+            查看全部消息>
+        </a>
+    </div>
+</div>
+<!-- 系统信息 end -->
+<!--导航栏-->
+<!--导航模块 begin-->
+<div class="sy_nav">
+    <ul>
+        <li class="nav_now">
+            <a href="" title="">首页</a>
+        </li>
+        <li><a href="javascript:void(0);" title="">账户</a>
+            <div class="sy_bar">
+                <dl>
+                    <dt onclick="javascript:window.location.href='./账户/账户查询/zhanghuguanli_chaxun.html';return false;">
+                        账户查询
+                    </dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="javascript:window.location.href='./账户/网银流水查询/zhanghu_wangshangliushui.html';return false;">
+                        网银流水查询
+                    </dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="javascript:window.location.href='###';return false;">他行账户查询</dt>
+                    <dd><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="javascript:window.location.href='###';return false;">他行账户维护</dt>
+                    <dd><a href="###">他行账户查询维护</a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="javascript:window.location.href='###';return false;">本行账户授权维护</dt>
+                    <dd><a href="###">本行账户查询授权</a></dd>
+                </dl>
+                <dl>
+                    <dt onclick="javascript:window.location.href='';return false;">电子回单</dt>
+                    <dd><a href="./账户/电子回单/zhanghu_dianzihuidandayin.html">电子回单打印</a></dd>
+                    <dd><a href="./账户/电子回单/zhanghu_huidanxiangqing.html">电子回单验证</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="" title="">付款</a>
+            <div class="sy_bar">
+                <dl>
+                    <dt onclick="javascript:window.location.href='./付款/单笔转账/single_recorded_info.html'">单笔转账</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onClick="window.location.href = './付款/批量转账/fukuan_piliang.html';">批量转账</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>收款方管理</dt>
+                    <dd>
+                        <a href="./付款/收款方管理/fukuan_shoukuanfangguanli_shoukuanfangfenzu.html">收款方分组管理</a>
+                    </dd>
+                    <dd>
+                        <a href="./付款/收款方管理/fukuan_shoukuanfangguanli_shoukuanfangweihu.html">收款方维护</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onClick="window.location.href = './付款/款项用途维护/fukuan_kuanxiangyongtuweihu.html';">款项用途维护</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="window.location.href='./付款/大额行号查询/daefukuan.html'">大额行号查询</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="window.location.href='./付款/预约撤销/transation_cancel.html'">预约撤销</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="window.location.href='./付款/代发工资/daifagongzi.html'">代发工资</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="./存款/定期存款/cunru_dingqicunkuanE.html" title="">存款</a>
+            <div class="sy_bar depositNav">
+                <dl>
+                    <dt>定期存款</dt>
+                    <dd>
+                        <a href="./存款/定期存款/cunru_dingqicunkuan.html">存入定期存款</a>
+                    </dd>
+                    <dd>
+                        <a href="./存款/定期存款/zhiqudingqicunkuan.html">支取定期存款</a>
+                    </dd>
+                    <dd>
+                        <a href="./存款/定期存款/cunkuan_chaxundingqicunkuan_A.html">查询定期存款</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>通知存款</dt>
+                    <dd>
+                        <a href="./存款/通知存款/cunru_tongzhicunkuan.html">存入通知存款</a>
+                    </dd>
+                    <dd>
+                        <a href="./存款/通知存款/jianli_zhiqutongzhi.html">建立支取通知</a>
+                    </dd>
+                    <dd>
+                        <a href="../存款/通知存款/drawNotice.html">支取通知存款</a>
+                    </dd>
+                    <dd>
+                        <a href="./存款/通知存款/quxiao_zhiqutongzhi.html">取消支取通知</a>
+                    </dd>
+                    <dd>
+                        <a href="./存款/通知存款/chaxun_tongzhicunkuan.html">查询通知存款</a>
+                    </dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="javascript:;" title="">复核</a>
+            <div class="sy_bar depositNav depositNavFh" style="margin-left:190px;">
+                <dl>
+                    <dt onclick="javascript:window.location.href='../html/复核/交易复核/trade_R.html';return false;"><a
+                            href="../html/复核/交易复核/trade_R.html"
+                            style="font-size:14px; color:#333; height: 40px;line-height: 40px;margin-bottom: 10px;text-align: center;">交易复核</a>
+                    </dt>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="" title="">设置</a>
+            <div class="sy_bar">
+                <dl>
+                    <dt onclick="goto('setting_quanxian')">操作员权限设置</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_xinxi')">操作员信息维护</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_change')">操作员信息变更</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_fuhe')">复核流程设置</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_xiane')">交易限额设置</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('setting_guide')">系统设置向导</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="goto('fh_quanxian')">管理员复核</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="" title="">服务中心</a>
+            <div class="sy_bar serviceNav">
+                <dl>
+                    <dt onClick="window.location.href = './服务中心/网银操作日志查询/fuwuzhongxin_wangyingcaozuorizhi.html'">
+                        网银操作日志查询
+                    </dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt onclick="window.location.href='./服务中心/修改密码/fuwuzhongxin_xiugaimima.html'">修改用户登录密码</dt>
+                    <dd>
+                        <a href=""></a>
+                    </dd>
+                </dl>
+
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+<!--导航模块 end-->
+<div class="sy_banner">
+    <div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="../images_box/banner.jpg"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="../images_box/banner.jpg"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="../images_box/banner.jpg"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+    </div>
+    <div class="sy_xinxi">
+        <ul>
+            <li class="text-center">
+                <div><span title="欢迎 ，环球集团亚洲区地方北京分公司经理">欢迎 ，环球集团亚洲区地方北京分公司经理 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>李丽丽!</span>
+                </div>
+            </li>
+            <li>
+                登录次数：4次
+            </li>
+            <li class="last-time">
+                上次登录时间为：2017-06-21 04:21:23
+            </li>
+            <li class="last-ip">
+                上次登录IP地址为：128.128.80.92
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="sy_section">
+    <div class="sy_section1">
+        <span class="line"></span><span class="wait">我的提醒</span>
+    </div>
+    <div class="sy_section2">
+        <div class="shenhe wait_recheck" style="cursor: pointer;">
+            <img src="../images_box/daifuhe.png" alt="" class="indPic"/>
+            <p class="number indPic">25</p>
+            <p>待复核</p>
+        </div>
+        <div class="shenhe">
+            <img src="../images_box/daixuanzhong.png" alt=""/>
+            <p class="number">0</p>
+            <p>对账单</p>
+        </div>
+        <div class="shenhe">
+            <img src="../images_box/huizhidandanyin.png" alt=""/>
+            <p class="number">0</p>
+            <p>回单打印</p>
+        </div>
+        <div class="shenhe">
+            <img src="../images_box/daihuifu.png" alt=""/>
+            <p class="number">0</p>
+            <p>待回复</p>
+        </div>
+    </div>
+</div>
+<div class="sy_foot">
+    <div class="tanchu fukuan datemome" id="tc_c" style="display:none">
+        <div class="momeadd">
+            <div class="sy_time">
+                <div class="layer"></div>
+            </div>
+            <div class="xq_tab systeminfo momelist" id="tc_cont">
+                <h1>
+                    <span>事件列表</span>
+                    <a href="javascript:void(0);" class="gz_close">×</a>
+                    <div class="editmome">
+                        <a href="##" class="editMon">近一个月</a>
+                        <a href="###" class="addmomelist">添加</a>
+                    </div>
+                </h1>
+                <dd class="noMessage" style="display: none">
+                    <p>当前日期没有事件,可通过右侧按钮提醒</p>
+                </dd>
+                <ul class="momeul momeulp">
+                    <li>
+                        <span>2017-08-06</span>
+                        <p class="con">我的事件我的事件我的事件我的事件我的事件我的事件我的事</p>
+                        <a href="javascript:;" class="del">删除</a>
+                        <a href="javascript:;" class="set">编辑</a>
+                    </li>
+                </ul>
+                <ul class="momeul momeulm" style="display:none;">
+                    <li>
+                        <span>2017-08-06</span>
+                        <p class="con">我的事件我的事件我的事件我的事件我的事件我的事件我的事</p>
+                        <a href="javascript:;" class="del">删除</a>
+                        <a href="javascript:;" class="set">编辑</a>
+                    </li>
+                    <li>
+                        <span>2017-08-06</span>
+                        <p class="con">我的事件我的事件我的事件我的事件我的事件我的事件我的事</p>
+                        <a href="javascript:;" class="del">删除</a>
+                        <a href="javascript:;" class="set">编辑</a>
+                    </li>
+                    <li>
+                        <span>2017-08-06</span>
+                        <p class="con">我的事件我的事件我的事件我的事件我的事件我的事件我的事</p>
+                        <a href="javascript:;" class="del">删除</a>
+                        <a href="javascript:;" class="set">编辑</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clock">
+        <div class="tanchu fukuan" id="tc_c"></div>
+        <p>事件提醒</p>
+        <ul>
+            <li><span>事件日期</span><i>2017-08-06</i></li>
+            <li>
+                <span>事件类型</span>
+                <i>
+                    <select name="type" id="type" class="type" style="margin-left: -5px">
+                        <option value="其他">其他</option>
+                    </select></i>
+            </li>
+            <li><span>事件内容</span><i><input type="text" class="type content"></i></li>
+        </ul>
+        <div class="time_btn">
+            <input type="button" class="save" value="保存"/>
+            <input type="button" class="cancel" value="取消"/>
+        </div>
+    </div>
+    <div class="clock_edit" style="display: none">
+        <div class="tanchu fukuan" id="tc_c"></div>
+        <p>事件提醒<a href="javascript:void(0);" class="gz_close">×</a>
+        </p>
+        <ul>
+            <li><span>事件日期</span><i>2017-08-06</i></li>
+            <li><span>事件内容</span><i><input type="text" class="type content"></i></li>
+        </ul>
+        <div class="time_btn">
+            <input type="button" class="save" value="保存"/>
+            <input type="button" class="cancel" value="取消"/>
+        </div>
+    </div>
+    <div class="sy_left">
+        <div class="sy_section1">
+            <span class="line"></span><span class="wait">业务提醒</span>
+            <a href="javascript:;" class="addmymome">添加</a>
+        </div>
+        <div class="sy_time">
+            <!--<div class="layer"></div>-->
+        </div>
+    </div>
+    <div class="sy_right">
+        <p class="sy_top"><img src="../images_box/icon-01.png" alt=""/>未读提醒<a href="###" class="remindmore">更多</a></p>
+        <p class="sy_p"><span>></span><a class="news">理学院学生创新实践中心宣讲会SPA顺利召开</a></p>
+        <p class="sy_p"><span>></span><a class="news">理学院学生创新实践中心宣讲会SPA顺利召开</a></p>
+        <p class="sy_p"><span>></span><a class="news">理学院学生创新实践中心宣讲会SPA顺利召开</a></p>
+        <p class="sy_top"><img src="../images_box/icon-01.png" alt=""/>我的提醒<a href="###" class="more">更多</a></p>
+        <p class="sy_p"><span>></span><a class="news">理学院学生创新实践中心宣讲会SPA顺利召开</a></p>
+        <p class="sy_p"><span>></span><a class="news">理学院学生创新实践中心宣讲会SPA顺利召开</a></p>
+        <p class="sy_p"><span>></span><a class="news">理学院学生创新实践中心宣讲会SPA顺利召开</a></p>
+    </div>
+</div>
+<div class="modal fade" id="xitongxinxitishi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="background: #000000;color: #FFFFFF;" class="close close-modal"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel">代办事项</h5>
+            </div>
+            <div class="modal-body">
+                <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                <p class="sy_tanchu_time">2014-11-12</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn queding" data-dismiss="modal">确定</button>
+                <button type="button" class="btn quxiao">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 系统信息查看end -->
+<div class="fanhuidingbu">
+    <img src="../images_box/huidaodingbu.png" alt=""/>
+</div>
+<!--底部-->
+<div class="ht-footer" style="margin-bottom: 20px;">
+    <div class="ht-footer-info">
+        <ul>
+            <li class="one">门户官网</li>
+            <li class="ht-footer-fg">|</li>
+            <li class="two">客户热线：400-010-8858</li>
+        </ul>
+    </div>
+    <div class="ht-footer-bt">
+        &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+    </div>
+</div>
+
+<!--未读模态框-->
+<div class="modal fade" id="weidutanceng" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="background: #000000;color: #FFFFFF;" class="close close-modal"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel">系统提醒</h5>
+            </div>
+            <div class="modal-body">
+                <div>
+
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>登记日期</th>
+                        <th>提醒内容</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="active">
+                        <td>2018-09-08</td>
+                        <td>10020202093302323账号有31笔入账记账......</td>
+                        <td><a class="info">详情</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018-09-08</td>
+                        <td>10020202093302323账号有31笔入账记账......</td>
+                        <td><a class="info">详情</a></td>
+                    </tr>
+                    <tr class="active">
+                        <td>2018-09-08</td>
+                        <td>10020202093302323账号有31笔入账记账......</td>
+                        <td><a class="info">详情</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018-09-08</td>
+                        <td>10020202093302323账号有31笔入账记账......</td>
+                        <td><a class="info">详情</a></td>
+                    </tr>
+                    <tr class="active">
+                        <td>2018-09-08</td>
+                        <td>10020202093302323账号有31笔入账记账......</td>
+                        <td><a class="info">详情</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018-09-08</td>
+                        <td>10020202093302323账号有31笔入账记账......</td>
+                        <td><a class="info">详情</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-7" style="height: 108px;line-height: 139px;padding: 0">
+                        共27条
+                    </div>
+                    <div class="col-md-4 " style="padding: 0;">
+
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination" style="    padding-left: 0">
+                                <li class="disabled">
+                                    <a aria-label="Previous">
+                                    <span aria-hidden="true">
+                                       &lt;
+                                    </span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a> 1</a>
+                                </li>
+                                <li>
+                                    <a> 2</a>
+                                </li>
+                                <li>
+                                    <a> 3</a>
+                                </li>
+                                <li>
+                                    <a> 4</a>
+                                </li>
+                                <li>
+                                    <a aria-label="Next">
+                                    <span aria-hidden="true">
+                                         &gt;
+                                    </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn queding" data-dismiss="modal">确定</button>-->
+                <button type="button" class="btn quxiao" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--代办模态框-->
+
+<div class="modal fade" id="daibantanceng" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="background: #000000;color: #FFFFFF;" class="close close-modal"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel">我的提醒</h5>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>登记日期</th>
+                        <th>提醒内容</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr >
+                        <td>2018-09-08</td>
+                        <td>理学院学生创新实践中心宣讲会SPA顺利召开......</td>
+                        <td><a class="info">详情</a>|<a class="dels">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018-09-08</td>
+                        <td>理学院学生创新实践中心宣讲会SPA顺利召开......</td>
+                        <td><a class="info">详情</a>|<a class="dels">删除</a></td>
+                    </tr>
+                    <tr >
+                        <td>2018-09-08</td>
+                        <td>理学院学生创新实践中心宣讲会SPA顺利召开......</td>
+                        <td><a class="info">详情</a>|<a class="dels">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018-09-08</td>
+                        <td>理学院学生创新实践中心宣讲会SPA顺利召开......</td>
+                        <td><a class="info">详情</a>|<a class="dels">删除</a></td>
+                    </tr>
+                    <tr >
+                        <td>2018-09-08</td>
+                        <td>理学院学生创新实践中心宣讲会SPA顺利召开......</td>
+                        <td><a class="info">详情</a>|<a class="dels">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018-09-08</td>
+                        <td>理学院学生创新实践中心宣讲会SPA顺利召开......</td>
+                        <td><a class="info">详情</a>|<a class="dels">删除</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn quxiao" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--我的提醒  添加模态框-->
+<!--模态框-->
+<div id="maymodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="gridSystemModalLabel">详情</h4>
+            </div>
+            <div class="modal-body">
+                <p>事件时间：2018-09-26</p>
+                <span>事件内容：</span>
+                <span style="width: 400px;height: 220px;border: 1px solid #000000;margin: 0 auto;    position: relative;
+    top: -14px;    display: inherit;">
+理学院学生创新实践中心宣讲会SPA顺利召开
+                        </span>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">发送</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="wodetixingTianjia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="background: #000000;color: #FFFFFF;" class="close close-modal"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel">代办事项</h5>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <div class="sy_time">
+                        <div class="layer geren"></div>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <div class="modal-ri-top">
+                        <div class="left">近一个月</div>
+                        <div class="right cursor-po" data-toggle="modal" data-target="#bianji">添加</div>
+                    </div>
+                    <div class="modal-ri-body">
+                        <div class="bor-bot">
+                            <div>
+                                <div class="modal-ri-body-le">2017-11-11</div>
+                                <div class="modal-ri-body-ri">
+                                    <div><img class="img-mar-ri-10 cursor-po" data-toggle="modal"
+                                              data-target="#querentishi" src="../images_box/shanchu.png" alt=""/><span
+                                            data-toggle="modal" data-target="#querentishi"
+                                            class="font-12 cursor-po right-mar-20">删除</span></div>
+                                    <div><img class="img-mar-ri-10 cursor-po" data-toggle="modal" data-target="#bianji"
+                                              src="../images_box/bianji.png" alt=""/><span data-toggle="modal"
+                                                                                           data-target="#bianji"
+                                                                                           class="font-12 cursor-po">编辑</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>理学院学生创新实践中心SIPC宣讲会顺利顺利顺利顺利....</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--确认提示框-->
+
+<div class="modal fade" id="querentishi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="background: #000000;color: #FFFFFF;" class="close close-modal"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel">操作提示</h5>
+            </div>
+            <div class="modal-body">
+                <h4>确认删除吗?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn queding" data-dismiss="modal">确定</button>
+                <button type="button" class="btn quxiao">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--编辑---添加-->
+<div class="modal fade" id="bianji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="background: #000000;color: #FFFFFF;" class="close close-modal"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h5 class="modal-title" id="myModalLabel">操作提示</h5>
+            </div>
+            <div class="modal-body">
+                <div>事件日期 : <span>2017-09-09</span></div>
+                <div style="margin-top: 20px;">事件内容 : <textarea class="form-control shijianr"></textarea></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn queding" data-dismiss="modal">确定</button>
+                <button type="button" class="btn quxiao">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/lib/jquery.SuperSlide.2.1.1.js"></script>
+<script src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
+<script src="../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="../js/huidaodingbu.js"></script>
+<script>
+    $(".zh").click(function () {
+        location.href = "zhanghuguanli_chaxun.html";
+    })
+
+    $(".more").click(function () {
+        $('#daibantanceng').modal('show');
+    })
+    $(".zh").click(function () {
+        location.href = "zhanghuguanli_chaxun.html";
+    })
+    //开始选择头像
+    //          $('#touxiang').hover(function(){
+    //              $('#shangchuantouxiang').css({'display':'block'});
+    //              $("#userImg").attr("src","");
+    //          })
+    //关闭图片选择框
+    $('.imgCancel').on("click", function () {
+        $('#shangchuantouxiang').css({'display': 'none'});
+    })
+    //点击确定显示图片
+    $(".imgSure").on('click', function () {
+        var srcImg = $("#userImg")[0].src;
+        $('#shangchuantouxiang').css({'display': 'none'});
+        $("#touxiang img").attr("src", srcImg);
+    })
+    //显示系统消息
+    $('#sy_sys_info').hover(function () {
+        $('.sy_sysmess').css({'display': 'block'});
+    })
+    //隐藏系统消息
+    $('.sy_sysmess').mouseleave(function () {
+        $(this).css({'display': 'none'});
+    })
+    $(".zh").click(function () {
+        location.href = "zhanghuguanli_chaxun.html";
+    })
+    $(".sy_sys_more").click(function () {
+        location.href = "shouye_systeminfo.html";
+    })
+    $(".remindmore").click(function () {
+        $('#weidutanceng').modal('show');
+    })
+    $('.sy_sys_details').click(function () {
+        $('#xitongxinxitishi').modal('show');
+    });
+    $('.gz_close,.gclose').click(function () {
+        $('.tanchu').css({
+            'display': 'none'
+        });
+    });
+    $(function () {
+        var time = ''
+        //首页点击事件
+        $('.addmymome').click(function () {
+
+            $('#wodetixingTianjia').modal('show');
+        })
+        $('.date .title a').click(function () {
+            $('.mCustomScrollbar').css('display', 'none')
+            $('.sy_right').css('display', 'block')
+        })
+        //添加事件
+        $('.addmomelist').click(function () {
+            $('.datemome').css('display', 'none')
+            $('.clock').css('display', 'block')
+            $('.clock .tanchu').css({"display": "block", "z-index": "-1"})
+        })
+        //点击取消
+        $('.quxiao').click(function () {
+            $('#shangchuantouxiang').css('display', 'none')
+        })
+        //添加事件取消
+        $('.clock .cancel').click(function () {
+            $('.clock').css('display', 'none')
+            $('.datemome').css('display', 'block')
+        })
+        //编辑事件取消
+        $('.clock_edit .cancel').click(function () {
+            $('.clock_edit').css('display', 'none')
+            $('.datemome').css('display', 'block')
+        })
+        //添加模态关闭
+        $('.clock .gz_close').click(function () {
+            $('.clock').css('display', 'none')
+            $('.mCustomScrollbar').css('display', 'block')
+        })
+        //点击保存
+        $('.clock .save').click(function () {
+            $('.clock').css('display', 'none')
+            $('.datemome').css('display', 'block')
+            var value = $('.clock .content').val();
+            if (value == '') {
+                alert('内容不能为空');
+                return;
+            }
+            var tpl = '<li>\
+                        <span>2017-08-06</span>\
+                        <p class="con">' + value + '</p>\
+                        <a href="javascript:;" class="del">删除</a>\
+                        <a href="javascript:;" class="set">编辑</a>\
+                        </li>';
+            $('.momelist>ul').append(tpl);
+            $('.clock .content').val('')
+        })
+        //删除事件
+        $('.momelist').on('click', 'li .del', function () {
+            $(this).parent().remove();
+        })
+        //近一个月
+        $('.editMon').on('click', function () {
+            $(".momeulp").css("display", "none");
+            $(".momeulm").css("display", "block");
+
+        })
+        //编辑事件
+        $('.momelist').on('click', 'li .set', function () {
+            $('.datemome').css('display', 'none')
+            $('.clock_edit').css('display', 'block')
+            $('.clock_edit .tanchu').css({"display": "block", "z-index": "-1"})
+            var that = $(this);
+            $('.clock_edit .save').click(function () {
+                $('.clock_edit').css('display', 'none')
+                $('.datemome').css('display', 'block')
+                var value = $('.clock_edit .content').val();
+                if (value == '') {
+                    alert('内容不能为空');
+                    return;
+                }
+                that.parent().children('.con').html(value);
+            })
+        });
+        $(".wait_recheck").on("click", function () {
+            window.location.href = "../html/复核/交易复核/trade_R.html";
+        })
+    })
+
+    function goto(trans) {
+        switch (trans) {
+            case 'setting_quanxian':
+                location.href = "../html/设置/setting/authority_setting.html";
+                break;
+            case 'setting_xinxi':
+                location.href = "../html/设置/setting/operator_information_maintenance.html";
+                break;
+            case 'setting_change':
+                location.href = "../html/设置/setting/operator_information_change.html";
+                break;
+            case 'setting_fuhe':
+                location.href = "../html/设置/setting/review_process_setting.html";
+                break;
+            case 'setting_xiane':
+                location.href = "../html/设置/setting/transaction_limit_setting.html";
+                break;
+            case 'setting_guide':
+                location.href = "../html/设置/系统设置向导/few_reviewA.html";
+                break;
+            case 'fh_quanxian':
+                location.href = "../html/设置/setting/admin_review_a.html";
+                break;
+        }
+    }
+
+    function gotofuhe() {
+        location.href = "../../通知存款复核分类/复核/存款复核/html/cunkuanfuhe_jiaoyifuhe.html";
+    }
+
+    //判断导航是否有三级菜单,如没有，清除二级菜单横向条
+    var navDl = $(".sy_nav .sy_bar dl");
+    for (var i = 0; i < navDl.length; i++) {
+        var navDd = $(navDl[i]).children("dd").length;
+        if (navDd < 2) {
+            $(navDl[i]).children("dt").css("border-bottom", "none");
+            $(navDl[i]).children("dt").mouseover(function () {
+                $(this).css({"cursor": "pointer", "color": "#348CE4"})
+            })
+            $(navDl[i]).children("dt").mouseout(function () {
+                $(this).css({"color": "#000000"})
+            })
+        }
+
+    }
+
+    //选择头像
+    function getFileUrl(sourceId) {
+        var url;
+        if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
+            url = document.getElementById(sourceId).value;
+        } else if (navigator.userAgent.indexOf("Firefox") > 0) { // Firefox
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        } else if (navigator.userAgent.indexOf("Chrome") > 0) { // Chrome
+            url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+        }
+        return url;
+    }
+
+    //将本地图片显示到浏览器上
+    function preImg(sourceId, targetId) {
+        var url = getFileUrl(sourceId);
+        var imgPre = document.getElementById(targetId);
+        imgPre.src = url;
+    }
+
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "leftLoop",
+        autoPlay: true
+    });
+    $(function () {
+        $(".sy_time").datepicker({
+            language: 'zh-CN',
+            format: 'yyyy ',
+            todayHighlight: true,
+            startView: '0',
+            minView: 'decade',
+            maxView: '0',
+            weekStart: '0',
+            daysOfWeekDisabled: [0, 6],
+            viewSelect: 'decade',
+            toggleActive: true
+        });
+    });
+</script>
+<script>
+    $(".news").click(function () {
+        $("#maymodal").modal({
+            show: true
+        })
+    })
+    $(".info").click(function () {
+        $("#maymodal").modal({
+            show: true
+        })
+    })
+    $(".pagination li").click(function () {
+        if ($(this).index() == 0) {
+            $(".pagination li").eq(5).removeClass("disabled")
+
+//            console.log( $(".pagination li").length)
+            for (var i = 0; i < $(".pagination li").length; i++) {
+                if ($($(".pagination li")[i]).hasClass("active")) {
+                    if (i == 1) {
+                        $(".pagination li").eq(i - 1).addClass("disabled")
+                        return false
+                    }
+
+                    $(".pagination li").eq(i).removeClass("active");
+                    $(".pagination li").eq(i - 1).addClass("active")
+                }
+//                console.log($($(".pagination li")[i]).hasClass("active"))
+            }
+        } else if ($(this).index() == 5) {
+            $(".pagination li").eq(0).removeClass("disabled")
+            for (var i = 0; i < $(".pagination li").length; i++) {
+                if ($($(".pagination li")[i]).hasClass("active")) {
+                    if (i==4){
+                        $(".pagination li").eq(i + 1).addClass("disabled")
+                        return false
+                    }
+                    $(".pagination li").eq(i).removeClass("active");
+                    $(".pagination li").eq(i + 1).addClass("active")
+                    break
+                }
+            }
+        } else {
+            $(this).siblings("li").removeClass("active")
+            $(this).addClass("active")
+        }
+    })
+    $(".dels").click(function () {
+        console.log(123)
+        $(this).parents("tr").remove()
+    })
+</script>
+</body>
+</html>
+

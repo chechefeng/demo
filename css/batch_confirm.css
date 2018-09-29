@@ -1,0 +1,102 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea{margin:0;padding:0} 
+body{color:#040404;font-size:16px;background:#f5f5f5;-webkit-text-size-adjust:100%;} 
+a{color:#646464;text-decoration:none;} 
+/*a:hover{color:#2e8ae7;text-decoration:none;}*/ 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0;} 
+p{word-wrap:break-word} 
+button{
+	font-size:18px;
+	outline:none;
+	border:none;
+	color:#FFFFFF;
+}
+.piliangzhuanzhangquerenyemian{
+	width:1000px;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+.pl{
+	color: #646464;
+	margin-top: 2px;
+	text-align:left ;
+	
+}
+.piliangzhuanzhangneirong{
+	background: white;
+	margin-top:25px;
+ 	height: 900px;
+ 	font-family: "微软雅黑";
+ 	text-align: center;
+    margin: auto;
+ 	
+}
+.plzz{
+	padding:30px;
+	text-align: center;
+}
+.tab_pl{
+	height:35px;
+	line-height: 35px;
+	margin-top: 10px;
+}
+.tab_pl .plpl li{
+	min-width: 120px;
+	text-align: center;
+	margin-right: 10px;
+	float: left;
+	margin: 1px;
+}
+.tab_pl .plpl li a{
+	display: block;
+	background: #fff;
+	border-radius:4px 4px 0 0;
+	color: #333;
+	font-size: 14px;
+}
+
+.tab_pl .plpl li.now a{
+	background: #fff;
+	color: #108ee9;
+}
+
+
+.plzz_txt{
+	margin: 10px;
+	text-align: left;
+	
+}
+
+.plzz_name{
+	color: #888888;
+	width: 120px;
+	display:inline-block;
+	text-align: right;
+}
+
+.plzz{
+	/*margin-top: 60px;*/
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+.btn{
+	width:140px;
+	height:50px;
+	border:1px solid #348CE4;
+	border-radius: 4px;
+	margin:15px;
+}
+.btn:first-child{
+	background:#348CE4;
+	color:#FFFFFF;
+}
+.btn:last-child{
+	background:#FFFFFF;
+	color:#348CE4;
+}
+
+

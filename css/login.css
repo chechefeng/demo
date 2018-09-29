@@ -1,0 +1,268 @@
+﻿*{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+}
+body{
+	font-family:"microsoft yahei";
+	overflow:hidden;
+	/*background-color:#F5F5F5;*/
+}
+input{
+	outline:none;
+	border-style:none;
+}
+.dl_container{
+	width:1000px;
+	margin:0 auto;
+}
+.dl_header{
+	height:52px;
+	width:1000px;
+	margin-top:25px;	
+}
+.dl_logo{
+	width:396px;.taon
+	height:47px;	
+}
+.dl_lu{
+	width:650px;
+	margin:0 auto;
+	/*border:1px solid red;*/
+}
+.dl_dl{
+	text-align: right;
+	margin:20px;
+}
+
+.dl_login{
+	font-size:20px;
+	color:#FFFFFF;
+}
+.dl_banner{
+	width:100%;
+	height:647px;
+	background-image:url(../images_box/login.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding:20px;
+}
+.banner{
+	width:1000px;
+	margin:0 auto;
+	/*padding-top:65px;*/
+}
+/* input::-moz-placeholder{color:#FFF;}
+input::-webkit-input-placeholder{color:#FFF;}
+input::-ms-input-placeholder{color:#FFF;}
+input{color:#8A8A8A;} */
+.tab{
+				width:356px;
+				height:346px;
+				/*border:1px solid red;*/
+				border-radius:16px;
+				background:#FFFFFF;
+				float:right;
+			}
+			.tab ul{
+				overflow: auto;
+				border-top-left-radius:8px;
+				border-top-right-radius:8px;
+			}
+			.tabli{
+				width:178px;
+				height:50px;
+				float:left;
+				background:#348CE4;
+				color:#FFFFFF;
+				line-height:50px;
+				list-style:none;
+				text-align:center;
+
+			}
+			.active{
+				color:#348CE4;
+				background:#FFFFFF;
+			}
+			.tcon{
+				/*width:566px;*/
+				height:401px;
+				display:none;
+				padding:45px 35px 0;
+			}
+			.option{
+				display:block;
+			}
+			.pass{
+				background-image:url(../images_box/password.png);
+				background-repeat:no-repeat;
+				 background-position:10px center;				 
+				background-color:#F5F5F5;				
+				width:280px;
+				height:34px;
+				text-indent:65px;
+				margin:20px 0;
+				line-height:34px;
+			}
+			.pwd{
+				margin-top:50px;
+			}
+			#user{
+				background-image:url(../images_box/username.png);
+				background-repeat:no-repeat;
+				 background-position:10px center;
+				background-color:#F5F5F5;
+				width:280px;
+				height:34px;
+				text-indent:65px;
+				line-height:34px;
+			}
+			.sub{
+				width:280px;
+				height:34px;
+				line-height:34px;
+				background-color:#348CE4;
+				color:#FFFFFF;
+				margin-top:20px;
+				margin-bottom:13px;
+				border-radius:8px;
+
+			}
+			.form_a{
+				padding-left:90px;
+				margin-top:100px;
+			}
+			.form_b{
+				padding-left:118px;
+			}
+			.form_b a{
+				color:#348CE4;
+				text-decoration:none;
+			}
+			.form_a a{
+				color:#348CE4;
+				text-decoration:none;
+			}
+			#yzm{
+				width:160px;
+				height:34px;
+				background-color:#F5F5F5;
+				border-radius:8px;
+				text-indent: 30px;
+				line-height:34px;
+			}
+			#getyzm{
+				width:112px;
+				height:34px;
+				line-height:34px;
+				border-radius:4px;
+				background:#FFFFFF;
+				color:#348CE4;
+				border:1px solid #E2E2E2;
+				margin-left:4px;
+			}
+/*card*/			
+.container{
+	width:100%;
+	height:86px;
+	margin:0 auto;
+	background-color: #F5F5F5;
+	padding-bottom: 25px;
+}
+.header{
+	height:52px;
+	width:1000px;
+	margin:0 auto;
+}
+.logo{
+	width:450px;
+	height:47px;
+	padding-top:25px;
+
+}
+.login{
+	font-size:20px;
+	color:#040404;
+	width:200px;
+	margin:0 auto;
+	height:30px;
+	margin-top:30px;
+
+}
+.yz_yx{
+	width:1000px;
+	margin:0 auto;
+	background:#FFFFFF;	
+
+}
+.yz_yx .yz_lab{
+	margin:0 auto;
+	width:750px;
+}
+.yz_yx .yz_lab label,.forlab{
+	width:220px;
+	display:inline-block;
+	text-align:right;
+	margin-right:20px;
+	color:#8A8A8A;
+
+	
+}
+.yz_yx .yz_lab p{
+	margin-bottom:20px;
+	color:#4B4B4B;
+
+	
+}
+.yz_padd{
+	padding:40px 0 60px;
+}
+.yz_yx .yz_lab .yz_cg{
+	text-align: center;
+}
+.fromp{
+				width:750px;
+				height:50px;
+				line-height:35px;
+			}
+			.formp input,.formp .card{
+				width:260px;
+				height:44px;
+				border:1px solid #B7B7B7;
+				border-radius:4px;
+				outline-color:#B5DE6F;
+				outline-border-radius:8px;
+				line-height:44px;
+			}
+			.sendyzm{
+				color:#8A8A8A;
+			}
+			#getyzm{
+				width:112px;
+				height:34px;
+				border-radius:4px;
+				background:#348CE4;
+				color:#FFFFFF;
+				outline:none;
+				border-style:none;
+			}
+.dy_btn{
+text-align:center;
+	
+}
+.dy_btn button{
+	width:140px;
+	height:50px;
+	border:1px solid #348CE4;
+	border-radius: 4px;
+	margin:15px;
+	font-size:18px;
+}
+.first-btn{
+	background:#FFFFFF;
+	color:#348CE4;
+}
+ .last-btn{
+	background:#FFFFFF;
+	color:#348CE4;
+}

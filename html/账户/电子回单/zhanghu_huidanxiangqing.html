@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="../../../css/zhongguancun.css"/>
+    <link rel="stylesheet" href="../../../css/nav.css"/>
+    <link href="../../../css/yejiao.css" rel="stylesheet">
+
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/global.js"></script>
+    <script src="../../../js/nav.js"></script>
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <script src="../../../bootstrap/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+<div id="navWraper"></div>
+<div class="huidan zhanghu">
+    <div class="title_mianbaoxie">
+        <span class="l"></span>
+
+        <div class="l">
+            <img src="../../../images_box/position.png" alt=""/>
+            <a href="###">账户</a>
+            /
+            <a href="###">电子回单</a>
+            /
+            <a href="###">电子回单验证</a>
+        </div>
+    </div>
+    <p style="padding:20px; font-size:18px; font-weight:normal; color:#666;">请输入查询条件</p>
+    <div class="luru" style="text-align:center;">
+        <div class="form-group per50">
+            <span style="color:#f03202;">*</span>
+            <label class="label1" style="color:#666;">回单编号：</label>
+            <input type="text" class="iptRange" placeholder="请输入电子回单编号" style="width: 400px; height:32px;">
+        </div>
+        <button type="button" class="blue-btn" style="width:64px; margin-top:40px;" onclick="show()">验证</button>
+    </div>
+
+
+
+
+    <div id="maymodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">点子回单验证</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="huidan zhanghu">
+                        <div class="yz_yx" style="padding: 20px; margin-top:-20px; " id="huidan_info">
+                            <div class="yz_lab">
+                                <p><label for=""><img src="../../../images_box/succ.png" alt=""/></label>此回单真实有效</p>
+                                <p><label for="">回单号：</label>2905100001105254103</p>
+                                <p><label for="">付款方账号：</label>03-56448946334864</p>
+                                <p><label for="">付款方户名：</label>上海经纬网讯有限公司</p>
+                                <p><label for="">交易金额：</label>516，684，510.00</p>
+                                <p><label for="">交易日期：</label>2017-05-23 13:34:36</p>
+                                <p><label for="">交易用途：</label>装修尾款</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="ht-footer">
+        <div class="ht-footer-info">
+            <ul>
+                <li class="one">门户官网</li>
+                <li class="ht-footer-fg">|</li>
+                <li class="two">客户热线：400-010-8858</li>
+            </ul>
+        </div>
+        <div class="ht-footer-bt">
+            &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $(".btn").click(function () {
+                $(this).css({"background": "#348CE4", "color": "#FFFFFF"})
+                    .siblings().css({"background": "#FFFFFF", "color": "#348CE4"});
+            })
+        });
+        $("#navWraper").html(nav);
+
+        function show(argument) {
+//            $("#huidan_info").show();
+            $("#maymodal").modal({
+                show:true
+            })
+
+        }
+
+    </script>
+</body>
+</html>

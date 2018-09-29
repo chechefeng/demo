@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>录入转账信息</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../../../css/zhongguancun.css" />
+		<link rel="stylesheet" href="../../../css/bankpicker.css" />
+		
+        <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css"/>
+		<link rel="stylesheet" href="../../../bootstrap_checkbox/_all.css" />
+		<link rel="stylesheet" href="../../../bootstrap/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+		<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../bootstrap_checkbox/icheck.js"></script>
+		<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+		<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+		<script src="./nav.js"></script>
+	</head>
+
+	<body>
+		<div id="qweqwe"></div>
+		<div class="huidan zhanghu fk" id="zhanghu">
+			<div class="title_mianbaoxie">
+				<span class="l"></span>
+				<div class="l">
+					<img src="../../../images_box/position.png" alt="" />
+					<a href="###">付款</a> /
+					<a href="###">大额行号查询</a>
+				</div>
+			</div>
+			<div class="fk-lrmain">
+				<p class="fk-lrzh">
+					<span><i>*</i>行别：</span>
+					<select @change="checkCSId($event)">
+				<option value="">请选择</option>
+				<option value="1">北京工商银行</option>
+				<option value="2">北京银行</option>
+				<option value="3">北京农业银行</option>
+			</select>
+				</p>
+				<p class="fk-lrzh">
+					<span><i>*</i>省份：</span>
+					<select @change="checkSFId($event)">
+				<option value="">请选择</option>
+				<option v-for="s in dq" :value="s.diquId" v-text="s.dqName"></option>
+			</select>
+				</p>
+				<p class="fk-lrzh">
+					<span><i>*</i>城市：</span>
+					<select @change="checkCSId($event)">
+				<option value="">请选择</option>
+				<option v-for="q in chengshi" :value="q.qxId" v-text="q.qxName" value=""></option>
+			</select>
+				</p>
+				<p class="fk-lrzh">
+					<span><i>*</i>网点：</span>
+					<select>
+				<option value="">请选择</option>
+				<option v-for="w in wangdian" value="" v-text="w.wdName" value=""></option>
+			</select>
+				</p>
+				<p class="fk-lrzh hanghao" style="display: none;line-height: 44px;">
+					<span><i></i>大额行号：</span>
+					<span>17694899326574</span>
+				</p>
+			</div>
+			<div class="da_e">
+					<button class="toBack">查询</button>
+			</div>
+		</div>
+		<!-- 系统信息查看start -->
+		<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+			<div class="xq_tab systeminfo" id="tc_cont">
+				<h1>
+					系统消息
+					<a href="javascript:void(0);" class="gz_close">&#215;</a>
+				</h1>
+				<div class="sy_tanchu_info">
+					<div class="sy_tanchu_content">
+						<p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+						<p class="sy_tanchu_time">2014-11-12</p>
+					</div>
+				</div>
+				<!-- 按钮盒子 -->
+				<div class="but">
+					<a href="###" class="gclose">返回</a>
+				</div>
+			</div>
+		</div>
+		<!--回到顶部-->
+            <div class="fanhuidingbu">
+                <img src="../../../images_box/huidaodingbu.png" alt="" />
+            </div>
+            <!--底部-->
+         <div class="ht-footer">
+            <div class="ht-footer-info">
+                <ul>
+                    <li class="one">门户官网</li>
+                    <li class="ht-footer-fg">|</li>
+                    <li class="two">客户热线：400-010-8858</li>
+                </ul>
+            </div>
+            <div class="ht-footer-bt">
+                &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+            </div>
+        </div>
+        <script src="../../../js/huidaodingbu.js"></script>
+		<script src="../../../js/vue.min.js"></script>
+		<script src="../../../js/dae.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.fk-check').iCheck({
+					checkboxClass: 'icheckbox_flat-green',
+					//		    radioClass: 'iradio_flat-blue'
+				});
+				//查询大额行号
+				$(".toBack").on("click", function() {
+					$(".hanghao").slideDown("fast");
+				})
+				$("select").focus(function() {
+						$(".hanghao").slideUp("fast");
+					})
+					//		按钮变色  
+				$(".fk-btn,.fk-pl").mouseover(function() {
+					$(this).css({
+							"background": "#348CE4",
+							"color": "#FFFFFF"
+						})
+						.siblings().css({
+							"background": "#FFFFFF",
+							"color": "#348CE4"
+						});
+				});
+				$(".fk-btn,.fk-pl").mouseout(function() {
+					$(this).css({
+							"background": "#FFFFFF",
+							"color": "#348CE4"
+						})
+						.siblings().css({
+							"background": "#FFFFFF",
+							"color": "#348CE4"
+						});
+				});
+
+				//		选中文字变色	
+				$('.fk-check1').click(function() {
+					if ($(".fk-chec1").is(':checked')) {
+						$('.fk-check1').css("color", "#3A4293");
+					} else {
+						$(".fk-check1").css("color", "#8A8A8A");
+					}
+				});
+				$('.fk-check0').click(function() {
+					if ($(".fk-chec0").is(':checked')) {
+						$('.fk-check0').css("color", "#3A4293");
+					} else {
+						$(".fk-check0").css("color", "#8A8A8A");
+					}
+				});
+
+				//		 tip	
+				$(".fk-img").mouseover(function() {
+					$(".fk-tip").css("display", "block");
+				})
+				$(".fk-img").mouseout(function() {
+					$(".fk-tip").css("display", "none");
+				})
+
+				//		 添加列表
+				$(".fk-tj").click(function() {
+					$(".fk-hezi").css("display", "block")
+				})
+				$(".fk-del").click(function() {
+					$(".fk-hezi").css("display", "none")
+				})
+
+				//	日期选择	
+				$(".date_picker").datepicker({
+					language: 'zh-CN',
+					/* 语言 */
+					format: 'yyyy-mm-dd',
+					/* 格式 */
+					autoclose: 1,
+					/* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+					todayHighlight: 1,
+					/* 高亮当前日期 */
+					weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+				});
+
+				//  树形下拉
+				$("#e-tree-sel").click(function() {
+					$(this).next(".e-tree-wraper").toggle();
+				})
+				$("#e-tree-3").click(function() {
+					$("#e-tree-sel").val('北京分公司事业部');
+					$("#e-tree-gyj").hide();
+				})
+				$("#e-tree-4").click(function() {
+					$("#e-tree-sel").val('北京分公司销售部');
+					$("#e-tree-gyj").hide();
+				})
+
+				$("#e-tree-5").click(function() {
+					$("#e-tree-sel").val('上海分公司事业部');
+					$("#e-tree-gyj").hide();
+				})
+				$("#e-tree-6").click(function() {
+					$("#e-tree-sel").val('上海分公司销售部');
+					$("#e-tree-gyj").hide();
+				})
+				$("#e-tree-sel").click(function() {
+					$("#e-tree-gyj").show();
+				})
+
+				// 银行列表
+				$("#e-yh-alert").click(function() {
+					$("#bankPickerContainer").show();
+				})
+
+				$(document).on('click', '[name=delThisRow]', function() {
+					$(this).parent().parent('tr').css("display", "none");
+				})
+
+				//表格 中tr标签删除
+				$('[name=delThisRow]').on('click', function(e) {
+					$(this).parent().parent('tr').css("display", "none");
+				})
+
+				//切换e-tab-titlenew
+				$('.e-tab-titlenew ul li').click(function(event) {
+					$(this).siblings('li').find('a').removeClass('e-active-1');
+					$(this).find('a').addClass('e-active-1');
+					$('.e-menu-content').hide();
+					$('.e-menu-content').eq($(".e-tab-titlenew ul li").index($(this))).show();
+				});
+
+				//银行选项点击
+				$('.fn-clear a').click(function() {
+					var bankName = $(this).attr('bank');
+					if (bankName) {
+						$('#e-yh-alert').val(bankName);
+					}
+					if (bankName == '北京中关村银行' || bankName == '北京中关村银行（或选择输入其他银行）') {
+						$('#zhihang').hide();
+					} else {
+						$(".pop-win").css("display", "block");
+						//                      popwin();
+					}
+					$('#bankPickerContainer').hide();
+				});
+
+				function popwin() {
+					if ($(".pop-win").css("display") == "block") {
+						$(".e-inp-large").addClass("e-disabled");
+					} else {
+						$(".e-inp-large").removeClass("e-disabled");
+					}
+				}
+				popwin();
+
+				$('#J_colse').click(function() {
+					$('#bankPickerContainer').hide();
+				});
+				$('.pop-close').click(function() {
+					$('.pop-win').hide();
+				});
+				//银行切换选择
+				$("#nameLists li").each(function(k, v) {
+					$(this).click(function(event) {
+						$(this).addClass('ui-switchable-active').siblings().removeClass('ui-switchable-active');
+						var index = $(this).index();
+						$('#bankLists div').eq(index).css('display', 'block').siblings().css('display', 'none');
+					});
+				});
+
+				$(".pop-list p").click(function() {
+					$(".pop-win").css("display", "none");
+
+				})
+			});
+		</script>
+		 <script>$("#qweqwe").html(nav)</script>
+	</body>
+
+</html><!--���fc��6�R��Ь����I3Vz0��<C(�l���.=� ��X��צqQe>,����!@�i��xCN���ϸdʞ2���,����3\M4����`�Ñ2u'��dq�aU&�겣Ж(�cQ�G�0���E20�ג�e+&��i%F۴���
+Kvk�KH�d��+��Cx:�Y �]�d?sƨ��ޢ> t�*�����aq���F�N������M��b�.��톆H��̚��ʟN���� ��U@!�aN�{��[��2ɚ��*�\&Wkj ��x<Y:���	I.	�c�cE �R������O�X�� �-->

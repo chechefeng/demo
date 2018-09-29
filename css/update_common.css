@@ -1,0 +1,102 @@
+/* 下拉框箭头*/
+select.icon_arrow {
+    background:url(../images_box/arrow.png) no-repeat 334px center;
+}
+
+/*居中*/
+.content-center {
+    margin: 0 auto;
+}
+
+
+.dialog-isDel{
+    display: none;
+    position: absolute;
+    width: 144px;
+    top: -80px;
+    left: -72px;
+    background: #fff;
+
+}
+.dialog-isDel .dialog-content{
+    text-align: center;
+    line-height: 40px;
+
+}
+
+.dialog-isDel .btns-isDel{
+    padding: 10px 0;
+    text-align: center;
+}
+
+.dialog-isDel .btns-isDel a {
+    display: inline-block;
+    width: 48px !important;
+    height: 32px !important;
+    border-radius: 3px;
+    line-height: 32px;
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+}
+.dialog-isDel .btns-isDel a.btns-ok{
+    background: #348CE4;
+    color: #fff;
+}
+
+.td_pos{
+    position: relative;
+}
+
+/*付款方维护批量删除弹窗**/
+.weihu_del-modal-body{
+
+}
+.weihu_del-modal-body p {
+    padding: 10px 0;
+}
+.weihu_del-modal-body p span{
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.weihu_del-modal-body p span:nth-of-type(1) {
+    text-align: right;
+}
+
+.weihu_del-modal-body p span:nth-of-type(2) {
+    text-align: left;
+}
+
+/**复选框**/
+.check_label{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+.check_label .checkbox-icon{
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    z-index: 1;
+    line-height: 16px;
+    text-align: center;
+}
+.check_label .checkbox-icon.checkbox_on{
+    background: url('../images_box/duihao.png') center no-repeat;
+}
+.check_label .checkbox_hide{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.span-del{
+    cursor: pointer;
+}

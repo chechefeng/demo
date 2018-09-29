@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>账户/电子回单/电子回单打印</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<link href="../../../css/Pager.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../../css/global.css">
+	<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+	<link rel="stylesheet" href="../../../css/nav.css" />
+	<!-- datepicker css -->
+	<link rel="stylesheet" href="../../../bootstrap/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/gangzi.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+	<script src="../../../js/nav.js"></script>
+</head>
+
+<body>
+
+	<div id="qweqwe"></div>
+	<!-- 内容部分 -->
+	<div class="content zhanghuguanli_mingxi">
+		<div class="w" style="width:1200px;">
+			<!-- 查询 大盒子-->
+			<div class="chaxun">
+				<div class="title_mianbaoxie">
+					<span class="l"></span>
+					<div class="l">
+						<img src="../../../images_box/position.png" alt="" />
+						<a href="###">账户</a> /
+						<a href="###">网银流水查询</a>
+					</div>
+				</div>
+				<!-- 坑货 -->
+				<div class="query_box c" style="background-color: #fff;">
+					<form class="form-inline search_form" style="margin-left:50px; margin-top:30px;;">
+						<div class="row-list">
+							<div class="form-group date_picker input-daterange pull-left per50">
+								<label class="label1">
+									<select name="" id="" class="form-control">
+										<option value="">录入日期</option>
+										<option value="">复核日期</option>
+									</select>
+								</label>
+
+
+								<input type="text" id="dataStart" class="form-control dataWidth" value="2018-8-31" style=" text-align:left; width: 210px; background:url(../../../images_box/rli.png) no-repeat 170px center;padding:0;">
+								<span class="MG_LR7">-</span>
+								<input type="text" id="dataEnd" class="form-control dataWidth" value="2018-8-31" style=" text-align:left; width: 210px; border-radius: 4px;  background:url(../../../images_box/rli.png) no-repeat 170px center;padding:0;">
+							</div>
+
+						</div>
+						<div class="row-list">
+							<div class="form-group">
+								<label class="label1">
+									<span style="color:#f04134; padding-right:3px;">*</span>业务类型：</label>
+								<select value="aaaa" class="form-control" id="serverType" style="width: 210px;">
+									<option>请选择</option>
+
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="label1" style="width: 90px;">
+									<span style="color:#f04134; padding-right:3px;">*</span>交易名称：</label>
+								<select class="form-control" id="serverName" style="width: 210px; text-align: left; margin-left: 5px;">
+									<option value="">请选择</option>
+								</select>
+							</div>
+						</div>
+						<div class="row-list" id="ceshi" style="display:none">
+							<div class="form-group">
+								<label class="label1">收款人户名：</label>
+								<input type="text" class="iptRange" value="" style="width: 210px;">
+							</div>
+							<div class="form-group">
+								<label class="label1" style="width: 90px;">收款人账号：</label>
+								<input type="text" class="iptRange" value="" style="width: 210px;">
+							</div>
+						</div>
+						<div class="row-list">
+							<div class="form-group per50">
+								<label class="label1">金额范围：</label>
+								<input type="text" class="iptRange" value="" style="width: 210px;">
+								<span class="MG_LR7">-</span>
+								<input type="text" class="iptRange" value="" style="width: 210px;">
+							</div>
+						</div>
+						<div class="topShow">
+							<div class="date_picker input-daterange pull-left">
+								<label class="label1">交易状态：</label>
+								<a href="javascript:;" class="active quanbu">全部</a>
+								<a href="javascript:;" class="qita">待复核</a>
+								<a href="javascript:;" class="qita">复核中</a>
+								<a href="javascript:;" class="qita">复核拒绝</a>
+								<a href="javascript:;" class="qita">银行处理中</a>
+								<a href="javascript:;" class="qita">银行处理已完成</a>
+								<a href="javascript:;" class="qita">交易成功</a>
+								<a href="javascript:;" class="qita">交易失败</a>
+								<br/>
+								<a href="javascript:;" class="qita" style="margin-left: 180px;">交易状态不确定</a>
+								<a href="javascript:;" class="qita">转账已撤销</a>
+								<a href="javascript:;" class="qita">受理成功</a>
+								<a href="javascript:;" class="qita">已删除</a>
+								<a href="javascript:;" class="qita">过期已失效</a>
+							</div>
+						</div>
+
+					</form>
+
+					<div class="text-center row-list" style="width: 1200px; text-align:center; font-size:18px;">
+						<button type="button" class="blue-btn">
+							查&nbsp;询</button>
+						<button type="button" class="blue-btn reset">重&nbsp;置</button>
+					</div>
+				</div>
+
+
+				<!-- 表格开始 -->
+				<div class="tjsj" id="tjsj" style="display:none; padding-left:20px; background:#fff; font-size:14px;">
+					<div class="f-l">自2017-02-01至2017-02-07</div>
+
+				</div>
+
+				<div class="biaoge" id="biaoge" style="display:none;">
+					<table id="ss">
+						<thead>
+							<tr>
+								<td style="width: 14%;">网银流水号</td>
+								<td style="width: 14%;">付款方账号</td>
+								<td style="width: 14%;">收款方账号</td>
+								<td style="width: 10%;">收款方户名</td>
+								<td style="width: 10%;">交易余额</td>
+								<td style="width: 10%;">交易用途</td>
+								<td style="width: 10%;">交易日期</td>
+								<td style="width: 10%;">交易状态</td>
+								<td style="width: 8%;">操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+
+								<td>294339779
+									<br>808088</td>
+								<td>039410050
+									<br>404003</td>
+								<td>039410050
+									<br>404003</td>
+								<td>单笔转账</td>
+								<td>1000.00</td>
+								<td>装修尾款</td>
+								<td class="appointtime">2016-08-05</td>
+								<td class="g9">待审核</td>
+								<td width="13%">
+									<a href="###" class="tc_gz">详情</a>
+								</td>
+							</tr>
+							<tr>
+								<!--<td>2016-08-05</td>
+                        <td>2016-08-05</td>
+                        <td>张明明</td>
+                        <td>李明明</td>-->
+
+								<td>294339779
+									<br>808088</td>
+								<td>039410050
+									<br>404003</td>
+								<td>039410050
+									<br>404003</td>
+								<td>单笔转账</td>
+								<td>1000.00</td>
+								<td>装修尾款</td>
+								<td class="appointtime">2016-08-05</td>
+								<td class="g9">待审核</td>
+								<td width="13%">
+									<a href="###" class="detail tc_gz">详情</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div>
+
+
+
+						<!-- <div class="fenye r" style="float:right;padding-top:28px;padding-right:10px;">
+						<div id="pager" class="l"></div>
+						<p class="l">共5页</p>
+					</div>
+					</div>
+				</div> -->
+						<!-- biaoge结束 -->
+						<!-- 按钮盒子 -->
+						<div class="anniuhezi1" style="width: 300px; margin-left:506px;">
+							<a href="###" class="anniuhe tc_dayin">打印</a>
+							<a href="###" class="anniuhe">下载</a>
+						</div>
+						<div style="float: right; padding-top: 28px; padding-right: 10px;">
+							<p style="float: left;margin-right: 5px; color: #666;padding-top: 2px;">共一条</p>
+							<div style="border: 1px solid #e5e5e5; width: 28px; height: 28px; text-align: center; line-height: 28px;float: left;margin-right: 5px; color: #e5e5e5">
+								<</div>
+									<div style="border: 1px solid #e5e5e5; width: 28px; height: 28px; text-align: center; line-height: 28px; background: #337AB7;float: left;margin-right: 5px; color: #fff; border-radius:3px;">1</div>
+									<div style="border: 1px solid #e5e5e5; width: 28px; height: 28px; text-align: center; line-height: 28px;float: left;margin-right: 5px; color: #e5e5e5">></div>
+									<div style="border: 1px solid #e5e5e5; width: 81px; height: 28px; text-align: center; line-height: 28px;float: left;margin-right: 5px; color: #666">10条/每页
+										<span style="color: #e5e5e5;">v</span>
+									</div>
+
+
+							</div>
+
+						</div>
+					</div>
+					<!-- 弹出框 -->
+					<div class="fanhuidingbu">
+						<img src="../../../images_box/huidaodingbu.png" alt="" />
+					</div>
+					<!--底部-->
+					<div class="ht-footer" style="margin-bottom: 20px;">
+						<div class="ht-footer-info">
+							<ul>
+								<li class="one">门户官网</li>
+								<li class="ht-footer-fg">|</li>
+								<li class="two">客户热线：400-010-8858</li>
+							</ul>
+						</div>
+						<div class="ht-footer-bt">
+							&copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--弹出框详情-->
+			<div class="tanchu fukuan" id="tc_d" style="display:none;">
+				<div class="xq_tab" id="tc_cont">
+					<h1 style="font-weight:bold;">
+						详情
+						<a href="javascript:void(0);" class="gz_close">&#215;</a>
+					</h1>
+					<div class="pd10">
+						<div class="shoukuan_wh">
+							<div class="form_int">
+								<ul class="detailList">
+									<li>
+										<span>网银流水号：</span>349853980450394</li>
+									<li>
+										<span>付款方账号：</span>34343434343434334</li>
+									<li>
+										<span>付款方户名：</span>上海经纬网讯有限公司</li>
+									<li>
+										<span>收款方账号：</span>34324324234324234</li>
+									<li>
+										<span>收款方户名：</span>经纬网讯</li>
+									<li>
+										<span>交易金额：</span>34324324234324234</li>
+									<li>
+										<span>用途：</span>装修</li>
+									<li>
+										<span>预约日期：</span>2017</li>
+									<li>
+										<span>录入人员：</span>李</li>
+									<li>
+										<span>录入时间：</span>2017</li>
+									<li>
+										<span>复核人员：</span>李</li>
+									<li>
+										<span>复核时间：</span>2016</li>
+									<li>
+										<span>复核进度：</span>11级复核人员（1名）复核完毕</li>
+									<li>
+										<span>交易状态：</span>成功</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 按钮盒子 -->
+					<div class="but" style="padding:0;margin-bottom:20px;">
+						<a href="###" class="gclose">确定</a>
+					</div>
+				</div>
+			</div>
+
+
+			<!--弹出框打印-->
+			<div class="tanchu fukuan" id="tc_f" style="display:none;">
+				<div class="xq_tab" id="tc_cont">
+					<h1>
+						网银流水查询列表打印
+						<a href="javascript:void(0);" class="gz_close">&#215;</a>
+					</h1>
+					<div class="tjsj">
+						<div class="f-l" style="padding-left:14px; font-size:12px;">自2018-08-01至2018-08-22</div>
+
+					</div>
+
+					<div class="biaoge" style="width:1000px;">
+						<table id="ss" style="width:1000px;">
+							<tbody>
+								<tr>
+									<td style="width: 14%; background:#f9f9f9; border-right:none;">网银流水号</td>
+									<td style="width: 14%; background:#f9f9f9; border-right:none;">付款方账号</td>
+									<td style="width: 14%; background:#f9f9f9; border-right:none;">收款方账号</td>
+									<td style="width: 10%; background:#f9f9f9; border-right:none;">收款方户名</td>
+									<td style="width: 10%; background:#f9f9f9; border-right:none;">交易余额</td>
+									<td style="width: 10%; background:#f9f9f9; border-right:none;">交易用途</td>
+									<td style="width: 10%; background:#f9f9f9; border-right:none;">交易日期</td>
+									<td style="width: 10%; background:#f9f9f9; border-right:none;">交易状态</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+
+									<td style="border-right:none;">039410050
+										<br>404003</td>
+									<td style="border-right:none;">039410050
+										<br>404003</td>
+									<td style="border-right:none;">039410050
+										<br>404003</td>
+									<td style="border-right:none;">单笔转账</td>
+									<td style="border-right:none;">1000.00</td>
+									<td style="border-right:none;">装修尾款</td>
+									<td class="appointtime" style="border-right:none;">2016-08-05</td>
+									<td class="g9" style="border-right:none;">待审核</td>
+								</tr>
+								<tr>
+									<!--<td>2016-08-05</td>
+				<td>2016-08-05</td>
+				<td>张明明</td>
+				<td>李明明</td>-->
+
+									<td style="border-right:none;">294339779
+										<br>808088</td>
+									<td style="border-right:none;">039410050
+										<br>404003</td>
+									<td style="border-right:none;">039410050
+										<br>404003</td>
+									<td style="border-right:none;">单笔转账</td>
+									<td style="border-right:none;">1000.00</td>
+									<td style="border-right:none;">装修尾款</td>
+									<td style="border-right:none;" class="appointtime">2016-08-05</td>
+									<td style="border-right:none;" class="g9">待审核</td>
+								</tr>
+							</tbody>
+						</table>
+						<div>
+							<!-- 按钮盒子 -->
+							<div class="but" style="padding:0">
+								<a href="###" class="gclose" style="margin-bottom:20px;">打印</a>
+							</div>
+						</div>
+
+
+</body>
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/jquery.pager.js"></script>
+<!-- bootstrap 主要js -->
+<script src="../../../bootstrap/js/bootstrap.js"></script>
+<!-- datetimepicker 主要js -->
+<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+<!-- datetimepicker 中文包 -->
+<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript">
+	//详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+	$(".date_picker").datepicker({
+		language: 'zh-CN',
+		/* 语言 */
+		format: 'yyyy-mm-dd',
+		/* 格式 */
+		autoclose: 1,
+		/* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+		todayHighlight: 1,
+		/* 高亮当前日期 */
+		weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+	});
+	//	分页
+	$(document).ready(function () {
+		$("#pager").pager_s({
+			pagenumber: 1,
+			pagecount: 5,
+			buttonClickCallback: PageClick
+		});
+	});
+	PageClick = function (pageclickednumber) {
+		$("#pager").pager_s({
+			pagenumber: pageclickednumber,
+			pagecount: 5,
+			buttonClickCallback: PageClick
+		});
+		$("#result").html("Clicked Page " + pageclickednumber);
+	}
+
+	$(".quanbu").click(function () {
+		$(this).addClass('active');
+		$('.qita').removeClass('active');
+	})
+	$('.qita').click(function () {
+		$('.quanbu').removeClass('active');
+		if ($(this).hasClass("active")) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+	})
+	// 弹出框
+	$(".zdybtn").click(function () {
+		$(".pop_tanchu").css("display", "block");
+	})
+	$(".pop_cancel").click(function () {
+		$(".pop_tanchu").css("display", "none");
+	})
+	// 按钮
+	$(".anniuhe").mouseover(function () {
+		$(this).css({ "background": "#348CE4", "color": "#FFFFFF" }).siblings().css({ "background": "#FFFFFF", "color": "#348CE4" });
+	});
+	$(".anniuhe").mouseout(function () {
+		$(this).css({ "background": "#FFFFFF", "color": "#348CE4" }).siblings().css({ "background": "#FFFFFF", "color": "#348CE4" });
+	});
+
+</script>
+<script type="text/javascript" src="../../../js/global.js"></script>
+<script src="../../../js/huidaodingbu.js"></script>
+<script>
+	$(document).ready(function () {
+		var appoints = $(".appointtime");
+		for (var i = 0; i < appoints.length; i++) {
+			if (appoints[i].innerHTML == "") {
+				$(appoints[i]).siblings("td").children(".repeal").css("display", "none");
+			} else {
+				$(appoints[i]).siblings("td").children("repeal").css("display", "block");
+			}
+		}
+	});
+	gexingbianse();
+	//  gexingbianse2();
+	//  gexingbianse3();
+
+	//		业务选择
+	var server = new Array();
+	server['付款业务'] = ['单笔转账', '批量转账',"代发工资","预约转账撤销"];
+	server['定期存款'] = ['存入定期存款', '支取定期存款'];
+	server['通知存款'] = ['存入通知存款', '建立支取通知', '取消支取通知', '支取通知存款'];
+//	server['电票交易查询'] = ["EBANK_02_02_01"];
+
+	var st = document.getElementById("serverType");
+	var sn = document.getElementById("serverName");
+	for (var i in server) {
+		st.add(new Option(i, i), null);
+
+	}
+	st.onchange = function () {
+		if (st.value == '付款业务') {
+			$("#ceshi").show();
+		} else {
+			$("#ceshi").hide();
+		}
+
+		sn.options.length = 0;
+		if (st.value == "请选择") {
+			sn.add(new Option('请选择'));
+		}
+
+		for (var i in server) {
+			if (st.value == i) {
+				for (var j in server[i]) {
+					sn.add(new Option(server[i][j], server[i][j]), null);
+				}
+			}
+		}
+	}
+
+	$(function () {
+		$("").click(function () {
+			if ($("#serverName").val() == "存入定期存款" || $("#serverName").val() == "支取定期存款" || $("#serverName").val() == "存入通知存款") {
+				$(".serverTab1").css("display", "table");
+				$(".serverTab2").css("display", "none");
+				$(".fenye").css("display", "block");
+				$(".anniuhezi1").css("display", "block");
+				$(".tjsj").css("display", "block");
+			}
+			if ($("#serverName").val() == "建立支取通知" || $("#serverName").val() == "取消支取通知" || $("#serverName").val() == "支取通知存款") {
+				$(".serverTab1").css("display", "none");
+				$(".serverTab2").css("display", "table");
+				$(".fenye").css("display", "block");
+				$(".anniuhezi1").css("display", "block");
+				$(".tjsj").css("display", "block");
+			}
+			if ($("#serverName").val() == "存入定期存款") {
+				$(".tradeSta").click(function () {
+					location.href = "zhanghu_cunrudingqidetail.html";
+				})
+			}
+
+			if ($("#serverName").val() == "支取定期存款") {
+				$(".tradeSta").click(function () {
+					location.href = "zhanghu_zhiqudingqidetail.html";
+				})
+			}
+			if ($("#serverName").val() == "存入通知存款") {
+				$(".tradeSta").click(function () {
+					location.href = "zhanghu_cunrutongzhidetail.html";
+				})
+			}
+			if ($("#serverName").val() == "建立支取通知") {
+				$(".tradeSta").click(function () {
+					location.href = "zhanghu_jianlizhiqudetail.html";
+				})
+			}
+			if ($("#serverName").val() == "取消支取通知") {
+				$(".tradeSta").click(function () {
+					location.href = "zhanghu_quxiaozhiqudetail.html";
+				})
+			}
+			if ($("#serverName").val() == "支取通知存款") {
+				$(".tradeSta").click(function () {
+					location.href = "zhanghu_zhiqutongzhidetail.html";
+				})
+			}
+		})
+		//详情弹出
+		$('.tc_gz').click(function () {
+			$('#tc_d').css({ 'display': 'block' });
+			$('.xq_tab').css({ "top": "5%", "width": "40%" });
+		});
+		$('.gz_close,.gclose').click(function () {
+			$('#tc_d').css({ 'display': 'none' });
+		});
+		//打印详情
+		$('.tc_dayin').click(function () {
+			$('#tc_f').css({ 'display': 'block' });
+			$('.xq_tab').css({ "top": "5%", "width": "1000px" });
+		});
+		$('.gz_close,.gclose').click(function () {
+			$('#tc_f').css({ 'display': 'none' });
+		});
+	})
+	//查询
+	$('.blue-btn').click(function () {
+		$('#tjsj').css({ 'display': 'block' });
+		$('#biaoge').css({ 'display': 'block' });
+	});
+	$('.reset').click(function () {
+		$('#tjsj').css({ 'display': 'none' });
+		$('#biaoge').css({ 'display': 'none' });
+	});
+	$("#qweqwe").html(nav)
+</script>
+
+
+</html>

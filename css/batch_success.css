@@ -1,0 +1,72 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea{margin:0;padding:0} 
+body{color:#040404;font-size:16px;background:#f5f5f5;-webkit-text-size-adjust:100%;} 
+a{color:#646464;text-decoration:none;} 
+/*a:hover{color:#2e8ae7;text-decoration:none;}*/ 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0;} 
+p{word-wrap:break-word} 
+button{
+	font-size:18px;
+	outline:none;
+	border:none;
+	color:#FFFFFF;
+}
+.piliangzhuanzhangcg{
+	width:1200px;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+.plcg{
+	color: #646464;
+	margin-top: 2px;
+	text-align:left ;
+	
+}
+.cgneirong{
+	background: white;
+	margin-top:25px;
+ 	height: 900px;
+ 	font-family: "微软雅黑";
+ 	text-align: center;
+    margin: auto;
+ 	
+}
+.plzzcg{
+	padding:30px;
+	text-align: center;
+	text-align: center;
+	width: 700px;
+	margin: auto;
+}
+.tab_plcg{
+	height:35px;
+	line-height: 35px;
+	margin-top: 10px;
+}
+.tab_plcg .scwj li{
+	min-width: 120px;
+	text-align: center;
+	margin-right: 10px;
+	float: left;
+	margin: 1px;
+}
+.tab_plcg .scwj li a{
+	display: block;
+	background: #fff;
+	border-radius:4px 4px 0 0;
+	color: #333;
+	font-size: 14px;
+}
+
+.tab_plcg .scwj li.now a{
+	background: #fff;
+	color: #108ee9;
+}
+.tishi{
+	margin-right: 20px;
+}
+
+

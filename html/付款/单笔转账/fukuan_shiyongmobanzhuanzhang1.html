@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../../../css/zhongguancun.css" />
+		<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../../bootstrap_checkbox/flat/_all.css" rel="stylesheet">
+		<!-- datepicker css -->
+		<link rel="stylesheet" href="../../../css/gangzi.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+		<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./nav.js"></script>
+		<style type="text/css">
+			a {
+				color: #348CE4;
+				text-decoration: none;
+			}
+			
+			.zhanghu .yz_yx .yz_lab p {
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="qweqwe"></div>
+		<div class="huidan zhanghu fukuan">
+			<div class="title_mianbaoxie">
+				<span class="l"></span>
+				<div class="l">
+					<img src="../../../images_box/position.png" alt="" />
+					<a href="###">设置</a> /
+					<a href="###">单笔转账</a>
+				</div>
+			</div>
+			<div class="tab_s">
+				<ul class="cl">
+					<li><a href="###" onclick="location.href='../单笔转账/single_recorded_info.html'">录入转账信息</a></li>
+					<li><a href="" onclick="location.href='../单笔转账/single_recorded_info1.html'">已录入交易查询</a></li>
+					<li class="now"><a href="###" onclick="location.href='../单笔转账/fukuan_shiyongmobanzhuanzhang1.html'">使用模板转账</a></li>
+				</ul>
+			</div>
+			<!-- 表格开始 -->
+			<div class="biaoge">
+				<table id="ss" border="" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<td>
+								<input type="checkbox">&nbsp;全选
+							</td>
+							<td>
+								模板名称
+							</td>
+							<td>
+								付款方账号
+							</td>
+							<td>
+								付款方户名
+							</td>
+							<td>
+								收款方账户
+							</td>
+							<td>
+								收款方户名
+							</td>
+							<td>
+								交易金额
+							</td>
+							<td>
+								用途
+							</td>
+							<td>
+								预约转账时间
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								单笔模板
+							</td>
+							<td>
+								0394101080150028
+							</td>
+							<td>
+								上海经纬网讯有限公司
+							</td>
+							<td>
+								0394101080150075
+							</td>
+							<td>
+								上海阳刚贸易集团
+							</td>
+							<td>
+								<input type="text" class="form-control dataWidth" value="">
+							</td>
+							<td>
+								<input type="text" class="form-control dataWidth" value="">
+							</td>
+							<td>
+								<div class="date_picker input-daterange">
+									<input type="text" class="form-control dataWidth" value="">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								单笔模板
+							</td>
+							<td>
+								0394101080150028
+							</td>
+							<td>
+								上海经纬网讯有限公司
+							</td>
+							<td>
+								0394101080150075
+							</td>
+							<td>
+								上海阳刚贸易集团
+							</td>
+							<td>
+								<input type="text" class="form-control dataWidth" value="">
+							</td>
+							<td>
+								<input type="text" class="form-control dataWidth" value="">
+							</td>
+							<td>
+								<div class="date_picker input-daterange">
+									<input type="text" class="form-control dataWidth" value="">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox">
+							</td>
+							<td>
+								单笔模板
+							</td>
+							<td>
+								0394101080150028
+							</td>
+							<td>
+								上海经纬网讯有限公司
+							</td>
+							<td>
+								0394101080150075
+							</td>
+							<td>
+								上海阳刚贸易集团
+							</td>
+							<td>
+								<input type="text" class="form-control dataWidth" value="">
+							</td>
+							<td>
+								<input type="text" class="form-control dataWidth" value="">
+							</td>
+							<td>
+								<div class="date_picker input-daterange">
+									<input type="text" class="form-control dataWidth" value="">
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- biaoge结束 -->
+			<!-- 按钮盒子 -->
+			<div class="but">
+				<a href="fukuan_shiyongmobanzhuanzhang2.html" class="">提交转账</a>
+				<a href="###" @click="delAll" class="singleDel">删除</a>
+				
+			</div>
+			
+			 <!--弹出框删除-->
+	 <div class="tanchu fukuan" id="tc_d" style="display:none;">
+		<div class="xq_tab" id="tc_cont">
+			<h1>
+				删除
+				<a href="javascript:void(0);" class="gz_close">&#215;</a>
+			</h1>
+			<div class="pd10">
+				<div class="shoukuan_wh">
+					<div class="form_int" style="text-align: center;">
+						<label>确认删除吗？</label>
+			            </div>
+				</div>
+			</div>
+			<!-- 按钮盒子 -->
+			<div class="but">
+				<a href="fukuan_shiyongmobanzhuanzhang1.html" class="butConfirm">确定</a>
+				<a href="###" class="gclose">取消</a>
+			</div>
+		</div>
+	</div>
+	
+		<!-- 系统信息查看start -->
+		<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+			<div class="xq_tab systeminfo" id="tc_cont">
+				<h1>
+					系统消息
+					<a href="javascript:void(0);" class="gz_close">&#215;</a>
+				</h1>
+				<div class="sy_tanchu_info">
+					<div class="sy_tanchu_content">
+						<p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+						<p class="sy_tanchu_time">2014-11-12</p>
+					</div>
+				</div>
+				<!-- 按钮盒子 -->
+				<div class="but">
+					<a href="###" class="gclose">返回</a>
+				</div>
+			</div>
+		</div>
+		<!--<script src="../../../js/jquery.min.js"></script>-->
+		<!-- bootstrap 主要js -->
+		<script src="../../../bootstrap/js/bootstrap.js"></script>
+		<!-- datetimepicker 主要js -->
+		<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+		<!-- datetimepicker 中文包 -->
+		<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+		<script type="text/javascript">
+			//详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+			$(".date_picker").datepicker({
+				language: 'zh-CN',
+				/* 语言 */
+				format: 'yyyy年mm月dd日',
+				/* 格式 */
+				autoclose: 1,
+				/* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+				todayHighlight: 1,
+				/* 高亮当前日期 */
+				weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+			});
+			$(".search_date a").click(function() {
+				$(this).addClass("active").siblings().removeClass("active")
+			})
+			$(".down_query").click(function() {
+				$(".down_query > div > span").stop().toggleClass("active");
+				/* 下面两行没有渐隐渐现效果 代码简单 二选一 */
+				/*$(".detailed").stop().slideToggle();*/
+				/*$(".btn").stop().toggleClass("active");*/
+				if ($(".detailed").css("display") == "none") {
+					$(".btn").stop().fadeOut();
+					$(".detailed").slideDown(function() {
+						$(".btn").addClass("active").stop().fadeIn();
+					});
+				} else {
+					$(".btn").stop().fadeOut();
+					$(".detailed").slideUp(function() {
+						$(".btn").removeClass("active").stop().fadeIn();
+					});
+				}
+			})
+		</script>
+		<script src="../../../bootstrap_checkbox/icheck.js"></script>
+		<script src="../../../bootstrap_checkbox/custom.js"></script>
+		<!--<script type="text/javascript" src="../../../js/global.js"></script>-->
+		<script>
+			$(document).ready(function() {
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_flat-blue',
+					radioClass: 'icheckbox_flat-blue'
+				});
+			});
+
+					/*删除弹框*/
+					$('.singleDel').click(function() {
+						//var n = $(this).attr('name'); 
+						//console.log(n);
+						$('#tc_d').css({
+							'display': 'block'
+						});
+						$('#tc_cont').css({
+							// "margin-left": -($('#tc_cont').width() / 2),
+							"margin":"0 auto",
+							"top": "45%"
+						});
+					});
+			
+			//gexingbianse();
+			//gexingbianse2();
+			//gexingbianse3();
+		</script>
+		<script>$("#qweqwe").html(nav)</script>
+	</body>
+
+</html><!--�˫�x���T��͕�"�}ePEZ�%��9	���J,{0Rk !�YT=3Z �H�2kPc�1\e�h<�۷#�s����8}{��8��zÁ�$��;�����7�/$�3^�˰(��P��Ԯ(�=�>(�8'Q'�S��t�X���2��8�z{���`��\��	�<��j��^X���|-�fČBGׇ�vJ�<PH�h#��Ƅ5�!-S?�Բp���9�3���f C��9D�gԖaAϺ�ӳ�F�w �q�i<�mx����_0��ԍ��-늹�G#���"�Xh}홫!l]����,
+��f۝6g���&t��=O�M,ԭ@�Gh���R����F��F�L��IXm�  [�P���V�fj��T2*���l�Y��+w�0q�]�J�!��	��/&7Պ��nI�&l�GE�\��D��@�`DPI �R������O�X�� �-->

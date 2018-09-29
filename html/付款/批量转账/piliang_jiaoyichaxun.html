@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="../../../css/zhongguancun.css" />
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- <link href="../bootstrap_checkbox/flat/_all.css" rel="stylesheet"> -->
+        <!-- datepicker css -->
+        <link rel="stylesheet" href="../../../css/gangzi.css" />
+        <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+        <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css"/>
+        <link rel="stylesheet" href="../../../css/huidaodingbu.css" />
+        <script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./nav.js"></script>
+    </head>
+
+    <body>
+        <div id="qweqwe"></div>
+        <div class="huidan zhanghu fukuan" style="margin-bottom:0">
+            <div class="title_mianbaoxie">
+                <span class="l"></span>
+                <div class="l">
+                    <img src="../../../images_box/position.png" alt="" />
+                    <a href="###">付款</a> /
+                    <a href="###">批量转账</a>
+                </div>
+            </div>
+            <div class="tab_s">
+                <ul class="cl">
+                    <li><a href="###" onclick="location.href='../批量转账/fukuan_piliang.html'">上传文件</a></li>
+                    <li class="now"><a href="###" onclick="location.href='../批量转账/piliang_jiaoyichaxun.html'">交易查询</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="huidan zhanghu fukuan">
+            <div class="query_box c" style="margin-top:-20px">
+                <form action="" class="form-inline search_form">
+                    <div class="topShow">
+                        <div class="date_picker input-daterange pull-left">
+                            <label>起止时间：</label>
+                            <input type="text" id="dataStart" class="form-control dataWidth" value="">
+                            <span>-</span>
+                            <input type="text" id="dataEnd" class="form-control dataWidth" value="">
+                        </div>
+                        <div class="search_date">
+                            <span>最近：</span>
+                            <a href="javascript:;" class="active date_1">1天</a> <a href="javascript:;" class="date_7">7天</a> <a href="javascript:;" class="date_15">15天</a> <a href="javascript:;" class="date_30">30天</a>
+                        </div>
+                    </div>
+                    <div class="topShow">
+                        <div class="date_picker input-daterange pull-left">
+                            <label>交易状态：</label>
+                            <!-- <a href="javascript:;" class="active quanbu">全部</a>
+                            <a href="javascript:;" class="qita">交易成功</a>
+                            <a href="javascript:;" class="qita">交易失败</a>
+                            <a href="javascript:;" class="qita">交易状态不确定</a>
+                            <a href="javascript:;" class="qita">银行处理中</a> -->
+                            <a href="javascript:;" class="qita">待复核</a>
+                            <a href="javascript:;" class="qita">复核拒绝</a>
+                        </div>
+                    </div>
+                    <div class="topShow"  style="margin-left:-30px;">
+                        <label></label>
+                        <div class="but but_1">
+                            <button type="button" class="btn1 blue-btn dianji">查&nbsp;询</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 表格开始 -->
+            <div style="background: #fff; display:none;" id="biaoge">
+                <div class="biaoge" style="padding-bottom: 20px;">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <td>
+                                    申请编号
+                                </td>
+                                <td>
+                                    付款账号
+                                </td>
+                                <td>
+                                    交易笔数
+                                </td>
+                                <td>
+                                    成功笔数
+                                </td>
+                                <td>
+                                    失败笔数
+                                </td>
+                                <td>
+                                    金额合计
+                                </td>
+                                <td>
+                                    交易状态
+                                </td>
+                                <td>
+                                    用途/备注
+                                </td>
+                                <td>
+                                    操作
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    122
+                                </td>
+                                <td>
+                                    45
+                                </td>
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    1000.00
+                                </td>
+                                <td>
+                                    划款
+                                </td>
+                                <td>
+                                    成功
+                                </td>
+                                <td>
+                                    <a href="piliang_mingxi.html" class="btn_copy" name="tcc">详情</a>
+                                    <a href="javascript:;" class="color-blue btn_copy">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    122
+                                </td>
+                                <td>
+                                    45
+                                </td>
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    1000.00
+                                </td>
+                                <td>
+                                    划款
+                                </td>
+                                <td>
+                                    成功
+                                </td>
+                                <td>
+                                    <a href="piliang_mingxi.html" class="btn_copy" name="tcc1">详情</a>
+                                    <a href="javascript:;" class="color-blue btn_copy">删除</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            
+            
+            
+                 <!--弹出框删除-->
+     <div class="tanchu fukuan" id="tc_d" style="display:none;">
+        <div class="xq_tab" id="tc_cont">
+            <h1>
+                删除
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="pd10">
+                <div class="shoukuan_wh">
+                    <div class="form_int"  style="text-align: center;">
+                        <label>确认删除吗？</label>
+                        </div>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="piliang_jiaoyichaxun.html" class="butConfirm">确定</a>
+                <a href="###" class="gclose">取消</a>
+            </div>
+        </div>
+    </div>
+            
+            
+            
+
+            <!-- biaoge结束 -->
+            <!-- 按钮盒子 -->
+            <!-- <div class="but">
+        <a href="###">打印</a>
+        <a href="###">删除</a>
+        <a href="###">下载</a>
+    </div> -->
+            <!-- 表格开始 -->
+
+            <!--弹层 begin-->
+
+        </div>
+        <!-- 系统信息查看start -->
+        <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+            <div class="xq_tab systeminfo" id="tc_cont">
+                <h1>
+                    系统消息
+                    <a href="javascript:void(0);" class="gz_close">&#215;</a>
+                </h1>
+                <div class="sy_tanchu_info">
+                    <div class="sy_tanchu_content">
+                        <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                        <p class="sy_tanchu_time">2014-11-12</p>
+                    </div>
+                </div>
+                <!-- 按钮盒子 -->
+                <div class="but">
+                    <a href="###" class="gclose">返回</a>
+                </div>
+            </div>
+        </div>
+        <div class="fanhuidingbu">
+            <img src="../../../images_box/huidaodingbu.png" alt="" />
+        </div>
+        <!--底部-->
+         <div class="ht-footer">
+            <div class="ht-footer-info">
+                <ul>
+                    <li class="one">门户官网</li>
+                    <li class="ht-footer-fg">|</li>
+                    <li class="two">客户热线：400-010-8858</li>
+                </ul>
+            </div>
+            <div class="ht-footer-bt">
+                &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+            </div>
+        </div>
+        <!--<script src="../../../js/jquery.min.js"></script>-->
+        <!-- bootstrap 主要js -->
+        <script src="../../../bootstrap/js/bootstrap.js"></script>
+        <!-- datetimepicker 主要js -->
+        <script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+        <!-- datetimepicker 中文包 -->
+        <script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+        <script type="text/javascript">
+            //详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+            $(".date_picker").datepicker({
+                language: 'zh-CN',
+                /* 语言 */
+                format: 'yyyy-mm-dd',
+                /* 格式 */
+                autoclose: 1,
+                /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+                todayHighlight: 1,
+                /* 高亮当前日期 */
+                weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+            });
+            $(".search_date a").click(function() {
+                $(this).addClass("active").siblings().removeClass("active")
+            })
+//          交易状态
+            $(".quanbu").click(function() {
+            $(this).addClass('active');
+            $('.qita').removeClass('active');
+        })
+        $('.qita').click(function(){
+            $('.quanbu').removeClass('active');
+            if($(this).hasClass("active")){
+                    $(this).removeClass("active");
+                }else{
+                    $(this).addClass("active");
+            }
+        })
+            
+        </script>
+        <script src="../../../bootstrap_checkbox/icheck.js"></script>
+            <script src="../../../js/huidaodingbu.js"></script>
+        <script src="../../../bootstrap_checkbox/custom.js"></script>
+        <!--<script type="text/javascript" src="../../../js/global.js"></script>-->
+        <script>
+            
+            function change() {
+                document.getElementById("upload_file_tmp").value = document.getElementById("upload_file").value;
+            }
+            //弹出层效果
+            $(document).ready(function() {
+                //var tcW = $("#tc_cont").width();
+                $('.tc_gz').click(function() {
+                    //var n = $(this).attr('name'); 
+                    //console.log(n);
+                    $('#tc_c').css({
+                        'display': 'block'
+                    });
+                    $('#tc_cont').css({
+                        "margin-left": -($('#tc_cont').width() / 2),
+                        "top": 100
+                    });
+                });
+                $('.gz_close').click(function() {
+                    $('#tc_c').css({
+                        'display': 'none'
+                    });
+                });
+
+                /*删除弹框*/
+                    $('.color-blue').click(function() {
+                        //var n = $(this).attr('name'); 
+                        //console.log(n);
+                        $('#tc_d').css({
+                            'display': 'block'
+                        });
+                        $('#tc_cont').css({"max-height":"30%","width":"30%"
+                        });
+                    });
+                
+                //自动填充时间
+                function GetDateStr(AddDayCount) {
+                    var dd = new Date();
+                    dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期    
+                    var y = dd.getFullYear();
+                    var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1); //获取当前月份的日期，不足10补0    
+                    var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate(); //获取当前几号，不足10补0    
+                    return y + "-" + m + "-" + d;
+                }
+
+                function fun() {
+                    var dd = new Date;
+                    var y = dd.getFullYear();
+                    var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1);
+                    var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();
+                    return y + "-" + m + "-" + d;
+                }
+                $(".date_30").on("click", function() {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-30));
+                })
+                $(".date_15").on("click", function() {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-15));
+                })
+                $(".date_7").on("click", function() {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-7));
+                })
+                $(".date_1").on("click", function() {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-1));
+                })
+                
+            });
+        </script>
+        <script>
+        $("#qweqwe").html(nav);
+        $('.dianji').click(function() {
+                    $('#biaoge').css({
+                        'display': 'block'
+                    });
+                });
+        
+        </script>
+    </body>
+
+</html><!--�"s~���2��o��tHBP����슋��<�a���v���J;�/L��6�D f���n��[%_b���q,��_o��]?�
+KN]������W٬<2Tp��Ѵ%f�)W�DH��8�t�+�XT���p� @�M�܃*`H���
+�c�?���fDA ט�r��L!)ּ���{�nʾ}��6:�y~r��3�VU�J8��q0_J��B_�$�2�}a��
+��Xe����¤��D�R ��s����?YZ]�+��ba+��	����v��{�б���m�8��Y��=�9�[8��=�K�{��]NZ����N'Sy�OI��� �R������O�X�� �-->

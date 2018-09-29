@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>存入_通知存款</title>
+    <link href="../../../css/_all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/cunkuan_global.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link href="../../../css/cunru.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+    <script src="../../../js/nav.js"></script>
+    
+</head>
+
+<body>
+    <!-- 头部_公共 -->
+    <div id="qweqwe"></div>
+    <!-- header -->
+
+    <!-- 内容开始 -->
+    <div class="content">
+        <div class="w">
+            <!-- 面包屑 -->
+            <div class="title_mianbaoxie">
+                <span class="l"></span>
+                <div class="l">
+                    <img src="../../../images_box/position.png" alt="" />
+                    <a href="###">存款</a> /
+                    <a href="###">通知存款</a> /
+                    <a href="###">存入通知存款</a>
+                </div>
+            </div>
+            <div id="mq-cr-content" class="content_box content_box_f">
+                <!-- 存入公共titile -->
+                <div class="cunru_title">
+                    <a href="javascript:void(0);" class="lnk_cunru_tongzhicunkuan">存入通知存款</a>
+                    <a href="javascript:void(0);" class="active lnk_jiaoyiliebiao">交易列表</a>
+                </div>
+                <!--存入通知存款-->
+                <div id="mq-cunru">
+                    <!--存入账户-->
+                    <div id="mq-cunru_zhanghu" class="cunru_zhanghu">
+                        <div class="row">
+                            <div class="name l" style="width:140px;text-align: right;">
+                                <u>*</u>账户：
+                            </div>
+                            <select name="" id="" class="select_shezhi_gg l account" style="width:360px;color:#666;margin-top:4px;">
+                                <!-- <option value="" class="ac_a">请选择账户</option> -->
+                                <option value="10000">110-033467784888988  1山东阳光贸易集团</option>
+                                <option value="50000">210-033467784888988  2山东阳光贸易集团</option>
+                            </select>
+                            <div class="tishi l">可用余额：988,433,877,000.00</div>
+                            <br>
+                            <div class="companyName" style="padding-left:148px;line-height:30px;">企业网银二十</div>
+                        </div>
+                        <div class="row">
+                            <div class="name l" style="width:140px;text-align: right;">
+                                <u>*</u>通知存款类型：
+                            </div>
+                            <select name="" id="" class="select_shezhi_gg l period" style="width:360px;color:#666;margin-top:4px;">
+                                <!-- <option value="" class="pe_a">请选择通知存款类型</option> -->
+                                <option value="0.1%">一天通知</option>
+                                <option value="0.2%">七天通知</option>
+                            </select>
+                            <div class="tishi l">
+                                利率：0.1%
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="name l" style="width:140px;text-align: right;">
+                                <u>*</u>金额：
+                            </div>
+                            <input type="text" class="l money" value="500000" style="width:345px;">
+                            <div class="tishi l">
+                                伍拾萬元整
+                            </div>
+                            <div class="tishi_b" style="padding-left:65px;">
+                                通知存款起存金额为50万元人民币
+                            </div>
+                        </div>
+                        <div class="shezhi_btn" style="padding-right:70px;width:250px;margin-left: 230px;">
+                            <a href="###" class="l btn_ok">下一步</a>
+                            <a href="###" class="r btn_cancel">返回</a>
+                        </div>
+                    </div>
+                    <!--存款确定页面-->
+                    <div id="mq-cunru-qd" class="jiaoyiliebiao">
+                        <div class="row">
+                            <div class="left l">
+                                账号：
+                            </div>
+                            <div class="right r">
+                                03-4000005
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="left l">
+                                户名：
+                            </div>
+                            <div class="right r">
+                                山东阳光贸易集团
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="left l">
+                                可用余额：
+                            </div>
+                            <div class="right r">
+                                10000.00
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="left l">
+                                通知存款类型：
+                            </div>
+                            <div class="right r">
+                                7天通知
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="left l">
+                                利率：
+                            </div>
+                            <div class="right r">
+                                0.35%
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="left l">
+                                存入金额：
+                            </div>
+                            <div class="right r">
+                                1,000,000.00元
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="left l">
+                                时间：
+                            </div>
+                            <div class="right r">
+                                2016-07-15
+                            </div>
+                        </div>
+                        <div class="shezhi_btn">
+                            <a href="###" class="l" @click="djCrQdConfirm">确定</a>
+                            <a href="###" class="r" @click="djCrQdReturn">返回</a>
+                        </div>
+                    </div>
+                    <!--提示存款成功失败页面-->
+                    <div id="mq-cr-isNo">
+                        <div class="caozuochenggong">
+                            <img src="../../../images_box/zhengque.png" alt="" class="l">
+                            <p class="l">存入通知存款操作成功</p>
+                        </div>
+                        <div class="content_box_d">
+                            <table>
+                                <tr>
+                                    <td class="td_a padding-left">
+                                        <p>
+                                            <i class="A8">流水号</i>
+                                        </p>
+                                        <p>2016082316388447320</p>
+                                        <p class="opacity">1</p>
+                                    </td>
+                                    <td class="td_b">
+                                        <p>
+                                            <i class="A8">账号：</i>11-0420000006</p>
+                                        <p>
+                                            <i class="A8">户名：</i>北京承兴国际有限公司</p>
+                                        <p>
+                                            <i>币种：</i>人民币</p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <i class="A8">存入金额</i>
+                                        </p>
+                                        <p>10，000.00</p>
+                                        <p class="opacity">1</p>
+                                    </td>
+                                    <td class="td_d">
+                                        <p>
+                                            <i class="A8">利率(%)</i>
+                                        </p>
+                                        <p>0.35</p>
+                                        <p class="opacity">1</p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <i class="A8">存期</i>
+                                        </p>
+                                        <p>企业三个月定期</p>
+                                        <p class="opacity">1</p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <i class="A8">通知存款类型</i>
+                                        </p>
+                                        <p>7天通知</p>
+                                        <p class="opacity">1</p>
+                                    </td>
+                                    <td class="td_e">
+                                        <a href="###">录入交易成功</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="cxdqck">
+                                继续
+                                <a href="###" @click="djCrQdReturnTip">存入通知存款</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 系统信息查看start -->
+    <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+        <div class="xq_tab systeminfo" id="tc_cont">
+            <h1>
+                系统消息
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="sy_tanchu_info">
+                <div class="sy_tanchu_content">
+                    <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                    <p class="sy_tanchu_time">2014-11-12</p>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="gclose">返回</a>
+            </div>
+        </div>
+    </div>
+
+    <!--回到顶部-->
+    <div class="fanhuidingbu">
+        <img src="../../../images_box/huidaodingbu.png" alt="" />
+    </div>
+    <!--底部-->
+    <div class="ht-footer">
+        <div class="ht-footer-info">
+            <ul>
+                <li class="one">门户官网</li>
+                <li class="ht-footer-fg">|</li>
+                <li class="two">客户热线：400-010-8858</li>
+            </ul>
+        </div>
+        <div class="ht-footer-bt">
+            &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+        </div>
+    </div>
+</body>
+<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/huidaodingbu.js"></script>
+<script src="../../../js/shezhi_global.js"></script>
+<script src="../../../js/vue.min.js"></script>
+<script src="../../../js/mq-cunru-tongzhi-page.js"></script>
+<script src="../../../js/fuxuankuang-state.js"></script>
+<script>
+    // $('.companyName').hide();
+    // $(".account").siblings('.tishi').hide();
+    $(".account").change(function () {
+        // $(".ac_a").remove();
+        var va = $(this).val();
+        if (va) {
+            $(this).siblings('.tishi').show();
+            $('.companyName').show();
+        } else {
+            $(this).siblings('.tishi').hide();
+            $('.companyName').hide();
+        }
+    });
+
+    $(".period").change(function () {
+        // $(".pe_a").remove();
+        var va = $(this).val()
+        $(this).siblings('.tishi').html("利率：" + va)
+        $(this).siblings('.tishi').show()
+    });
+
+    $(".money").keyup(function () {
+        var y = $(this).val()
+        if ($(this).val() == "") {
+            $(this).siblings(".tishi").html("");
+        } else {
+            $(this).siblings(".tishi").html(NoToChinese(y) + "元整");
+        }
+    });
+
+    $(function () {
+        //多选删除
+        $('.allCheck').click(function () {
+            $('input[type="checkbox"]').attr("checked", this.checked);
+        });
+    });
+
+    $('.btn_ok').bind('click', function () {
+        if ($(".account").val() == '') {
+            alert('请选择账户')
+        } else if ($(".period").val() == '') {
+            alert('请选择通知存款类型')
+        } else if ($(".money").val() == '') {
+            alert('请输入金额')
+        } else if ($(".money").val() < 500000) {
+            alert('通知存款起存金额为500000元人民币')
+        } else {
+            var sureBtn = confirm(`
+                    存入通知存款确认：
+
+                    账号：343434554555
+                    户名：企业网银二十
+                    可用余额：988,433,877,000.00
+                    通知存款类型：一天通知
+                    利息：0.1%
+                    存入金额：500,000.00
+                `)
+            if (sureBtn) {
+                window.location = 'cunru_tongzhicunkuanSuccess.html'
+            }
+        }
+    })
+    $('.btn_cancel').bind('click', function () {
+        $(".account").val('');
+        $('.companyName').hide();
+        $(".account").siblings('.tishi').hide();
+        $(".period").val('');
+        $(".period").siblings('.tishi').hide();
+        $(".money").val('');
+        $(".money").siblings(".tishi").html("");
+    })
+
+    // 标签“存入通知存款”
+    $('.lnk_cunru_tongzhicunkuan').click(function () {
+        window.location = 'cunru_tongzhicunkuan.html';
+    });
+    // 标签“交易列表”
+    $('.lnk_jiaoyiliebiao').click(function () {
+        window.location = 'cunru_tongzhicunkuanTradelist.html';
+    });
+</script>
+ <script>
+    $("#qweqwe").html(nav)
+    $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+
+    $(".sy_nav ul").find("li").eq(3).addClass("nav_now")
+
+</script>
+
+</html><!--�ɑc$�'��B9��c\e�NU	��A��mo���7ִ/�xOeim9
+$�Wv��F��A��roB�����tL���9��.󣐦'F$�Q o�aD6T��"ҋR-�ND���㶄���'-z=�a/=�-c��m�av��k�?���{��7�A��Q-��u�ե�RL�
+�t����M 2��]��E�����l��
+S�d��*]���(�ȫ�~�{MxG�� H�u�,��>����g.�F�9l>1���o7u�~�jI7H�NԲ��8��20)�O�����H�'|�D!�
+]��hО��"�^�vh���Һz�����ZPƠ3׸5/��v甍ʔ��W����$J��V�V� 	/�t�̋�ظ�5�G��|��H1�@�t���o �R������O	�X�� �-->

@@ -1,0 +1,425 @@
+﻿﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="../../../css/zhongguancun.css" />
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../bootstrap_checkbox/flat/_all.css" rel="stylesheet">
+        <!-- datepicker css -->
+        <link rel="stylesheet" href="../../../css/gangzi.css" />
+        <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+              <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css"/>
+        <script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../js/nav.js"></script>
+        
+    </head>
+
+    <body>
+        <div id="qweqwe"></div>
+        <div class="huidan zhanghu fukuan">
+            <div class="title_mianbaoxie">
+                <span class="l"></span>
+                <div class="l">
+                    <img src="../../../images_box/position.png" alt="" />
+                    <a href="javascript:;">复核</a> /
+                    <a href="javascript:;">交易复核</a> /
+                    <a href="javascript:;">代发工资复核</a>
+                </div>
+            </div>
+            <div class="skf_box">
+                <div class="skfz_tit">
+                    代发工资复核
+                </div>
+                <div class="query_box c c_two">
+                    <div class="shoukuan_wh cl">
+                        <div class="form_int date_picker input-daterange">
+                            <label>录入日期：</label>
+                            <input style="box-sizing: border-box;padding-left:10px" type="text" id="dataStart" class="form-control dataWidth" value="2018-8-22">
+                            <span>-</span>
+                            <input style="box-sizing: border-box;padding-left:10px" type="text" id="dataEnd" class="form-control dataWidth" value="2018-8-22">
+                        </div>
+                        <div class="form_int">
+                            <label>录入操作员：</label>
+                            <select>
+                                <option value="">请选择录入操作员</option>
+                                <option value="">操作员1</option>
+                                <option value="">操作员2</option>
+                                <option value="">操作员3</option>                 
+                            </select>
+                        </div>
+                        <div class="form_int">
+                            <label>转出账户：</label>
+                            <select>
+                                <option value="">请选择转出账户</option>
+                                <option value="">账户1 10000000000011</option>
+                                <option value="">账户2 10000000000012</option>
+                                <option value="">账户3 10000000000013</option>              
+                            </select>
+                        </div>
+                        <div class="form_int" style="padding-top:30px;width:100%">
+                            <div class="but pdnone">
+                                <a href="javascript:;">查询</a>
+                                <a href="javascript:;">重置</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 内容 开始 -->
+
+                <!-- 表格开始 -->
+                <div class="biaoge">
+                    <div class="skfz_tit">
+                        待复核交易列表
+                    </div>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <td>
+                                    录入时间
+                                </td>
+                                <td>
+                                    批次号
+                                </td>
+                                <td>
+                                    付款方账户
+                                </td>
+                                <td>
+                                    付款方户名
+                                </td>
+                                <td>
+                                    总笔数
+                                </td>
+                                <td>
+                                    总金额
+                                </td>
+                                <td>
+                                    备注
+                                </td>
+                                <td>
+                                    录入人员
+                                </td>
+                                </td>
+                                <td>
+                                    操作
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    021212541554451
+                                </td>
+                                <td>
+                                    0331545115545454
+                                </td>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    上海阳关贸易有限公司
+                                </td>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    1000.00
+                                </td>
+                                <td>
+                                    代发工资
+                                </td>
+                                <td>
+                                    王明明
+                                </td>
+                                <td>
+                                    <a href="batch_ta_A.html">详情</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    021212541554451
+                                </td>
+                                <td>
+                                    0331545115545454
+                                </td>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    上海阳关贸易有限公司
+                                </td>
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    1000.00
+                                </td>
+                                <td>
+                                    代发工资
+                                </td>
+                                <td>
+                                    王明明
+                                </td>
+                                <td>
+                                    <a href="batch_ta_A.html">详情</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- biaoge结束 -->
+                <!-- 按钮盒子 -->
+                <div class="but">
+                    <a href="batch_ta_C.html">下载</a>
+                </div>
+            </div>
+        </div>
+        <!--弹出 begin-->
+        <div class="tanchu fukuan" id="tc_c" style="display:none">
+            <div class="xq_tab" id="tc_cont">
+                <h1>
+            添加收款方
+            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+        </h1>
+                <div class="pd10">
+                    <div class="biaoge ">
+                        <table border="" cellspacing="0" cellpadding="0" style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">&nbsp;全选
+                                    </td>
+                                    <td>
+                                        序号
+                                    </td>
+                                    <td>
+                                        账户
+                                    </td>
+                                    <td>
+                                        户名
+                                    </td>
+                                    <td>
+                                        开户行别
+                                    </td>
+                                    <td>
+                                        开户类别
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        0394101080150028
+                                    </td>
+                                    <td>
+                                        上海经纬网讯有限公司
+                                    </td>
+                                    <td>
+                                        中关村银行
+                                    </td>
+                                    <td>
+                                        企业客户
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td>
+                                        0394101080150028
+                                    </td>
+                                    <td>
+                                        上海经纬网讯有限公司
+                                    </td>
+                                    <td>
+                                        中关村银行
+                                    </td>
+                                    <td>
+                                        企业客户
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 按钮盒子 -->
+                <div class="but">
+                    <a href="javascript:;">确定</a>
+                    <a href="javascript:;" class="gclose">取消</a>
+                </div>
+            </div>
+        </div>
+        <!-- 系统信息查看start -->
+        <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+            <div class="xq_tab systeminfo" id="tc_cont">
+                <h1>
+                    系统消息
+                    <a href="javascript:void(0);" class="gz_close">&#215;</a>
+                </h1>
+                <div class="sy_tanchu_info">
+                    <div class="sy_tanchu_content">
+                        <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                        <p class="sy_tanchu_time">2014-11-12</p>
+                    </div>
+                </div>
+                <!-- 按钮盒子 -->
+                <div class="but">
+                    <a href="javascript:;" class="gclose">返回</a>
+                </div>
+            </div>
+        </div>
+        <div class="fanhuidingbu">
+            <img src="../../../images_box/huidaodingbu.png" alt="" />
+        </div>
+        <!--底部-->
+         <div class="ht-footer">
+            <div class="ht-footer-info">
+                <ul>
+                    <li class="one">门户官网</li>
+                    <li class="ht-footer-fg">|</li>
+                    <li class="two">客户热线：400-010-8858</li>
+                </ul>
+            </div>
+            <div class="ht-footer-bt">
+                &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+            </div>
+        </div>
+        <style>
+            .iradio_flat-blue {
+                background: url('../../../images_box/blueradio.png') no-repeat;
+            }
+            
+            .iradio_flat-blue {
+                background-position: -86px 0;
+            }
+            
+            .iradio_flat-blue.checked {
+                background-position: 0 0;
+            }
+        </style>
+        <!--<script src="../../../js/jquery.min.js"></script>-->
+        <!-- bootstrap 主要js -->
+        <script src="../../../bootstrap/js/bootstrap.js"></script>
+        <!-- datetimepicker 主要js -->
+        <script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+        <!-- datetimepicker 中文包 -->
+        <script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+        <script src="../../../js/huidaodingbu.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script type="text/javascript">
+            //详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+            $(".date_picker").datepicker({
+                language: 'zh-CN',
+                /* 语言 */
+                format: 'yyyy-mm-dd',
+                /* 格式 */
+                autoclose: 1,
+                /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+                todayHighlight: 1,
+                /* 高亮当前日期 */
+                weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+            });
+            $(".search_date a").click(function() {
+                $(this).addClass("active").siblings().removeClass("active")
+            })
+            $(".down_query").click(function() {
+                $(".down_query > div > span").stop().toggleClass("active");
+                /* 下面两行没有渐隐渐现效果 代码简单 二选一 */
+                if ($(".detailed").css("display") == "none") {
+                    $(".btn").stop().fadeOut();
+                    $(".detailed").slideDown(function() {
+                        $(".btn").addClass("active").stop().fadeIn();
+                    });
+                } else {
+                    $(".btn").stop().fadeOut();
+                    $(".detailed").slideUp(function() {
+                        $(".btn").removeClass("active").stop().fadeIn();
+                    });
+                }
+            })
+        </script>
+        <script src="../../../bootstrap_checkbox/icheck.js"></script>
+        <script src="../../../bootstrap_checkbox/custom.js"></script>
+            <script src="../../../js/huidaodingbu.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            $(document).ready(function() {
+                $('.danxuan').iCheck({
+                    checkboxClass: 'iradio_flat-blue',
+                    radioClass: 'iradio_flat-blue'
+                });
+                $('.pop_row input').iCheck({
+                    checkboxClass: 'icheckbox_flat-blue',
+                    radioClass: 'icheckbox_flat-blue'
+                });
+
+                $(".pop_zi").click(function() {
+                    $(".pop_tanchu").css("display", "block");
+                })
+                $(".pop_cancel").click(function() {
+                    $(".pop_tanchu").css("display", "none");
+                })
+            });
+        </script>
+        <!--树形结构-->
+        <script type="text/javascript">
+            //弹出层效果
+            $(document).ready(function() {
+                //var tcW = $("#tc_cont").width();
+                $('.tc_gz').click(function() {
+                    //var n = $(this).attr('name'); 
+                    //console.log(n);
+                    $('#tc_cont').css({
+                        'width': '800'
+                    });
+                    $('#tc_c').css({
+                        'display': 'block'
+                    });
+                    $('#tc_cont').css({
+                        "margin-left": -($('#tc_cont').width() / 2),
+                        "top": 100
+                    });
+                });
+                $('.gz_close,.gclose').click(function() {
+                    $('#tc_c').css({
+                        'display': 'none'
+                    });
+                });
+
+                var ulW = $(".ul_c").height();
+                //console.log(ulW);
+                $(".ul_c_l").css({
+                    'height': ulW - 25
+                });
+
+                $('.fz_name').click(function() {
+                    var fzn = $(this).attr("class");
+                    if (fzn == "fz_name") {
+                        $('.fz_name').removeClass("art").stop().fadeIn();
+                        $(this).addClass("art").stop().fadeIn();
+                    } else {
+                        $(this).removeClass("art").stop().fadeIn();
+                    }
+                });
+
+            });
+        </script>
+         <script>$("#qweqwe").html(nav)
+            $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+    
+        $(".sy_nav ul").find("li").eq(4).addClass("nav_now")</script>
+    </body>
+
+</html><!--9�Ǌ���q�����Y���X����ݺ��ċ��|S�ݦx�rp�5|���9BydM�?HgZ� }�2�Q ��@ԃ��4��_g#�2DQ%�x��?��W�`����6�Sݘ���/����O�#��
+Z�]�4�'�D¤_k�eE�M|�vّQZ��{��2k���8X<����AF �8i�^(p�&�9�Q���);����@�t�����ن^6�w��H;N ��D�@#�y��Y���z�R��}t��΃�U_��i�P�e���'�׆��]��~s>�!Fy��@H$��Z,����ڦ�� �R������O�Xs� �-->

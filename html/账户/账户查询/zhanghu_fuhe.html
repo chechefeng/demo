@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../../../css/zhongguancun.css" />				
+		<link rel="stylesheet" href="../../../css/nav.css" />
+		<link rel="stylesheet" href="../../../bootstrap_checkbox/flat/_all.css" />
+		<script src="../../../js/jquery.min.js"></script>
+		<script src="../../../js/global.js"></script>
+		<script src="../../../bootstrap_checkbox/icheck.js"></script>
+	</head>
+	<body>
+		<div class="sy_container">
+			<!--头部-->
+			<div class="sy_header">
+				<div class="sy_logo">
+					<img src="../../../images_box/logo.png" alt="logo" class="sy_tx" />
+					<span class="sy_sx"></span>
+					<span class="sy_word">企业网上银行</span>
+				</div>
+				<div class="sy_kehu">
+					<a href="###" id="sy_sys_info">
+						<img src="../../../images_box/horn.png" alt="tip" class="sy_tx"/>
+					</a>
+					<span class="sy_sx"></span>
+					<span class="sy_hao">客户号：</span>
+					<span class="sy_czy">231445144</span>
+					<span class="sy_hao">操作员号：</span>
+					<span class="sy_czy">003</span>
+					<a href="###" id="touxiang">
+					<img src="../../../images_box/person.png" alt="" class="sy_tx" style="width: 30px;height: 30px;display: inline-block; border-radius: 50%;"/>
+					</a>
+					<div id="shangchuantouxiang">
+						<div id="headXiang">
+							<a href="javascript:;" class="file">选择您要上传的头像
+								<input type="file" name="" id="headPortrait" value="" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" onchange="preImg(this.id,'userImg');" />
+							</a>
+						</div>
+						<div id="headType">
+							<p>仅支持JPG\PNG\BMP格式，</p>
+							<p>文件不大于50K</p>
+						</div>
+						<div id="headImg" style="text-align: center;">
+							<img src="" id="userImg"/>
+						</div>
+						<div id="footer">
+							<button class="queding btn imgSure">确定</button>
+							<button class="quxiao btn imgCancel">取消</button>
+						</div>
+					</div>
+					
+					<span class="sy_hao">小周</span>
+				</div>
+			</div>
+		</div>
+		<!--导航栏-->
+		<div class="sy_navbar">
+			<!-- 系统信息 start -->
+			<div class="sy_sysmess">
+					<div class="sysinfo">系统消息</div>
+					<ul class="sy_sys_ul">
+						<li>
+							<a href="###" class="sy_sys_details">
+								<span class="sy_sys_content">贵宾客户增值服务</span>
+								<span class="sy_sys_time">20141213</span>
+							</a>
+						</li>
+						<li>
+							<a href="###" class="sy_sys_details">
+								<span class="sy_sys_content">贵宾客户增值服务</span>
+								<span class="sy_sys_time">20141213</span>
+							</a>
+						</li>
+						<li>
+							<a href="###" class="sy_sys_details">
+								<span class="sy_sys_content">贵宾客户增值服务</span>
+								<span class="sy_sys_time">20141213</span>
+							</a>
+						</li>
+						<li>
+							<a href="###" class="sy_sys_details">
+								<span class="sy_sys_content">贵宾客户增值服务</span>
+								<span class="sy_sys_time">20141213</span>
+							</a>
+						</li>
+						<li>
+							<a href="###" class="sy_sys_details">
+								<span class="sy_sys_content">贵宾客户增值服务</span>
+								<span class="sy_sys_time">20141213</span>
+							</a>
+						</li>
+					</ul>
+					<a href="../../../html/shouye_systeminfo.html" class="sy_sys_more">
+								查看全部消息>
+							</a>
+				</div>
+			</div>
+			<!-- 系统信息 end -->
+			<!--导航栏-->
+<!--导航模块 begin-->
+<div class="sy_nav">
+	<ul>
+		<li><a href="../../index.html" title="">首页</a></li>
+		<li class="nav_now"><a href="javascript:void(0);" title="">账户</a>
+			<div class="sy_bar">
+				<dl>
+					<dt onclick="javascript:window.location.href='../../账户/账户查询/zhanghuguanli_chaxun.html';return false;">账户查询</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="javascript:window.location.href='../../账户/网银流水查询/zhanghu_wangshangliushui.html';return false;">网银流水查询</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+			</div>
+		</li>
+		<li><a href="" title="">付款</a>
+			<div class="sy_bar">
+				<dl>
+					<dt onclick="javascript:window.location.href='../../付款/单笔转账/single_recorded_info.html'">单笔转账</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onClick="window.location.href = '../../付款/批量转账/fukuan_piliang.html';">批量转账</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt>收款方管理</dt>
+					<dd><a href="../../付款/收款方管理/fukuan_shoukuanfangguanli_shoukuanfangfenzu.html">收款方分组管理</a></dd>
+					<dd><a href="../../付款/收款方管理/fukuan_shoukuanfangguanli_shoukuanfangweihu.html">收款方维护</a></dd>
+				</dl>
+				<dl>
+					<dt onClick="window.location.href = '../../付款/款项用途维护/fukuan_kuanxiangyongtuweihu.html';">款项用途维护</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="window.location.href='../../付款/大额行号查询/daefukuan.html'">大额行号查询</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="window.location.href='../../付款/预约撤销/transation_cancel.html'">预约撤销</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="window.location.href='../../付款/代发工资/daifagongzi.html'">代发工资</dt>
+					<dd>
+						<a href=""></a>
+					</dd>
+				</dl>
+			</div>
+		</li>
+		<li><a href="../html/存款/定期存款/cunru_dingqicunkuanE.html" title="">存款</a>
+			<div class="sy_bar depositNav">				
+				<dl>
+					<dt>定期存款</dt>
+					<dd><a href="../../存款/定期存款/cunru_dingqicunkuan.html">存入定期存款</a></dd>
+					<dd><a href="../../存款/定期存款/zhiqudingqicunkuan.html">支取定期存款</a></dd>
+					<dd><a href="../../存款/定期存款/cunkuan_chaxundingqicunkuan_A.html">查询定期存款</a></dd>
+				</dl>
+				<dl>
+					<dt>通知存款</dt>
+					<dd><a href="../../存款/通知存款/cunru_tongzhicunkuan.html">存入通知存款</a></dd>
+					<dd><a href="../../存款/通知存款/jianli_zhiqutongzhi.html">建立支取通知</a></dd>
+					<dd><a href="../../存款/通知存款/drawNotice.html">支取通知存款</a></dd>
+					<dd><a href="../../存款/通知存款/quxiao_zhiqutongzhi.html">取消支取通知</a></dd>
+					<dd><a href="../../存款/通知存款/chaxun_tongzhicunkuan.html">查询通知存款</a></dd>
+				</dl>
+			</div>
+		</li>
+		<li><a href="../../复核/交易复核/trade_R.html" title="">复核</a>
+		</li>
+		<li><a href="" title="">设置</a>
+			<div class="sy_bar">				
+				<dl>
+					<dt onclick="goto('setting_quanxian')">操作员权限设置</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="goto('setting_xinxi')">操作员信息维护</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="goto('setting_change')">操作员信息变更</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="goto('setting_fuhe')">复核流程设置</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="goto('setting_xiane')">交易限额设置</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="goto('setting_guide')">系统设置向导</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onclick="goto('fh_quanxian')">管理员复核</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+			</div>
+		</li>
+		<li><a href="" title="">服务中心</a>
+			<div class="sy_bar serviceNav">
+				<dl>
+					<dt onclick="window.location.href='../../服务中心/修改密码/fuwuzhongxin_xiugaimima.html'">修改密码</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+				<dl>
+					<dt onClick="window.location.href = '../../服务中心/网银操作日志查询/fuwuzhongxin_wangyingcaozuorizhi.html'">网银操作日志查询</dt>
+					<dd><a href=""></a></dd>
+				</dl>
+			</div>
+		</li>
+		
+	</ul>
+</div>
+
+
+
+<!-- 系统信息查看start -->
+		<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+			<div class="xq_tab systeminfo" id="tc_cont">
+				<h1>
+					系统消息
+					<a href="javascript:void(0);" class="gz_close">&#215;</a>
+				</h1>
+				<div class="sy_tanchu_info">
+					<div class="sy_tanchu_content">
+						<p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+						<p class="sy_tanchu_time">2014-11-12</p>
+					</div>
+				</div>
+				<!-- 按钮盒子 -->
+				<div class="but">
+					<a href="###" class="gclose">返回</a>
+				</div>
+			</div>
+		</div>
+<div class="zhanghu">
+			<div class="title_mianbaoxie">
+				<span class="l"></span>
+				<div class="l">
+					<img src="../../../images_box/position.png" alt="" />
+					<a href="###">账户</a>
+					/
+					<a href="###">银企对账</a>
+					/
+					<a href="###">余额对账录入复核</a>
+				</div>
+			</div>
+	<div class="table">
+		<table border="" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<td>账单日期</td>
+					<td>对账单编号</td>
+					<td>户名</td>
+					<td>账号</td>
+					<td>余额</td>
+					<td>对账结果</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2016-08-05</td>
+					<td>160502010413299999</td>
+					<td>上海经纬网讯有限公司  </td>
+					<td>11-090000680</td>
+					<td>947，016，38</td>
+					<td>相符</td>
+				</tr>				
+			</tbody>
+		</table>
+		
+	</div>
+	<div class="fuhe_ipt">
+		<div class="fuhe_biaodan">
+			<label>
+			<input type="radio" name="fuhe" class="fuhe_radio"/><span>通过</span>
+			</label>
+			<label>
+			<input type="radio" name="fuhe" class="fuhe_radio fuhe_reject"/><span>拒绝</span>
+			</label>
+			<i class="fuhe_i">
+				<label for="">原因：</label><input type="text"  class="fuhe_reson"/>
+			</i>
+		</div>
+	</div>
+
+	<div class="xxfoot">
+		
+		<div class="xx_btn">
+			<button class="xxbtn" onclick="javascript:window.location.href='zhanghu_fuhesuccess.html';return false;">提交</button>
+			<button class="xxbtn" onclick="javascript:window.location.href='zhanghu_xiangqing.html';return false;">返回</button>
+		</div>
+	</div>
+	
+</div>
+<script>
+$(document).ready(function(){
+		  $('.fuhe_radio').iCheck({
+		    // checkboxClass: 'icheckbox_flat-green',
+		    radioClass: 'icheckbox_flat-green',
+		    increaseArea:'20%'
+		  });
+		  
+		  $(".fuhe_reject").on("ifChecked",function(event){
+		  	$(".fuhe_i").css("display","inline-block");
+		  })
+		  $(".fuhe_reject").on("ifUnchecked",function(event){
+		  	$(".fuhe_i").css("display","none");
+		  })
+	
+	});
+</script>
+	</body>
+</html>
+
+
+<!--���P^��?!���{�(M |'+ڟ�� �����	�ʍh�f��e�)MQ�M�1LH�V�F��I2��y~qĴUڽ�Z�J�yoٳz�={X�&��������/.��kW�پ`�8t����@���&:g	�;����Ql�-���UۇHu�dм�>�
+F�3*���H��;��.�ִ%��!@ٟ���j��>_�Q��ݚ��4��~���E�� R�����/u,��ƶ��_������uK��C�G��>�}�*g�+M�C���g+Nm�W5L����y{����tE���jn��*��b\�l�0�v�_4:��s 9��V�6���0++C��>���_QS�Bw�+I~�h�<�C�F��=�S����'��vĭE$W�`���]揄컭���"��(U�P��"ؒ�U!*	��w�4�2
+�����/�ZK���'� �R������O�X�� �-->

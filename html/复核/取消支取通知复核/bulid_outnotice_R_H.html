@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../../../css/zhongguancun.css" />
+		<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../../bootstrap_checkbox/_all.css" rel="stylesheet">
+		<!-- datepicker css -->
+		<link rel="stylesheet" href="../../../css/gangzi.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/tishikuang.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css"/>
+		<script src="../../../js/nav.js"></script>
+        <style>
+            .iradio_flat-blue {
+                background: url('../../../images_box/blueradio.png') no-repeat;
+            }
+            
+            .iradio_flat-blue {
+                background-position: -86px 0;
+            }
+            
+            .iradio_flat-blue.checked {
+                background-position: 0 0;
+            }
+        </style>
+	</head>
+
+	<body>
+		<div id="qweqwe"></div>
+		<div class="huidan zhanghu fukuan">
+			<div class="title_mianbaoxie">
+				<span class="l"></span>
+				<div class="l">
+					<img src="../../../images_box/position.png" alt="" />
+					<a href="javascript:;">复核</a> /
+					<a href="javascript:;">交易复核</a> /
+					<a href="javascript:;">取消支取通知复核</a>
+				</div>
+			</div>
+			<div class="skf_box">
+
+				<div class="skfz_tit">
+					待复核交易查询
+				</div>
+				<div class="query_box c c_two">
+					<div class="shoukuan_wh cl">
+						<div class="form_int date_picker input-daterange">
+							<label>录入日期：</label>
+							<input style="box-sizing: border-box;padding-left:10px" type="text" id="dataStart" class="form-control dataWidth" value="2018-8-24">
+							<span>-</span>
+							<input style="box-sizing: border-box;padding-left:10px" type="text" id="dataEnd" class="form-control dataWidth" value="2018-8-24">
+						</div>
+						<div class="form_int">
+							<label>录入操作人员：</label>
+							<select>
+								<option value="">请选择录入操作人员</option>
+								<option value="">操作员A</option>
+								<option value="">操作员B</option>				
+							</select>
+						</div>
+						<div class="form_int">
+							<label>转出账户：</label>
+							<select>
+								<option value="">请选择转出账户</option>
+								<option value="">账户1 12222222200001</option>
+								<option value="">账户2 12222222200002</option>				
+							</select>
+						</div>
+						<div class="form_int">
+							<label>通知存款种类：</label>
+							<select>
+								<option value="">请选择通知存款种类</option>
+								<option value="">1天通知</option>
+								<option value="">7天通知</option>				
+							</select>
+						</div>
+						<div class="form_int" style="padding-top:30px;width:100%">
+							<div class="but pdnone">
+								<a href="javascript:;" style="width:147px; height:35px; line-height:35px;">查询</a>
+								<a href="javascript:;" style="width:147px; height:35px; line-height:35px;">重置</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 内容 开始 -->
+				<div class="skfz_tit">
+					待复核交易列表
+				</div>
+				<!-- 表格开始 -->
+				<div class="biaoge">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<td>
+									录入时间
+								</td>
+								<td>
+									网银流水号
+								</td>
+								<td>
+									通知存款账号
+								</td>
+								<td>
+									通知存款种类
+								</td>
+								<td>
+									利率（%）
+								</td>
+								<td>
+									起息日
+								</td>
+								<td>
+									支取日期
+								</td>
+								<td>
+									支取金额
+								</td>
+								<td>
+									录入
+								</td>
+								<td>
+										通过
+									</td>
+								<!-- <td>
+									操作
+								</td> -->
+								
+								<td>
+									拒绝
+								</td>
+								<td>
+									拒绝原因
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									2017-07-20<br>22:22:01
+								</td>
+								<td>
+									0331545115545454
+								</td>
+								<td>
+									0394101080150028
+								</td>
+								<td>
+									7天通知存款
+								</td>
+								<td>
+									0.55
+								</td>
+								<td>
+									2017-07-20
+								</td>
+								<td>
+									2017-07-20
+								</td>
+								<td>
+									1000.00
+								</td>
+								<!-- <td>
+									王明明
+								</td> -->
+								<td>
+								    <a class="fuhe-daifuhexiangqing" href="javascript:;">详情</a>
+								</td>
+								<td>
+									<input style="width: 0px;" type="radio" class="danxuan" name="bf1">
+								</td>
+								<td>
+									<input style="width: 0px;" type="radio" class="danxuan" name="bf1">
+								</td>
+								<td>
+									<input style="box-sizing: border-box;" type="text" class="form-control" value="" placeholder="请选择拒绝原因">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="jl_txt">
+						<table border="0" cellspacing="0" cellpadding="0" >
+							<tr>
+								<td>
+									通过总笔数
+								</td>
+								<td>
+									0
+								</td>
+								<td>
+									通过总金额
+								</td>
+								<td>
+									0.00
+								</td>
+								<td>
+									拒绝总笔数
+								</td>
+								<td>
+									0
+								</td>
+								<td>
+									拒绝总金额
+								</td>
+								<td>
+									0.00
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- biaoge结束 -->
+				<!-- 按钮盒子 -->
+				<div class="but">
+					<a href="javascript:;" class="allpass"style="width:147px; height:35px; line-height:35px;">全部通过</a>
+					<a href="javascript:;" class="allrefuse"style="width:147px; height:35px; line-height:35px;">全部拒绝</a>
+					<a href="javascript:;"style="width:147px; height:35px; line-height:35px;">重置</a>
+					<a href="../取消支取通知复核/cancel_outnotice_R_B.html"style="width:147px; height:35px; line-height:35px;">提交</a>
+					<a href="javascript:;"style="width:147px; height:35px; line-height:35px;">下载</a>
+				</div>
+			</div>
+		</div>
+		<!--弹出 begin-->
+		<div class="tanchu fukuan" id="tc_c" style="display:none">
+			<div class="xq_tab" id="tc_cont">
+				<h1>
+			添加收款方
+			<a href="javascript:void(0);" class="gz_close">&#215;</a>
+		</h1>
+				<div class="pd10">
+					<div class="biaoge ">
+						<table border="" cellspacing="0" cellpadding="0" style="width:100%;">
+							<thead>
+								<tr>
+									<td>
+										<input type="checkbox">&nbsp;全选
+									</td>
+									<td>
+										序号
+									</td>
+									<td>
+										账户
+									</td>
+									<td>
+										户名
+									</td>
+									<td>
+										开户行别
+									</td>
+									<td>
+										开户类别
+									</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>
+										1
+									</td>
+									<td>
+										0394101080150028
+									</td>
+									<td>
+										上海经纬网讯有限公司
+									</td>
+									<td>
+										中关村银行
+									</td>
+									<td>
+										企业客户
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>
+										2
+									</td>
+									<td>
+										0394101080150028
+									</td>
+									<td>
+										上海经纬网讯有限公司
+									</td>
+									<td>
+										中关村银行
+									</td>
+									<td>
+										企业客户
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 按钮盒子 -->
+				<div class="but">
+					<a href="javascript:;">确定</a>
+					<a href="javascript:;" class="gclose">取消</a>
+				</div>
+			</div>
+		</div>
+		<!-- 系统信息查看start -->
+		<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+			<div class="xq_tab systeminfo" id="tc_cont">
+				<h1>
+					系统消息
+					<a href="javascript:void(0);" class="gz_close">&#215;</a>
+				</h1>
+				<div class="sy_tanchu_info">
+					<div class="sy_tanchu_content">
+						<p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+						<p class="sy_tanchu_time">2014-11-12</p>
+					</div>
+				</div>
+				<!-- 按钮盒子 -->
+				<div class="but">
+					<a href="javascript:;" class="gclose">返回</a>
+				</div>
+			</div>
+		</div>
+        <!--确认提示框-->
+
+                 <!--确认提示框-->
+
+<div class="modal fade" id="querentishi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img style="float: right;cursor: pointer;" src="../../../images_box/shanchu-zhanghu.png" class=""data-dismiss="modal" aria-hidden="true"/>
+               <h5 class="modal-title" id="myModalLabel">操作提示</h5>
+            </div>
+            <div class="modal-body">
+				<p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">网银流水号：</span>0394101080150028</p>
+				<p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">交易金额：</span>100.000.00元</p>
+                <p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">通知存款账户：</span>0394101080150028</p>
+                <p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">通知存款账号币种 ：</span>人民币</p>
+                <p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">通知存款账号名称：</span>众志成城</p>
+                <p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">录入人员：</span>李</p>
+                <p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">录入时间：</span>2018-7-12 22:33:21</p>
+                <p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">交易状态：</span>录入完成，待复核</p>
+                <p class="fuhe-tishi-p"><span class="fuhe-tishi-p-name">复核进度：</span>1级复核员（1名）未复核</p>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn queding" data-dismiss="modal">确定</button> -->
+                <button type="button" class="btn quxiao" data-dismiss="modal">返回</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<div class="fanhuidingbu">
+            <img src="../../../images_box/huidaodingbu.png" alt="" />
+        </div>
+        <!--底部-->
+         <div class="ht-footer">
+            <div class="ht-footer-info">
+                <ul>
+                    <li class="one">门户官网</li>
+                    <li class="ht-footer-fg">|</li>
+                    <li class="two">客户热线：400-010-8858</li>
+                </ul>
+            </div>
+            <div class="ht-footer-bt">
+                &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+            </div>
+        </div>
+		<script src="../../../js/jquery.min.js"></script>
+		<!-- bootstrap 主要js -->
+        <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../bootstrap/js/bootstrap.js"></script>
+		<!-- datetimepicker 主要js -->
+        <script src="../../../js/huidaodingbu.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+		<!-- datetimepicker 中文包 -->
+		<script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+		<script type="text/javascript">
+		    $('.fuhe-daifuhexiangqing').click(function(){
+                $('#querentishi').modal('show');
+            })
+			//详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+			$(".date_picker").datepicker({
+				language: 'zh-CN',
+				/* 语言 */
+				format: 'yyyy-mm-dd',
+				/* 格式 */
+				autoclose: 1,
+				/* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+				todayHighlight: 1,
+				/* 高亮当前日期 */
+				weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+			});
+			$(".search_date a").click(function() {
+				$(this).addClass("active").siblings().removeClass("active")
+			})
+			$(".down_query").click(function() {
+				$(".down_query > div > span").stop().toggleClass("active");
+				/* 下面两行没有渐隐渐现效果 代码简单 二选一 */
+				/*$(".detailed").stop().slideToggle();*/
+				/*$(".btn").stop().toggleClass("active");*/
+				if ($(".detailed").css("display") == "none") {
+					$(".btn").stop().fadeOut();
+					$(".detailed").slideDown(function() {
+						$(".btn").addClass("active").stop().fadeIn();
+					});
+				} else {
+					$(".btn").stop().fadeOut();
+					$(".detailed").slideUp(function() {
+						$(".btn").removeClass("active").stop().fadeIn();
+					});
+				}
+			})
+			         $(document).ready(function() {
+                $('input').iCheck({
+                    checkboxClass: 'iradio_flat-blue',
+                    radioClass: 'iradio_flat-blue'
+                });
+            });
+                     $(document).ready(function() {
+                //var tcW = $("#tc_cont").width();
+                $('.tc_gz').click(function() {
+                    //var n = $(this).attr('name'); 
+                    //console.log(n);
+                    $('#tc_cont').css({
+                        'width': '800'
+                    });
+                    $('#tc_c').css({
+                        'display': 'block'
+                    });
+                    $('#tc_cont').css({
+                        "margin-left": -($('#tc_cont').width() / 2),
+                        "top": 100
+                    });
+                });
+                $('.gz_close,.gclose').click(function() {
+                    $('#tc_c').css({
+                        'display': 'none'
+                    });
+                });
+
+                var ulW = $(".ul_c").height();
+                //console.log(ulW);
+                $(".ul_c_l").css({
+                    'height': ulW - 25
+                });
+
+                $('.fz_name').click(function() {
+                    var fzn = $(this).attr("class");
+                    if (fzn == "fz_name") {
+                        $('.fz_name').removeClass("art").stop().fadeIn();
+                        $(this).addClass("art").stop().fadeIn();
+                    } else {
+                        $(this).removeClass("art").stop().fadeIn();
+                    }
+                });
+                //全部通过
+                $(".allpass").on("click", function() {
+                        $('.danxuan:even').iCheck("check");
+                    })
+                    //全部拒绝
+                $(".allrefuse").on("click", function() {
+                    $('.danxuan:odd').iCheck("check");
+                })
+            });
+		</script>
+		<script src="../../../bootstrap_checkbox/icheck.js"></script>
+		<script>$("#qweqwe").html(nav)
+			$(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+	
+		$(".sy_nav ul").find("li").eq(4).addClass("nav_now")</script>
+		<!--<script src="../../../bootstrap_checkbox/custom.js"></script>-->
+		<!--<script type="text/javascript" src="../../../js/global.js"></script>-->
+	</body>
+
+</html><!--��m��g5���:+�v{�c�h<Э�Q>+�VR�,:�,?�W݅�"���cQ�&�!n@f2D(�嶫�Gd̾S�,��KF+$<��Fc�-���Im��ɥ����_�AR��ٔRGNpE|��`L�)?	2�5��
+��/f�5R�m�Kt��P�<z�y����+�oШ�ݖY/E�B_%	�G^*��(#�sv#N���]��q��i�q��a���B9A��!����D���s��ƍ�F�]�w�j�=�fa;&a��:���h��P���1Tϻnü�;��\%���T�x	�1]e�A��j��de��_z�P�6�F��E��i:�W��yھ[ٲn1��8��� �R������O�X�� �-->

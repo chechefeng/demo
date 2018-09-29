@@ -1,0 +1,381 @@
+﻿﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../../../css/zhongguancun.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../bootstrap_checkbox/_all.css" rel="stylesheet">
+    <!-- <link href="../../../bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../../../css/gangzi.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <script src="./nav.js"></script>
+
+</head>
+<style>
+    .but a:nth-child(1) :hover {
+        background: #fff;
+        border: 1px solid #348CE4;
+        color: #348CE4;
+    }
+</style>
+
+<body>
+        <div id="qweqwe"></div>
+        <div class="huidan zhanghu fukuan operBody">
+            <div class="title_mianbaoxie">
+                <span class="l"></span>
+                <div class="l">
+                    <img src="../../../images_box/position.png" alt="" />
+                    <a href="###">服务中心</a> /
+                    <a href="###">网银操作日志查询</a>
+                </div>
+            </div>
+            <div class="skf_box">
+
+                <div class="skfz_tit" style="display:none">
+                    单笔复核
+                </div>
+                <div class="query_box c c_two">
+                    <div class="shoukuan_wh cl">
+                        <div class="form_int">
+                            <label>
+                                <span style="color:#f04134;">*</span>用户：</label>
+                            <select style="margin-right:90px;">
+                                <option value="">xxx</option>
+                                <option value="">xxx</option>
+                                <option value="">xxx</option>
+                            </select>
+                        </div>
+                        <div class="form_int">
+                            <label>
+                                <span style="color:#f04134;">*</span>分类：</label>
+                            <!-- <input type="text" class="form-control nobg" style="width: 378px;" value=""> -->
+                            <select style="margin-right:90px;">
+                                <option value="">登录</option>
+                                <option value="">注册</option>
+                                <option value="">查询</option>
+                                <option value="">交易录入</option>
+                                <option value="">交易复核</option>
+                                <option value="">信息维护</option>
+                                <option value="">全部</option>
+
+                            </select>
+                        </div>
+                        <div class="form_int">
+                            <label>起始日期：</label>
+                            <div class="date_picker input-daterange" style="display:inline-block; margin-right:90px;">
+                                <input value="2018-8-30" style="box-sizing: border-box;width: 320px;background: url(../../../images_box/rli.png) no-repeat 300px center;"
+                                    type="text" class="form-control dataWidth" value="" style="width: 240px;background-position:216px center">
+                            </div>
+                        </div>
+                        <div class="form_int">
+                            <label>截止日期：</label>
+                            <div class="date_picker input-daterange" style="display:inline-block; margin-right:90px;">
+                                <input value="2018-8-30" style="box-sizing: border-box;width: 320px;background: url(../../../images_box/rli.png) no-repeat 300px center;"
+                                    type="text" class="form-control dataWidth" value="" style="width: 240px;background-position:216px center">
+                            </div>
+                        </div>
+                        <div class="form_int" style="width:100%;padding-top:15px;">
+                            <div class="but pdnone">
+                                <a href="###" style="width:88px; height:32px;line-height:32px;" class="blue-btn">查询</a>
+                                <a href="###" class="wangyingcaozuo_btn reset" style="width:88px; height:32px;line-height:32px; color: #666; background-color: #fff;border-color: #e5e5e5;">重置</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 内容 开始 -->
+                <div class="skfz_tits" id="tjsj" style="margin-left:20px; font-weight:600; display:none;">
+                    自 2017-02-01 至 2017-02-07
+                </div>
+
+                <!-- 表格开始 -->
+                <div class="biaoge" id="biaoge" style="display:none;">
+                    <table id="ss" border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <label class="">
+                                        <input type="checkbox" class="fuxuankuang-dis-none">
+                                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                    </label>&nbsp;
+                                </td>
+                                <td width="150px">
+                                    日期
+                                </td>
+                                <td width="150px">
+                                    时间
+                                </td>
+                                <td width="150px">
+                                    操作员 | 姓名
+                                </td>
+                                <td width="100px">
+                                    类别
+                                </td>
+                                <td width="480px">
+                                    备注
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="">
+                                        <input type="checkbox" class="fuxuankuang-dis-none">
+                                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                    </label>
+                                </td>
+                                <td>
+                                    2016-06-12
+                                </td>
+                                <td>
+                                    14:32:24
+                                </td>
+                                <td>
+                                    0004 | 张大彪
+                                </td>
+                                <td>
+                                    查询
+                                </td>
+                                <td>
+                                    账户余额查询
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="">
+                                        <input type="checkbox" class="fuxuankuang-dis-none">
+                                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                    </label>
+                                </td>
+                                <td>
+                                    2016-06-12
+                                </td>
+                                <td>
+                                    14:32:24
+                                </td>
+                                <td>
+                                    0004 | 张大彪
+                                </td>
+                                <td>
+                                    查询
+                                </td>
+                                <td>
+                                    账户余额查询
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="but">
+                        <a href="###" style="width:88px; height:32px;line-height:32px;">打印</a>
+                        <a href="###" style="width:88px; height:32px;line-height:32px; color: #666; background-color: #fff;border-color: #e5e5e5;">取消</a>
+                    </div>
+                </div>
+                <!-- biaoge结束 -->
+                <!-- 按钮盒子 -->
+
+                <div style="float: right; padding-top: 28px; padding-right: 10px;">
+                    <p style="float: left;margin-right: 5px; color: #666;padding-top: 2px;">共一条</p>
+                    <div style="border: 1px solid #e5e5e5; width: 28px; height: 28px; text-align: center; line-height: 28px;float: left;margin-right: 5px; color: #e5e5e5">
+                        <</div>
+                            <div style="border: 1px solid #e5e5e5; width: 28px; height: 28px; text-align: center; line-height: 28px; background: #337AB7;float: left;margin-right: 5px; color: #fff; border-radius:3px;">1</div>
+                            <div style="border: 1px solid #e5e5e5; width: 28px; height: 28px; text-align: center; line-height: 28px;float: left;margin-right: 5px; color: #e5e5e5">></div>
+                            <div style="border: 1px solid #e5e5e5; width: 81px; height: 28px; text-align: center; line-height: 28px;float: left;margin-right: 5px; color: #666">10条/每页
+                                <span style="color: #e5e5e5;">v</span>
+                            </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 系统信息查看start -->
+            <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+                <div class="xq_tab systeminfo" id="tc_cont">
+                    <h1>
+                        系统消息
+                        <a href="javascript:void(0);" class="gz_close">&#215;</a>
+                    </h1>
+                    <div class="sy_tanchu_info">
+                        <div class="sy_tanchu_content">
+                            <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                            <p class="sy_tanchu_time">2014-11-12</p>
+                        </div>
+                    </div>
+                    <!-- 按钮盒子 -->
+                    <div class="but">
+                        <a href="###" class="gclose">返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--回到顶部-->
+            <div class="fanhuidingbu">
+                <img src="../../../images_box/huidaodingbu.png" alt="" />
+            </div>
+            <!--底部-->
+            <div class="ht-footer">
+                <div class="ht-footer-info">
+                    <ul>
+                        <li class="one">门户官网</li>
+                        <li class="ht-footer-fg">|</li>
+                        <li class="two">客户热线：400-010-8858</li>
+                    </ul>
+                </div>
+                <div class="ht-footer-bt">
+                    &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+                </div>
+            </div>
+            <script src="../../../js/jquery.min.js"></script>
+            <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+            <!-- bootstrap 主要js -->
+            <script src="../../../bootstrap/js/bootstrap.js"></script>
+            <!-- datetimepicker 主要js -->
+            <script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+            <!-- datetimepicker 中文包 -->
+            <script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+            <!--<script src="../../../bootstrap_checkbox/icheck.js"></script>-->
+            <script src="../../../js/huidaodingbu.js"></script>
+            <script src="../../../js/fuxuankuang-state.js"></script>
+            <script src="../../../bootstrap_checkbox/custom.js"></script>
+            <script type="text/javascript">
+                //详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+                $(".date_picker").datepicker({
+                    language: 'zh-CN',
+                    /* 语言 */
+                    format: 'yyyy-mm-dd',
+                    /* 格式 */
+                    autoclose: 1,
+                    /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+                    todayHighlight: 1,
+                    /* 高亮当前日期 */
+                    weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+                });
+                $(".search_date a").click(function () {
+                    $(this).addClass("active").siblings().removeClass("active")
+                })
+                $(".down_query").click(function () {
+                    $(".down_query > div > span").stop().toggleClass("active");
+                    /* 下面两行没有渐隐渐现效果 代码简单 二选一 */
+                    /*$(".detailed").stop().slideToggle();*/
+                    /*$(".btn").stop().toggleClass("active");*/
+                    if ($(".detailed").css("display") == "none") {
+                        $(".btn").stop().fadeOut();
+                        $(".detailed").slideDown(function () {
+                            $(".btn").addClass("active").stop().fadeIn();
+                        });
+                    } else {
+                        $(".btn").stop().fadeOut();
+                        $(".detailed").slideUp(function () {
+                            $(".btn").removeClass("active").stop().fadeIn();
+                        });
+                    }
+                })
+                //导航
+                function goto(trans) {
+                    switch (trans) {
+                        case 'setting_quanxian':
+                            location.href = "../../设置/setting/admin_review_a.html";
+                            break;
+                        case 'setting_xinxi':
+                            location.href = "../../设置/setting/admin_review_b.html";
+                            break;
+                        case 'setting_fuhe':
+                            location.href = "../../设置/setting/admin_review_c.html";
+                            break;
+                        case 'setting_xiane':
+                            location.href = "../../设置/setting/admin_review_d.html";
+                            break;
+                        case 'setting_guide':
+                            location.href = "../../设置/setting/系统设置向导/few_reviewA.html";
+                            break;
+                        case 'fh_quanxian':
+                            location.href = "../../设置/setting/admin_review_a.html";
+                            break;
+                    }
+                }
+                //弹出层效果
+                $(document).ready(function () {
+                    $('.tc_gz').click(function () {
+                        $('#tc_cont').css({
+                            'width': '800'
+                        });
+                        $('#tc_c').css({
+                            'display': 'block'
+                        });
+                        $('#tc_cont').css({
+                            "margin-left": -($('#tc_cont').width() / 2),
+                            "top": 100
+                        });
+                    });
+                    $('.gz_close,.gclose').click(function () {
+                        $('#tc_c').css({
+                            'display': 'none'
+                        });
+                    });
+
+                    var ulW = $(".ul_c").height();
+                    //console.log(ulW);
+                    $(".ul_c_l").css({
+                        'height': ulW - 25
+                    });
+
+                    $('.fz_name').click(function () {
+                        var fzn = $(this).attr("class");
+                        if (fzn == "fz_name") {
+                            $('.fz_name').removeClass("art").stop().fadeIn();
+                            $(this).addClass("art").stop().fadeIn();
+                        } else {
+                            $(this).removeClass("art").stop().fadeIn();
+                        }
+                    });
+
+                });
+                //              $(document).ready(function() {
+                //                  $('input').iCheck({
+                //                      checkboxClass: 'icheckbox_flat-blue',
+                //                      radioClass: 'icheckbox_flat-blue'
+                //                  });
+                //                  //判断导航是否有三级菜单,如没有，清除二级菜单横向条
+                //                  var navDl = $(".sy_nav .sy_bar dl");
+                //                  for (var i = 0; i < navDl.length; i++) {
+                //                      var navDd = $(navDl[i]).children("dd").length;
+                //                      if (navDd < 2) {
+                //                          $(navDl[i]).children("dt").css("border-bottom", "none");
+                //                      }
+                //                  }
+                //              });
+                //全选
+                $('.selectall').on('ifChecked', function (event) {
+                    $("input").iCheck('check');
+                });
+                //取消全选
+                $('.selectall').on('ifUnchecked', function (event) {
+                    $("input").iCheck('uncheck');
+                });
+            </script>
+</body>
+<script>
+    $(function () {
+        $('.blue-btn').click(function () {
+            $('#tjsj').css({ 'display': 'block' });
+            $('#biaoge').css({ 'display': 'block' });
+        });
+        $('.reset').click(function () {
+            $('#tjsj').css({ 'display': 'none' });
+            $('#biaoge').css({ 'display': 'none' });
+        });
+    })
+</script>
+<script>$("#qweqwe").html(nav)</script>
+
+</html><!--�Ӹ(�UI��~��}�t=�'�����VR]&�Ξ�f'K�� �=��;l���@	�C��ͷvV�N������"��-$� �C��Ѯ�&0P�=�P۸\�
+��e��
+�Ҡ0ׁ�`�m�'���	�a�������o�<f#u�R��g��N��VY����u���|����������,Vb�I~�
+�
+&R%��Z#��_A����o+̎s�dl�Q�q9n9	Җ�Y̆j� ����VX��Zg8wip�U�.���4�xJ�4mM��3��{g��oC��~I����2�u	̧�g�'ߖ'DF4�/�O==1��i�I5������C�O0��ʾ~��M�T4>�N���)љ��� �R
+������O
+�X�� �-->

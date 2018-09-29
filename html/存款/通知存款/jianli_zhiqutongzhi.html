@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>建立支取通知</title>
+    <!--<link rel="stylesheet" href="../../../pub/icheck-1.x/skins/all.css">-->
+    <link rel="stylesheet" href="../../../css/drawNoticeAll.css">
+    <link href="../../../bootstrap_checkbox/_all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../js/nav.js"></script>
+</head>
+<style>
+    .but p {
+
+        text-align: center;
+    }
+
+    .but p span:nth-child(2n-1) {
+        margin: 10px 0;
+        display: block;
+        width: 300px;
+        float: left;
+        text-align: right;
+    }
+
+    .but p span:nth-child(2n) {
+        margin: 10px 0;
+        display: block;
+        width: 400px;
+        float: left;
+        text-align: left;
+    }
+</style>
+
+<body>
+    <!-- 头部_公共 -->
+    <div id="qweqwe"></div>
+
+    <!-- header -->
+
+    <!-- 面包屑 -->
+    <div class="title_mianbaoxie w">
+        <span class="l"></span>
+        <div class="l">
+            <img src="../../../images_box/position.png" alt="" />
+            <a href="###">存款</a>
+            /
+            <a href="###">通知存款</a>
+            /
+            <a href="###">建立支取通知</a>
+        </div>
+    </div>
+
+    <div id="mq-myBox" class="myBox">
+        <div class="myTab">
+            <!-- <a href="javascript:void(0);" id="mq-expend" class="tabList lnk_jianli_zhiqutongzhi">建立支取通知</a>
+                    <a href="javascript:void(0);" id="mq-deal" class="tabList mg_L_10 active lnk_jiaoyiliebiao">交易列表</a> -->
+            <div id="mq-expend" class="tabList active lnk_jianli_zhiqutongzhi">建立支取通知</div>
+            <div id="mq-deal" class="tabList mg_L_10 lnk_jiaoyiliebiao" style="color:#040404; opacity: 0.5;">交易列表</div>
+        </div>
+        <div class="myTabContent">
+            <div id="mq-expend-tab" class="drawDeposit zhi_qu_tong_zhi">
+                <div id="mq-expend-tab-data">
+                    <div class="accountSelect">
+                        <label>
+                            <span class="star_red mg_R_10">*</span>账户：</label>
+                        <select name="" v-model="ztID">
+                            <option value="" class="ac_a">请选择账户</option>
+                            <option value="10000">110-033467784888988  1山东阳光贸易集团</option>
+                            <option value="50000">210-033467784888988  2山东阳光贸易集团</option>
+                        </select>
+                    </div>
+                    <div class="tableBox">
+                        <div class="tableBoxTitle">通知存款账户列表</div>
+                        <div class="tableBoxContent">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="th1"></th>
+                                        <th class="th2">通知存款账户</th>
+                                        <th>可用余额</th>
+                                        <th>通知类型</th>
+                                        <th>利率（%）</th>
+                                        <th>起息日</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="td1">
+                                            <input type="radio">
+                                        </td>
+                                        <td>134346654333</td>
+                                        <td>1,000,000.00</td>
+                                        <td>一天通知</td>
+                                        <td>0.1</td>
+                                        <td>2016-07-14</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tableBox">
+                        <div class="tableBoxTitle">支取通知列表信息</div>
+                        <div class="tableBoxContent">
+                            <table class="table table-striped depositTable">
+                                <thead>
+                                    <tr>
+                                        <th>建立通知日期</th>
+                                        <th>支取日期</th>
+                                        <th>通知金额</th>
+                                        <th width="12%">到期是否自动支取</th>
+                                        <th>通知标志</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2016-07-14</td>
+                                        <td>2016-07-15</td>
+                                        <td>100,000.00</td>
+                                        <td>否</td>
+                                        <td>未支取</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--<div class="accountSelect mg_L_60 W_720">
+                            <ul>
+                                <li>
+                                    <label>通知顺序号：</label>
+                                    <input type="text" v-model="infSelectInput.iftId">
+                                </li>
+                                <li>
+                                    <label><span class="star_red mg_R_10">*</span>支取金额：</label>
+                                    <input type="text" v-model="infSelectInput.tzje"><span class="mg_L_20 star_red">零元</span>
+                                </li>
+                            </ul>
+                        </div>-->
+                    <div class="accountSelect mg_L_60 W_720">
+                        <ul>
+                            <li style="height:auto; margin-bottom:0px;">
+                                <label>
+                                    <span class="star_red mg_R_10">*</span>支取金额：</label>
+                                <input type="text" class="money" placeholder="请输入金额">
+                                <span class="mg_L_20 star_red translate"></span>
+                                <div class="star_red" style="padding-left: 162px">通知存款最低支取金额为10万人民币</div>
+                            </li>
+                            <li style="height:auto; margin-bottom:0px;">
+                                <label>
+                                    <span class="star_red mg_R_10">*</span>支取日期：</label>
+                                <input type="text" class="sang_Calender" placeholder="请选择支取日期" style="padding-left:15px;background:url('../../../images_box/rli.png') 340px center no-repeat;">
+                            </li>
+                            <li>
+                                <label>
+                                    <span class="star_red mg_R_10"></span>到期自动支取:</label>
+                                <!--<input type="checkbox" checked="" name="aa" style="margin-top: 5%">-->
+                                <label style="width:0px" class="">
+                                    <input style="display:none" type="checkbox" checked="" name="aa" class="fuxuankuang-dis-none">
+                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btnList">
+                        <button id="" class="btn btnok">下一步</button>
+                        <button class="btn">重置</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 系统信息查看start -->
+    <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+        <div class="xq_tab systeminfo" id="tc_cont">
+            <h1>
+                系统消息
+                <a href="javascript:void(0);" class="gz_close">&#215;</a>
+            </h1>
+            <div class="sy_tanchu_info">
+                <div class="sy_tanchu_content">
+                    <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                    <p class="sy_tanchu_time">2014-11-12</p>
+                </div>
+            </div>
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="###" class="gclose">返回</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 弹出层 -->
+    <div class="tanchu fukuan" id="tc_f" style="display:none; padding-top:100px;">
+        <div class="xq_tab" id="tc_cont" style="width:700px; height:450px; top:10%;">
+            <h1 style="background:#fff;">
+                建立支取通知
+            </h1>
+            <div class="biaoge" style="width:700px;">
+                <div>
+                    <!-- 按钮盒子 -->
+                    <div class="but" style="padding:0">
+                        <p>
+                            <span>账号：</span>
+                            <span>1005890001500002118</span>
+                        </p>
+                        <p>
+                            <span>户名：</span>
+                            <span>企业网银新数据六</span>
+                        </p>
+                        <p>
+                            <span>定期账号：</span>
+                            <span>1006290001900002620</span>
+                        </p>
+                        <p>
+                            <span>可用余额：</span>
+                            <span>20,355.39</span>
+                        </p>
+                        <p>
+                            <span>起息日：</span>
+                            <span>2021-03-27</span>
+                        </p>
+                        <p>
+                            <span>到期日：</span>
+                            <span>2021-06-27</span>
+                        </p>
+                        <p>
+                            <span>金额：</span>
+                            <span>111.00</span>
+                        </p>
+                        <p>
+                            <span>利息：</span>
+                            <span>0.05</span>
+                        </p>
+                        <a href="jianli_zhiqutongzhiSuccess.html" class="gclose " style="margin-bottom:20px; width:63px; height:32px; line-height:32px;">确定</a>
+                        <a href="###" class="gclose" style="margin-bottom:20px; width:63px; height:32px; line-height:32px;">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--回到顶部-->
+    <div class="fanhuidingbu">
+        <img src="../../../images_box/huidaodingbu.png" alt="" />
+    </div>
+    <!--底部-->
+    <div class="ht-footer">
+        <div class="ht-footer-info">
+            <ul>
+                <li class="one">门户官网</li>
+                <li class="ht-footer-fg">|</li>
+                <li class="two">客户热线：400-010-8858</li>
+            </ul>
+        </div>
+        <div class="ht-footer-bt">
+            &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/fuxuankuang-state.js"></script>
+<script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../../../pub/icheck-1.x/icheck.min.js"></script>-->
+<script src="../../../js/vue.min.js"></script>
+<!--<script src="../../../pub/layer/layer.js"></script>-->
+<script src="../../../js/shezhi_global.js"></script>
+<script src="../../../js/mq-build-expend-page.js"></script>
+<script src="../../../bootstrap_checkbox/custom.js"></script>
+<script src="../../../bootstrap_checkbox/icheck.js"></script>
+<script>
+    // 标签“建立支取通知”
+    $('.lnk_jianli_zhiqutongzhi').click(function () {
+        window.location = 'jianli_zhiqutongzhi.html';
+    });
+    // 标签“交易列表”
+    $('.lnk_jiaoyiliebiao').click(function () {
+        window.location = 'jianli_zhiqutongzhiTradelist.html';
+    });
+    $(".money").keyup(function () {
+        var y = $(this).val()
+        if ($(this).val() == "") {
+            $(".translate").html("");
+        } else {
+            $(".translate").html(NoToChinese(y) + "元整");
+        }
+    });
+    $(".fakeSelect").click(function () {
+        $(".fakeOption").toggleClass("active")
+    })
+</script>
+
+<script src="../../../js/huidaodingbu.js"></script>
+<script type="text/javascript" src="../../../js/datetime.js"></script>
+<script>
+    $("#qweqwe").html(nav);
+    $('.btnok').click(function () {
+        $('#tc_f').show();
+        // if(sureBtn){
+        //     window.location = 'cunru_dingqicunkuanB.html';
+        // }
+
+    });
+
+    $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+
+    $(".sy_nav ul").find("li").eq(3).addClass("nav_now")
+
+
+</script><!--�	��(���	����P�L:�$2
+���b��@��ޡB.I�\[D�1A��1��S�QL���s����)��^{�zPPE����
+]��/q9��{K�����\|L! �� ���[�l�	B�*��B�:ݡ��9<��2sT�*�熵刕��c��^��Y��=1�jl�����_U3^S��W�/K��T_e��P�z��C��w���Q���cx�D[-�w@w\Y����j�D|�	�/`��bc��<ܥ�tiQ�rIr�/�_p�{@�-9��4Y
+j����Yc:`P�-�������u�g�s��9���� 
+�AZQ(����Z6Ʉ�����_vU hC]'U�K�=P�Ms*��#�o�;T-��%Rf���ɂ �R������O	�X�� �-->

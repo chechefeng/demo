@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员复核</title>
+    <link rel="stylesheet" href="../../../css/shezhi_global.css">
+    <link href="../../../css/_all.css" rel="stylesheet">
+    <link href="../../../css/nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/fuxuankuang.css"/>
+    <script src="../../../js/nav.js"></script>
+    <style type="text/css">
+        .icheckbox_flat-pink.checked {
+            background-position: -212px 0 !important;
+        }
+
+        .icheckbox_flat-pink {
+            background-position: -230px 0 !important;
+        }
+
+        .shezhi_fuxuankuang_box_content .icheckbox_flat-pink.checked {
+            background-position: -265px 0 !important;
+        }
+
+        .shezhi_fuxuankuang_box_content .icheckbox_flat-pink {
+            background-position: -250px 0 !important;
+        }
+    </style>
+</head>
+<body>
+<!-- 头部_公共 -->
+<div id="qweqwe"></div>
+<!-- 系统信息查看start -->
+<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+    <div class="xq_tab systeminfo" id="tc_cont">
+        <h1>
+            系统消息
+            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+        </h1>
+        <div class="sy_tanchu_info">
+            <div class="sy_tanchu_content">
+                <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                <p class="sy_tanchu_time">2014-11-12</p>
+            </div>
+        </div>
+        <!-- 按钮盒子 -->
+        <div class="but">
+            <a href="###" class="gclose">返回</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- 内容部分 -->
+<div class="content shezhi_guanliyuanfuhe">
+    <div class="w">
+        <div class="title_mianbaoxie">
+            <span class="l"></span>
+            <div class="l">
+                <a href="###">设置</a>
+                /
+                <a href="###">管理员复核</a>
+            </div>
+        </div>
+        <div class="shezhi_guanliyuanfuhe_box">
+            <!-- 公共选项卡 风格a -->
+            <div class="tab_a">
+                <!-- <div class="tab_a_title_s">
+                    <a href="javascript:void(0)" >操作员权限设置</a>
+                    <a href="javascript:void(0)">操作员信息维护</a>
+                    <a href="javascript:void(0)" class="tab_a_title_s_active">复核流程设置</a>
+                    <a href="javascript:void(0)">交易限额设置</a>
+                </div> -->
+                <div class="shezhi_fuheliuchengshezhi_box">
+                    <p class="ts">根据网银交易的类型、账户及金额，设置复核环节所需的各复核级别人数。</p>
+                    <!-- 选择操作人员 -->
+                    <div class="xzczry">
+                        <h2 class="shezhi_title">
+                            <span class="shezhi_title_span1 l"></span>
+                            <span class="l">选择操作人员</span>
+                        </h2>
+                        <div class="qx_s"
+                             style="background: #FFF; padding-bottom: 0px; height:13px; line-height: 15px; padding-top: 20px;">
+                            <label>
+                                <div class="l">
+                                    <label class="">
+                                        <input type="checkbox" class="fuxuankuang-dis-none">
+                                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                    </label>
+                                </div>
+                                <span class="l">
+                                    全选
+                                </span>
+                            </label>
+                        </div>
+                        <!-- 设置_复选框盒子公共 -->
+                        <div class="shezhi_fuxuankuang">
+                            <!-- 设置 -->
+                            <div class="shezhi_fuxuankuang_box shezhi_checkbox">
+                                <div class="shezhi_fuxuankuang_box_title">
+                                    <label class="">
+                                        <input type="checkbox" class="fuxuankuang-dis-none">
+                                        <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                    </label>
+                                    <span>设置</span>
+                                </div>
+                                <div class="shezhi_fuxuankuang_box_content">
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <div class="l">
+                                            <label class="">
+                                                <input type="checkbox" class="fuxuankuang-dis-none" checked="checked"
+                                                       value="系统设置向导" name='bbq'>
+                                                <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                            </label>
+                                        </div>
+                                        <span class="l">系统设置向导</span>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">交易限额设置</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">操作员权限设置</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">管理员复核</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">操作员信息维护</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">复核流程设置</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><!-- 设置结束 -->
+                            <!-- 账户管理 -->
+                            <div class="shezhi_fuxuankuang_box">
+                                <div class="shezhi_fuxuankuang_box_title">
+                                    <label>
+                                        <label class="">
+                                            <input type="checkbox" class="fuxuankuang-dis-none">
+                                            <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                        </label>
+                                        <span>账户管理</span>
+                                    </label>
+                                </div>
+                                <div class="shezhi_fuxuankuang_box_content">
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">账户查询</span>
+                                        </label>
+                                    </div>
+                                    <!-- shezhi_fuxuankuang_row一行 一行的 -->
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">网银流水查询</span>
+                                        </label>
+                                    </div>
+                                    <!-- shezhi_fuxuankuang_row一行 一行的 -->
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">电子回单</i>
+                                        </label>
+                                    </div>
+                                    <!-- shezhi_fuxuankuang_row一行 一行的 -->
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">银企对账</i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><!-- 账户管理 -->
+                            <!-- 付款 -->
+                            <div class="shezhi_fuxuankuang_box no_margin_right">
+                                <div class="shezhi_fuxuankuang_box_title">
+                                    <label>
+                                        <label class="">
+                                            <input type="checkbox" class="fuxuankuang-dis-none">
+                                            <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                        </label>
+                                        <span>付款</span>
+                                    </label>
+                                </div>
+                                <div class="shezhi_fuxuankuang_box_content">
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">网银账户互转</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">款项用途维护</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">单笔转账</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">电子工资单</i>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">批量转账</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">款方管理</i>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">代发工资</i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><!-- 付款 -->
+                            <!-- 存款 -->
+                            <div class="shezhi_fuxuankuang_box">
+                                <div class="shezhi_fuxuankuang_box_title">
+                                    <label>
+                                        <label class="">
+                                            <input type="checkbox" class="fuxuankuang-dis-none">
+                                            <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                        </label>
+                                        <span>存款</span>
+                                    </label>
+                                </div>
+                                <div class="shezhi_fuxuankuang_box_content">
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">定期存款</i>
+                                        </label>
+                                    </div>
+                                    <!-- shezhi_fuxuankuang_row一行 一行的 -->
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">通知存款</i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><!-- 存款 -->
+                            <!-- 复核 -->
+                            <div class="shezhi_fuxuankuang_box">
+                                <div class="shezhi_fuxuankuang_box_title">
+                                    <label>
+                                        <label class="">
+                                            <input type="checkbox" class="fuxuankuang-dis-none">
+                                            <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                        </label>
+                                        <span>复核</span>
+                                    </label>
+                                </div>
+                                <div class="shezhi_fuxuankuang_box_content">
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">交易复核</i>
+                                        </label>
+                                    </div>
+                                    <!-- shezhi_fuxuankuang_row一行 一行的 -->
+                                    <div class="shezhi_fuxuankuang_row">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <i class="l">预约交易撤销</i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><!-- 存款 -->
+                            <!-- 服务中心 -->
+                            <div class="shezhi_fuxuankuang_box no_margin_right">
+                                <div class="shezhi_fuxuankuang_box_title">
+                                    <label>
+                                        <label class="">
+                                            <input type="checkbox" class="fuxuankuang-dis-none">
+                                            <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                        </label>
+                                        <span>服务中心</span>
+                                    </label>
+                                </div>
+                                <div class="shezhi_fuxuankuang_box_content">
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">快捷菜单设定</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">网银操作日志查询</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">证书更新</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">在线客服</span>
+                                        </label>
+                                    </div>
+                                    <div class="shezhi_fuxuankuang_block">
+                                        <label>
+                                            <div class="l">
+                                                <label class="">
+                                                    <input type="checkbox" class="fuxuankuang-dis-none">
+                                                    <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                                                </label>
+                                            </div>
+                                            <span class="l">修改密码</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><!-- 服务中心 -->
+                        </div>
+                        <!-- 设置复核流程 -->
+                        <div class="szfhlc">
+                            <h2 class="shezhi_title">
+                                <span class="shezhi_title_span1 l"></span>
+                                <span class="l">设置复核流程</span>
+                            </h2>
+                            <div class="fuhe-parent" style="width: 860px;">
+                                <div class="height-60">
+                                    <div class="dis-inlink-block wid-340">交易金额范围（元）</div>
+                                    <div class="dis-inlink-block wid-100">1级复核人数</div>
+                                    <div class="dis-inlink-block wid-100">2级复核人数</div>
+                                    <div class="dis-inlink-block wid-100">3级复核人数</div>
+                                    <div class="dis-inlink-block wid-100">4级复核人数</div>
+                                    <div class="dis-inlink-block wid-100">5级复核人数</div>
+                                </div>
+                                <div class="mar-bot-15">
+                                    <div class="dis-inlink-block wid-340">
+                                        <input type="text" name="" class="">
+                                        <span class="fuhe-jiaoyijine">< 交易金额 ≤</span>
+                                        <input type="text" name="" class="">
+                                    </div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                </div>
+                                <div class="mar-bot-15">
+                                    <div class="dis-inlink-block wid-340">
+                                        <input type="text" name="" class="">
+                                        <span class="fuhe-jiaoyijine">< 交易金额 ≤</span>
+                                        <input type="text" name="" class="">
+                                    </div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                </div>
+                                <div class="mar-bot-15">
+                                    <div class="dis-inlink-block wid-340">
+                                        <input type="text" name="" class="">
+                                        <span class="fuhe-jiaoyijine">< 交易金额 ≤</span>
+                                        <input type="text" name="" class="">
+                                    </div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                </div>
+                                <div class="mar-bot-15">
+                                    <div class="dis-inlink-block wid-340">
+                                        <input type="text" name="" class="">
+                                        <span class="fuhe-jiaoyijine">< 交易金额 ≤</span>
+                                        <input type="text" name="" class="">
+                                    </div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                </div>
+                                <div class="mar-bot-15">
+                                    <div class="dis-inlink-block wid-340">
+                                        <input type="text" name="" class="">
+                                        <span class="fuhe-jiaoyijine">< 交易金额 ≤</span>
+                                        <input type="text" name="" class="">
+                                    </div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                    <div class="dis-inlink-block wid-100"><input type="text" name="" class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- 选择操作人员 -->
+                </div>
+                <!-- 按钮公共盒子 -->
+                <div class="shezhi_btn" style="width:453px; position: relative; left:40px;">
+                    <a href="###" class="btn_ok l">复核通过</a>
+                    <a href="###" class="btn_cancel l" style="margin-left:40px;">复核不通过</a>
+                    <a href="admin_review_c.html" class="btn_cancel ">返回</a>
+                </div>
+            </div>
+        </div><!-- table_a -->
+    </div><!-- shezhi_fuheliuchengshezhi_box -->
+</div><!-- w -->
+</div>
+<!--弹出框成功-->
+<div class="tanchu fukuan" id="tc_d" style="display:none;">
+    <div class="xq_tab" id="tc_cont">
+        <h1 style="font-weight:bold;">
+            成功提示
+            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+        </h1>
+        <div class="pd10" style="margin-left:60px;">
+            <div class="shoukuan_wh">
+                <div class="form_int" style="text-align: left;">
+                    <img src="../../../images_box/succ.png" alt="对勾"
+                         style="margin:40px 20px 26px 0;vertical-align: middle;"/>
+                    <span>设置信息复核通过！</span>
+                </div>
+            </div>
+        </div>
+        <!-- 按钮盒子 -->
+        <div class="but">
+            <a href="./admin_review_c.html" class="butConfirm">继续复核</a>
+            <a href="./admin_review_c.html" class="gclose">复核完成</a>
+        </div>
+    </div>
+</div>
+<!--弹出框失败-->
+<div class="tanchu fukuan" id="tc_e" style="display:none;">
+    <div class="xq_tab" id="tc_cont">
+        <h1 style="font-weight:bold;">
+            失败提示
+            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+        </h1>
+        <div class="pd10" style="margin-left:60px;">
+            <div class="shoukuan_wh">
+                <div class="form_int" style="text-align: left;">
+                    <img src="../../../images_box/big_notf.png" alt="对勾"
+                         style="margin:40px 20px 26px 0;vertical-align: middle;"/>
+                    <span>设置信息复核不通过！</span>
+                </div>
+            </div>
+        </div>
+        <!-- 按钮盒子 -->
+        <div class="but">
+            <a href="./admin_review_c.html" class="butConfirm">继续复核</a>
+            <a href="./admin_review_c.html" class="gclose">复核完成</a>
+        </div>
+    </div>
+</div>
+<div class="fanhuidingbu">
+    <img src="../../../images_box/huidaodingbu.png" alt=""/>
+</div>
+<!--底部-->
+<div class="ht-footer">
+    <div class="ht-footer-info">
+        <ul>
+            <li class="one">门户官网</li>
+            <li class="ht-footer-fg">|</li>
+            <li class="two">客户热线：400-010-8858</li>
+        </ul>
+    </div>
+    <div class="ht-footer-bt">
+        &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+    </div>
+</div>
+</body>
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/global.js"></script>
+<script src="../../../js/fuxuankuang-state.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/huidaodingbu.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/globalSet.js"></script>
+<script type="text/javascript">
+    //多选删除
+    $('.shezhi_checkbox .shezhi_fuxuankuang_box_title input').on('ifChecked', function (event) {
+        $(".shezhi_checkbox input").iCheck('check');
+    });
+
+    $('.shezhi_checkbox .shezhi_fuxuankuang_box_title input').on('ifUnchecked', function (event) {
+        $(".shezhi_checkbox input").iCheck('uncheck');
+    });
+
+    $(".xzzh input[type='radio']").on('ifChecked', function (event) {
+        //alert($(this).val());
+        //console.log($(this).val())
+        if ($(this).val() == 1) {
+            $(".tab_a").slideUp(300);
+            $(".xzzh .xzzh_box div label .u2").css("color", "#3A4293");
+            $(".xzzh .xzzh_box div label .u1").css("color", "#999999");
+        } else {
+            $(".tab_a").slideDown(300);
+            $(".xzzh .xzzh_box div label .u1").css("color", "#3A4293");
+            $(".xzzh .xzzh_box div label .u2").css("color", "#999999");
+        }
+    });
+
+
+    //公共tab_a 风格a  事件
+    $(".tab_a .tab_a_content input").on('ifChecked', function (event) {
+        $(this).parents("tr").css("background", "#f9f9f9")
+    });
+    $(".tab_a .tab_a_content input").on('ifUnchecked', function (event) {
+        $(this).parents("tr").css("background", "#FFF")
+    });
+</script>
+<!--<script src="../../../bootstrap_checkbox/icheck.js"></script>-->
+<script src="../../../bootstrap_checkbox/custom.js"></script>
+<script src="../../../js/shezhi_global.js"></script>
+<script>
+    $(document).ready(function () {
+        //选择操作人员
+        $('.shezhi_fuxuankuang .shezhi_fuxuankuang_box_title input').iCheck({
+            checkboxClass: 'icheckbox_flat-pink',
+            radioClass: 'icheckbox_flat-pink',
+            width: "20px"
+        });
+        $('.shezhi_fuxuankuang .shezhi_fuxuankuang_box_content input').iCheck({
+            checkboxClass: 'icheckbox_flat-pink',
+            radioClass: 'icheckbox_flat-pink',
+            width: "14px"
+        });
+        //选择账户
+        $(".xzzh input[type='radio']").iCheck({
+            checkboxClass: 'iradio_flat-blue',
+            radioClass: 'iradio_flat-blue'
+        });
+        //公共tab_a 风格a
+        $(".tab_a .tab_a_content input").iCheck({
+            checkboxClass: 'icheckbox_flat-pink',
+            radioClass: 'icheckbox_flat-pink'
+        });
+
+        $('.qx_s input').iCheck({
+            checkboxClass: 'icheckbox_flat-pink',
+            radioClass: 'icheckbox_flat-pink',
+            increaseArea: '20%' //设置label可以点击
+        });
+        //默认选择 否 不然选项卡出现
+        $(".no").iCheck('check');
+    });
+    //回调函数 获取选择复选框的值
+    $(".btn_ok").click(function () {
+        //var url = $(this).attr('data-url');
+        var str = "";
+        var ids = "";
+        $("input[name='bbq']:checkbox").each(function () {
+            if (true == $(this).is(':checked')) {
+                str += $(this).val() + ",";
+            }
+        });
+        if (str.substr(str.length - 1) == ',') {
+            ids = str.substr(0, str.length - 1);
+        }
+//  console.log(ids);
+        $('#tc_d').css({'display': 'block'});
+        $('.xq_tab').css({"width": "30%", "max-height": "30%"});
+    });
+    $('.gz_close,.gclose').click(function () {
+        $('#tc_d').css({'display': 'none'});
+    })
+    //  不通过
+    $('.btn_cancel').click(function () {
+        $('#tc_e').css({'display': 'block'});
+        $('.xq_tab').css({"width": "30%", "max-height": "30%"});
+    });
+    $('.gz_close,.gclose').click(function () {
+        $('#tc_e').css({'display': 'none'});
+    });
+</script>
+<script>
+    $("#qweqwe").html(nav)
+    $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+
+    $(".sy_nav ul").find("li").eq(5).addClass("nav_now")
+</script>
+</html><!--�I�ϱk�%�y	B��G./���6V ��Ӷ��dσI��4ߔ)��k�^:�ٚ�4(�.��}n`�lRҢ�?7t;�y	B|�F1�j.���(���
+[~-�	ku;�����+�R���NZ��\��'ň�y�K�Lp)�Յ�2F@*�<��=�G�rd��ˆ6�)���������z�?���'�۸���2f�Ua�3	̸��Ay6����:��j�cy�N�H�O�r��ʺżg�Yw�f��
+b�<����G�#ZC�@�4Fc=0E~>U��>Xa�7��O� �����}#�
+-��G�[���%w��$�x��W��&���X,4&�	ƀ�H��8~�Pz��2D�r��y�<8{PP�iTD�g���C")HV;(&d�8���a��iBJs�b��_�
+�Z�d��/c$#ؾ�ܿB�u�=
+FCT���@7� �R
+������O
+�X~H �-->

@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>录入转账信息</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/zhongguancun.css" />
+    <link rel="stylesheet" href="../../../css/gangzi.css" />
+    <link rel="stylesheet" href="../../../css/bankpicker.css" />
+    <link rel="stylesheet" href="../../../bootstrap_checkbox/flat/_all.css" />
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/yejiao.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/huidaodingbu.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/update_common.css" />
+    <script src="./nav.js"></script>
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="delModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delModalLabel">操作提示</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    是否确认删除?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary js_btn-del-sure">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal table -->
+    <div class="modal fade bd-example-modal-lg" id="tableModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tableModalLabel">单笔转账交易确认</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <table border style="width: 100%; border-color: #e2e2e2; color: #666; border-radius: 3px">
+                            <thead style="background: #f4f4f4">
+                                <tr>
+                                    <td>
+                                        付款方账号
+                                    </td>
+                                    <td>
+                                        付款方户名
+                                    </td>
+                                    <td>
+                                        收款方账号
+                                    </td>
+                                    <td>
+                                        收款方户名
+                                    </td>
+                                    <td>
+                                        收款方开户行
+                                    </td>
+                                    <td>
+                                        交易金额
+                                    </td>
+                                    <td>
+                                        交易用途
+                                    </td>
+                                    <td>
+                                        预约转账日期
+                                    </td>
+                                    <td>
+                                        预约转账时间
+                                    </td>
+                                    <td>
+                                        手续费金额
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1005890001500000719</td>
+                                    <td>企业网银二十</td>
+                                    <td>6217231611000720796</td>
+                                    <td>郝敬伟</td>
+                                    <td>中国工商银行聊城开发区支行</td>
+                                    <td>22.00</td>
+                                    <td>221</td>
+                                    <td>--</td>
+                                    <td>221</td>
+                                    <td>0.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <body>
+        <div class="pop-box"></div>
+        <div id="qweqwe"></div>
+        <!--banner-->
+        <div class="huidan zhanghu fk">
+            <div class="title_mianbaoxie">
+                <span class="l"></span>
+                <div class="l">
+                    <img src="../../../images_box/position.png" alt="" />
+                    <a href="###">付款</a> /
+                    <a href="###">单笔转账</a>
+                </div>
+            </div>
+            <div class="tab_s" style="margin-bottom:-20px;">
+                <ul class="cl">
+                    <li class="now">录入转账信息</li>
+                    <li>已录入交易查询</li>
+                    <li>使用模板转账</li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_active tab_now">
+            <div class="fk-lrmain  huidan zhanghu fk">
+                <p class="fk-lrxx">
+                    <span></span>付款方信息</p>  
+                <p class="fk-lrzh">
+                    <span>
+                        <i>*</i>付款方账号：</span>
+                    <select id="js_select_payac" onchange="changeItem(this.value)" class="icon_arrow">
+                        <option value="-1">请选择</option>
+                        <option value="10058900000115000719">10058900000115000719 人民币</option>
+                        <option value="10058900000115000718">10058900000115000718 人民币</option>
+                        <option value="10058900000115000717">10058900000115000717 人民币</option>
+                        <option value="10058900000115000716">10058900000115000716 人民币</option>
+                    </select>
+                    <i class="fk-jine" id="js_ableMoney"></i>
+                    <p class="fk-name" id="js_payname"></p>
+                </p>
+                <p class="fk-lrxx">
+                    <span></span>收款方信息</p>
+                <p class="fk-lrzh" style="position:relative;width:800px;">
+                    <span class="e-lab-1">收款方所在组：</span>
+                    <select class="icon_arrow">
+                        <option value="-1">请选择</option>
+                        <option value="10058900000115000719">北京分公司</option>
+                        <option value="10058900000115000718">上海分公司</option>
+                        <option value="10058900000115000717">未分组</option>
+                    </select>
+                    <div class="e-tree e-emon" id="e-tree-gyj" style="z-index:99;display: none;">
+                        <div class="e-tree-wraper e-tree-gyj">
+                            <div class="e-tree-center">
+                                <ul class="e-list-onelive">
+                                    <li>
+                                        <p>
+                                            <a href="javascript:;" id="e-tree-1">北京分公司</a>
+                                        </p>
+                                        <ul class="e-list-twolive">
+                                            <li>
+                                                <a href="javascript:;" id="e-tree-3">事业部</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" id="e-tree-4">销售部</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="javascript:;" id="e-tree-2">上海分公司</a>
+                                        </p>
+                                        <ul class="e-list-twolive">
+                                            <li>
+                                                <a href="javascript:;" id="e-tree-5">事业部</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" id="e-tree-6">销售部</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="javascript:;" id="e-tree-2">未分组</a>
+                                        </p>
+                                        <ul class="e-list-twolive">
+                                            <li>
+
+                                            </li>
+                                            <li>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+                <p class="fk-lrzh">
+                    <span>
+                        <i>*</i>收款方账号：</span>
+                    <select name="" id="" class="icon_arrow">
+                        <option value="-1">请选择</option>
+                        <option value="10058900000115000719">10058900000115000719</option>
+                        <option value="10058900000115000718">10058900000115000718</option>
+                        <option value="10058900000115000717">10058900000115000717</option>
+                        <option value="10058900000115000716">10058900000115000716</option>
+                    </select>
+                </p>
+                <p class="fk-lrzh">
+                    <span>
+                        <i>*</i>收款方户名：</span>
+                    <input type="text" />
+                </p>
+                <!--<p class="fk-lrzh">
+            <span><i>*</i>收款方开户行：</span>
+            <input type="text" />-->
+                <!--银行开始-->
+                <p class="e-relative fk-lrzh" style="_z-index:2;">
+                    <!--<label class="e-lab-1">
+                <span class="e-asterisk"></span>
+                    收款方银行:
+            </label>-->
+                    <span>
+                        <i>*</i>收款方开户行：</span>
+                    <input class="e-inp-large" type="text" value="" id="e-yh-alert" />
+                    <!--    银行   begin-->
+                    <div class="fn-hide" id="bankPickerContainer" style="left:31.28%;top:35px; position: absolute; z-index: 120; display:none;">
+                        <div class="ui-switchable" id="bankPicker">
+                            <p style="height:30px;line-height:30px;color:#3A4293;margin:5px;">开户银行</p>
+                            <ul class="bankTriggers fn-clear daparser-0 ui-switchable-nav" data-role="nav" data-daparser-cid="daparser-0" id="nameLists"
+                                style="height:23px;">
+                                <li class="triger daparser-1 ui-switchable-trigger ui-switchable-active" data-role="trigger" data-daparser-cid="daparser-1"
+                                    name="热门银行">热门银行</li>
+                                <li class="triger daparser-2 ui-switchable-trigger" data-role="trigger" data-daparser-cid="daparser-2" name="ABCDEF">ABCDEF</li>
+                                <li class="triger daparser-3 ui-switchable-trigger" data-role="trigger" data-daparser-cid="daparser-3" name="GHJ">GHJ</li>
+                                <li class="triger daparser-4 ui-switchable-trigger" data-role="trigger" data-daparser-cid="daparser-4" name="KLMN">KLMN</li>
+                                <li class="triger daparser-5 ui-switchable-trigger" data-role="trigger" data-daparser-cid="daparser-5" name="PQRST">PQRST</li>
+                                <li class="triger daparser-6 ui-switchable-trigger" data-role="trigger" data-daparser-cid="daparser-6" name="WXYZ">WXYZ</li>
+                            </ul>
+                            <!-- #bankLists -->
+                            <div class="ui-switchable-cnt ui-switchable-content" id="bankLists">
+                                <!-- 热门银行 -->
+                                <div class="fn-hide hotBank daparser-7 ui-switchable-panel" style="display: block;" data-role="panel" data-daparser-cid="daparser-7">
+                                    <ul class=" fn-clear">
+                                        <li class="hotBank-list">
+                                            <a title="北京中关村银行" class="hotBank-list-ico ZGC" shortname="ZGC" bank="北京中关村银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="中国工商银行" class="hotBank-list-ico ICBC" shortname="ICBC" bank="中国工商银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="中国建设银行" class="hotBank-list-ico CCB" shortname="CCB" bank="中国建设银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="中国农业银行" class="hotBank-list-ico ABC" shortname="ABC" bank="中国农业银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="中国邮政储蓄银行" class="hotBank-list-ico PSBC" shortname="PSBC" bank="中国邮政储蓄银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="中国民生银行" class="hotBank-list-ico CMBC" shortname="CMBC" bank="中国民生银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="平安银行" class="hotBank-list-ico SPABANK" shortname="SPABANK" bank="平安银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="交通银行" class="hotBank-list-ico COMM" shortname="COMM" bank="交通银行"></a>
+                                        </li>
+                                        <li class="hotBank-list">
+                                            <a title="北京银行" class="hotBank-list-ico BJBANK" shortname="BJBANK" bank="北京银行"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 按字母分组银行 -->
+                                <!-- ABCDEF -->
+                                <div class="fn-hide bankAlphabet daparser-8 ui-switchable-panel" style="display: none;" data-role="panel" id="ABCDEF" data-daparser-cid="daparser-8">
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">A</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="ARCU" bank="安徽省农村信用社">安徽省农村信用社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ASCB" bank="鞍山银行">鞍山银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">B</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="BJBANK" bank="北京银行">北京银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BJRCB" bank="北京农商行">北京农商行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOHAIB" bank="渤海银行">渤海银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BSB" bank="包商银行">包商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOCFCB" bank="中银富登村镇银行">中银富登村镇银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOQZ" bank="泉州银行">泉州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOP" bank="平顶山银行">平顶山银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">C</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="CABANK" bank="长安银行">长安银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CSCB" bank="长沙银行">长沙银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOCZ" bank="沧州银行">沧州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CDCB" bank="成都银行">成都银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CRCBANK" bank="重庆农村商业银行">重庆农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CZCB" bank="浙江稠州商业银行">浙江稠州商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CSRCB" bank="常熟农商银行">常熟农商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CQBANK" bank="重庆银行">重庆银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOCD" bank="承德银行">承德银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">D</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="DYCB" bank="德阳银行">德阳银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="DLB" bank="大连银行">大连银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="DRCBCL" bank="东莞农村商业银行">东莞农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOD" bank="东莞银行">东莞银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="DYCCB" bank="东营银行">东营银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="DZBANK" bank="德州银行">德州银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">E</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="ORBANK" bank="鄂尔多斯银行">鄂尔多斯银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">F</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="FJNX" bank="福建省农村信用社联合社">福建省农村信用社联合社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="FXCB" bank="阜新银行">阜新银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="FDB" bank="富滇银行">富滇银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="FJHXBC" bank="福建海峡银行">福建海峡银行</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- GHJ -->
+                                <div class="fn-hide bankAlphabet daparser-9 ui-switchable-panel" style="display: none;" data-role="panel" data-daparser-cid="daparser-9"
+                                    id="GHJ">
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">G</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="GDB" bank="广发银行">广发银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GYCB" bank="贵阳银行">贵阳银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GLBANK" bank="桂林银行">桂林银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BGB" bank="广西北部湾银行">广西北部湾银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GDRCC" bank="广东省农村信用社联合社">广东省农村信用社联合社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GHB" bank="广东华兴银行">广东华兴银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GRCB" bank="广州农村商业银行">广州农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GSRCU" bank="甘肃省农村信用社">甘肃省农村信用社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GZB" bank="赣州银行">赣州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GXRCU" bank="广西壮族自治区农村信用社联合社">广西壮族自治区农村信用社联合社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="NYBANK" bank="广东南粤银行">广东南粤银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="GCB" bank="广州银行">广州银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">H</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="HXBANK" bank="华夏银行">华夏银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="EGBANK" bank="恒丰银行">恒丰银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HURCB" bank="湖北省农村信用合作联社">湖北省农村信用合作联社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HANABANK" bank="韩亚银行">韩亚银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="QYBANK" bank="韩国企业银行">韩国企业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HSBANK" bank="徽商银行">徽商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HRBANK" bank="哈尔滨银行">哈尔滨银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HLDB" bank="葫芦岛银行">葫芦岛银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HZCB" bank="杭州银行">杭州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HBRCU" bank="河北省农村信用社联合社">河北省农村信用社联合社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BHB" bank="河北银行">河北银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HDBANK" bank="邯郸银行">邯郸银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOHN" bank="海南省农村信用社">海南省农村信用社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HKB" bank="汉口银行">汉口银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HBC" bank="湖北银行">湖北银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="HZCCB" bank="湖州银行">湖州银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">J</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="COMM" bank="交通银行">交通银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JSBANK" bank="江苏银行">江苏银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JSRCU" bank="江苏省农村信用社联合社">江苏省农村信用社联合社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JNBANK" bank="济宁银行">济宁银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JLBANK" bank="吉林银行">吉林银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JLRCU" bank="吉林省农村信用社联合社">吉林省农村信用社联合社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="TCRCB" bank="江苏太仓农村商业银行">江苏太仓农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JSB" bank="晋商银行">晋商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JINCHB" bank="晋城银行">晋城银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JXRCU" bank="江西省农村信用社">江西省农村信用社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JJBANK" bank="九江银行">九江银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JXBANK" bank="嘉兴银行">嘉兴银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="JRCB" bank="江苏江阴农村商业银行">江苏江阴农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOJZ" bank="锦州银行">锦州银行</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- KLMN -->
+                                <div class="fn-hide bankAlphabet daparser-10 ui-switchable-panel" style="display: none;" data-role="panel" data-daparser-cid="daparser-10"
+                                    id="KLMN">
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">K</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="KLB" bank="昆仑银行">昆仑银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="KSRB" bank="昆山农村商业银行">昆山农村商业银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">L</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="LSBANK" bank="莱商银行">莱商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="DAQINGB" bank="龙江银行">龙江银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="LHBANK" bank="漯河银行">漯河银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="LZCCB" bank="柳州银行">柳州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="LZYH" bank="兰州银行">兰州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="LSBC" bank="临商银行">临商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOL" bank="洛阳银行">洛阳银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="LSCCB" bank="乐山市商业银行">乐山市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="LANGFB" bank="廊坊银行">廊坊银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">M</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="MYBANK" bank="绵阳市商业银行">绵阳市商业银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">N</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="NBBANK" bank="宁波银行">宁波银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="NHB" bank="南海农商银行">南海农商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="NJCB" bank="南京银行">南京银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="NXBANK" bank="宁夏银行">宁夏银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="NXRCU" bank="宁夏黄河农村商业银行">宁夏黄河农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="NDHB" bank="宁波东海银行">宁波东海银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CGNB" bank="南充市商业银行">南充市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BNY" bank="南阳市商业银行">南阳市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="H3CB" bank="内蒙古银行">内蒙古银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="NCB" bank="南昌银行">南昌银行</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- PQRST -->
+                                <div class="fn-hide bankAlphabet daparser-11 ui-switchable-panel" style="display: none;" data-role="panel" data-daparser-cid="daparser-11"
+                                    id="PQRST">
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">P</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="SPABANK" bank="平安银行">平安银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="PZHCCB" bank="攀枝花市商业银行">攀枝花市商业银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">Q</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="ZBCB" bank="齐商银行">齐商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="QDCCB" bank="青岛银行">青岛银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOQH" bank="青海银行">青海银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="QLBANK" bank="齐鲁银行">齐鲁银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">R</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="RZB" bank="日照银行">日照银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">S</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="SPDB" bank="浦发银行">浦发银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SHBANK" bank="上海银行">上海银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SXCB" bank="绍兴银行">绍兴银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SRCB" bank="深圳农村商业银行">深圳农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SDEB" bank="顺德农商银行">顺德农商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SCBBANK" bank="商丘市商业银行">商丘市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SRBANK" bank="上饶银行">上饶银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SCCB" bank="三门峡银行">三门峡银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SHRCB" bank="上海农商银行">上海农商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOSZ" bank="苏州银行">苏州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="SDRCU" bank="山东省农村信用社联合社">山东省农村信用社联合社</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">T</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="TCCB" bank="天津银行">天津银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="TACCB" bank="泰安市商业银行">泰安市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="TLBANK" bank="铁岭银行">铁岭银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="TRCB" bank="天津农商银行">天津农商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="TJBHB" bank="天津滨海农村商业银行">天津滨海农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="TZCB" bank="台州银行">台州银行</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <!-- WXYZ -->
+                                <div class="fn-hide bankAlphabet daparser-12 ui-switchable-panel" style="display: none;" data-role="panel" data-daparser-cid="daparser-12"
+                                    id="WXYZ">
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">W</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="BANKWF" bank="潍坊银行">潍坊银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="URMQCCB" bank="乌鲁木齐市商业银行">乌鲁木齐市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="WHCCB" bank="威海市商业银行">威海市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="KEB" bank="外换银行">外换银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="WZCB" bank="温州银行">温州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="WJRCB" bank="吴江农村商业银行">吴江农村商业银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">X</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="CIB" bank="兴业银行">兴业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="XTB" bank="邢台银行">邢台银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="XMBANK" bank="厦门银行">厦门银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="XABANK" bank="西安银行">西安银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOSH" bank="新韩银行">新韩银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">Y</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="NBYZ" bank="鄞州银行">鄞州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="YTBANK" bank="烟台银行">烟台银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="WOORI" bank="友利银行">友利银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="RXCB" bank="榆次融信村镇银行">榆次融信村镇银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="YNRCC" bank="云南省农村信用社">云南省农村信用社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOYK" bank="营口银行">营口银行</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fn-clear">
+                                        <dt class="bankAlphabet-acronym">Z</dt>
+                                        <dd class="fn-clear bankAlphabet-list">
+                                            <a class="bankAlphabet-list-bank" shortname="ICBC" bank="中国工商银行">中国工商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ABC" bank="中国农业银行">中国农业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CCB" bank="中国建设银行">中国建设银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CMB" bank="招商银行">招商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="BOC" bank="中国银行">中国银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="PSBC" bank="中国邮政储蓄银行">中国邮政储蓄银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CITIC" bank="中信银行">中信银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CMBC" bank="中国民生银行">中国民生银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CEB" bank="中国光大银行">中国光大银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="MTBANK" bank="浙江民泰商业银行">浙江民泰商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="CZBANK" bank="浙商银行">浙商银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ZZYH" bank="枣庄银行">枣庄银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="RBOZ" bank="珠海华润银行">珠海华润银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ZZBANK" bank="郑州银行">郑州银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ZRCBANK" bank="张家港农村商业银行">张家港农村商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ZJKCCB" bank="张家口市商业银行">张家口市商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ZJTLCB" bank="浙江泰隆商业银行">浙江泰隆商业银行</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ZJNX" bank="浙江省农村信用社联合社">浙江省农村信用社联合社</a>
+                                            <a class="bankAlphabet-list-bank" shortname="ZGCCB" bank="自贡市商业银行">自贡市商业银行</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <!-- /#bankLists -->
+                            <a class="close-link" id="J_colse">关闭</a>
+                        </div>
+                    </div>
+                    <!--    银行  end     -->
+
+                    <div class="pop-win" style="display:none;z-index:999;">
+                        <div class="pop-container">
+                            <p class="pop-title">所属网点
+                                <a class="pop-close">关闭</a>
+                            </p>
+                            <p class="pop-address">
+                                <select name="" id="">
+                                    <option value="">北京</option>
+                                    <option value="">上海</option>
+                                </select>
+                                <span>省</span>
+                                <select name="" id="">
+                                    <option value="">北京</option>
+                                    <option value="">上海</option>
+                                </select>
+                                <span>市</span>
+                            </p>
+                            <p class="pop-search">
+                                <input type="text" placeholder="请输入关键字(行名或额号)">
+                                <button class="pop-btn">查询</button>
+                            </p>
+                            <div class="pop-list">
+                                <p>
+                                    <span>（123443544789915）</span>中国工商银行回龙观支行</p>
+                                <p>
+                                    <span>（123443544789915）</span>中国工商银行回龙观支行</p>
+                                <p>
+                                    <span>（123443544789915）</span>中国工商银行回龙观支行</p>
+                                <p>
+                                    <span>（123443544789915）</span>中国工商银行回龙观支行</p>
+                                <p>
+                                    <span>（123443544789915）</span>中国工商银行回龙观支行</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </p>
+                <!--</p>-->
+                <p class="fk-lrzh">
+                    <span></span>
+                    <label class="fk-checklab fk-check0">
+                        <label class="">
+                            <input type="checkbox" class="fuxuankuang-dis-none single">
+                            <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                        </label>
+                        保存收款方信息
+                    </label>
+                </p>
+                <p class="fk-lrxx">
+                    <span></span>付款信息</p>
+                <p class="fk-lrzh">
+                    <span>
+                        <i>*</i>金额：</span>
+                    <input type="text" />
+                    <i class="fk-jine">壹壹</i>
+                </p>
+                <p class="fk-lrzh">
+                    <span>
+                        <i>*</i>用途：</span>
+                    <input type="text" />
+                </p>
+                <p class="fk-lrzh">
+                    <span>预约付款：</span>
+                    <input type="text" class="fk_yuyue date_picker" />
+                </p>
+                <p class="fk-lrzh">
+                    <span>预约时间：</span>
+                    <input type="text" class="fk_yuyue date_picker" />
+                </p>
+                <p class="fk-lrzh">
+                    <span></span>
+                    <label class="fk-checklab fk-check1">
+                        <label class="">
+                            <input type="checkbox" class="fuxuankuang-dis-none single">
+                            <i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>
+                        </label>
+                        保存为常用模板
+                    </label>
+                </p>
+                <p class="fk-lrzh fk-posi">
+                    <span></span>
+                    <button class="fk-btn" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">下一步</button>
+                    <span class="fk-a">
+                        <a href="##" class="fk-tj">添加至列表</a>
+                        <img src="../../../images_box/wenhao.png" alt="" class="fk-img" />
+                    </span>
+                </p>
+                <div class="fk-tip">
+                    如果您需要添加多次单笔转账，可以选择添加到列表，一次认证即可完成 多次单笔转账。
+                    <span class="js_btn-tips">我知道了</span>
+                </div>
+
+                <div class="fukuan fk-hezi">
+                    <div class="biaoge">
+                        <p>单笔转账批量列表</p>
+                        <table class="" border="true">
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>付款方账号</td>
+                                    <td>收款方账号</td>
+                                    <td>收款方户名</td>
+                                    <td>交易金额</td>
+                                    <td>交易用途</td>
+                                    <td>预约转账日期</td>
+                                    <td>预约转账时间</td>
+                                    <td>手续费金额</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>2100023</td>
+                                    <td>2343433</td>
+                                    <td>北京乘兴国际</td>
+                                    <td>1213545</td>
+                                    <td>装修尾款</td>
+                                    <td>2018-09-01</td>
+                                    <td>9:00-11:00</td>
+                                    <td>0.00</td>
+                                    <td>
+                                        <a href="###" class="fk-del"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>01</td>
+                                    <td>2100023</td>
+                                    <td>2343433</td>
+                                    <td>北京乘兴国际</td>
+                                    <td>1213545</td>
+                                    <td>装修尾款</td>
+                                    <td>2018-09-01</td>
+                                    <td>9:00-11:00</td>
+                                    <td>0.00</td>
+                                    <td>
+                                        <a href="###" class="fk-del"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table-page">
+                            <ul class="clearifx">
+                                <li> > </li>
+                                <li class="page-current"> 1 </li>
+                                <li>
+                                    < </li>
+                            </ul>
+                        </div>
+                        <div class="totalMon">合计金额:
+                            <span>200000</span>
+                        </div>
+                    </div>
+
+                    <p class="fk-fl">
+                        <button class="fk-pl" onclick="javascript:window.location.href='danbizhuanzhang_queren.html'">批量提交</button>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- tab2 -->
+        <!-- 新增div -->
+        <div class="tab_active">
+            <div class="huidan zhanghu fukuan">
+                <div class="query_box c">
+                    <form action="" class="form-inline search_form">
+                        <div class="topShow">
+                            <div class="date_picker input-daterange pull-left">
+                                <label>起止时间：</label>
+                                <input type="text" id="dataStart" class="form-control dataWidth" value="">
+                                <span>-</span>
+                                <input type="text" id="dataEnd" class="form-control dataWidth" value="">
+                            </div>
+                            <div class="search_date">
+                                <span>最近：</span>
+                                <a href="javascript:;" class="active date_1">1天</a>
+                                <a href="javascript:;" class="date_7">7天</a>
+                                <a href="javascript:;" class="date_15">15天</a>
+                                <a href="javascript:;" class="date_30">30天</a>
+                            </div>
+                        </div>
+                        <div class="topShow">
+                            <div class="date_picker input-daterange pull-left">
+                                <label>交易状态：</label>
+                                <a href="javascript:;" class="active quanbu">全部</a>
+                                <a href="javascript:;" class="qita">交易成功</a>
+                                <a href="javascript:;" class="qita">交易失败</a>
+                                <a href="javascript:;" class="qita">交易状态不确定</a>
+                                <a href="javascript:;" class="qita">银行处理中</a>
+                                <a href="javascript:;" class="qita">待复核</a>
+                                <a href="javascript:;" class="qita">复核未通过</a>
+                                <a href="javascript:;" class="qita">其他状态</a>
+                            </div>
+                        </div>
+
+                        <div class="shoukuan_wh highFil" style="display: none">
+                            <div class="dis_jus form_int">
+                                <label>金额范围：</label>
+                                <input type="text" class="moneySmall" style="width:16%; padding: 6px 12px" placeholder="请输入金额" /> -
+                                <input type="text" class="moneySmall" style="width:16%; padding: 6px 12px" placeholder="请输入金额" />
+                            </div>
+                            <div class="form_int dis_jus">
+                                <label>付款账号：</label>
+                                <select>
+                                    <option value="">请选择</option>
+                                    <option value="">434343</option>
+                                    <option value="">343434</option>
+                                </select>
+                            </div>
+                            <div class="dis_jus form_int">
+                                <label>收款账号：</label>
+                                <select>
+                                    <option value="">请选择</option>
+                                    <option value="">434343</option>
+                                    <option value="">343434</option>
+                                </select>
+                            </div>
+                            <div class="form_int dis_jus">
+                                <label>用途：</label>
+                                <select>
+                                    <option value="">请选择</option>
+                                    <option value="">装修</option>
+                                    <option value="">装修</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="topShow">
+                            <div class="date_picker input-daterange pull-left top-filter">
+                                <label>高级筛选：</label>
+                                <span class="js_btn_expan btn_expan">展开</span>
+                            </div>
+                        </div>
+                        <div class="topShow">
+                            <label></label>
+                            <div class="but but_1">
+                                <button type="button" class="btn1 blue-btn">查&nbsp;询</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- 表格开始 -->
+                <div style="background: #fff">
+                    <div class="biaoge">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <!--<td>-->
+                                    <!--<label class="">-->
+                                    <!--<input type="checkbox" class="fuxuankuang-dis-none single">-->
+                                    <!--<i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>-->
+
+                                    <!--</label>&nbsp;全选-->
+                                    <!--</td>-->
+                                    <td>
+                                        录入时间
+                                    </td>
+                                    <td>
+                                        付款方账户
+                                    </td>
+                                    <td>
+                                        付款方户名
+                                    </td>
+                                    <td>
+                                        收款方账号
+                                    </td>
+                                    <td>
+                                        收款方户名
+                                    </td>
+                                    <td>
+                                        交易金额
+                                    </td>
+                                    <td>
+                                        交易用途
+                                    </td>
+                                    <td>
+                                        交易状态
+                                    </td>
+                                    <td>
+                                        试算手续费
+                                    </td>
+                                    <td>
+                                        失败原因
+                                    </td>
+                                    <td>
+                                        操作
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!--<td>-->
+                                    <!--<label class="">-->
+                                    <!--<input type="checkbox" class="fuxuankuang-dis-none single">-->
+                                    <!--<i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>-->
+                                    <!--</label>-->
+                                    <!--</td>-->
+                                    <td>
+                                        20170612
+                                        <br>12:11:57
+                                    </td>
+                                    <td>
+                                        0394101080150028
+                                    </td>
+                                    <td>
+                                        上海经纬网讯有限公司
+                                    </td>
+                                    <td>
+                                        0394101080150075
+                                    </td>
+                                    <td>
+                                        上海阳刚贸易集团
+                                    </td>
+                                    <td>
+                                        1000.00
+                                    </td>
+                                    <td>
+                                        划款
+                                    </td>
+                                    <td>
+                                        复核未完成
+                                    </td>
+                                    <td>
+                                        33元
+                                    </td>
+                                    <td>
+                                        复核未完成
+                                    </td>
+                                    <td>
+                                        <a href="##" class="tc_gz btn_copy">复制</a>
+                                        <br />
+                                        <!--<a href="javascript:window.location.href='../单笔转账/single_recorded_info.html';">修改</a>-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!--<td>-->
+                                    <!--<label class="">-->
+                                    <!--<input type="checkbox" class="fuxuankuang-dis-none single">-->
+                                    <!--<i class="fuxuankuang-weixuanzhong fuxuankuang-state">✓</i>-->
+                                    <!--</label>-->
+                                    <!--</td>-->
+                                    <td>
+                                        20170612
+                                        <br>12:11:57
+                                    </td>
+                                    <td>
+                                        0394101080150028
+                                    </td>
+                                    <td>
+                                        上海经纬网讯有限公司
+                                    </td>
+                                    <td>
+                                        0394101080150075
+                                    </td>
+                                    <td>
+                                        上海阳刚贸易集团
+                                    </td>
+                                    <td>
+                                        1000.00
+                                    </td>
+                                    <td>
+                                        划款
+                                    </td>
+                                    <td>
+                                        复核未完成
+                                    </td>
+                                    <td>
+                                        33元
+                                    </td>
+                                    <td>
+                                        复核未完成
+                                    </td>
+                                    <td>
+                                        <a href="##" class="tc_gz btn_copy">复制</a>
+                                        </br>
+                                        <!--<a href="javascript:window.location.href='../单笔转账/single_recorded_info.html';">修改</a>-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- biaoge结束 -->
+                <!-- 按钮盒子 -->
+                <div class="but">
+
+
+                    <a href="###">打印</a>
+                    <!--<a href="###" @click="delAll" class="singleDel">删除</a>-->
+                    <!--<a href="###">下载</a>-->
+                </div>
+
+                <!--弹出框删除-->
+                <div class="tanchu fukuan" id="tc_d" style="display:none;">
+                    <div class="xq_tab" id="tc_cont">
+                        <h1>
+                            删除
+                            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+                        </h1>
+                        <div class="pd10">
+                            <div class="shoukuan_wh">
+                                <div class="form_int" style="text-align: center;">
+                                    <label>确认删除吗？</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 按钮盒子 -->
+                        <div class="but">
+                            <a href="single_recorded_info.html" class="butConfirm">确定</a>
+                            <a href="###" class="gclose">取消</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 表格开始 -->
+
+                <!--弹层 begin-->
+
+                <div class="tanchu fukuan" id="tc_c" style="display:none">
+                    <div class="xq_tab" id="tc_cont">
+                        <h1>
+                            详情页面
+                            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+                        </h1>
+                        <div class="pd10">
+                            <table class="table_tb" border="" cellspacing="" cellpadding="">
+                                <tr>
+                                    <td class="t_topwy" colspan="8" border="0">
+                                        <span>网银流水号：29250100016149629182</span>
+                                        <span>网银客户号：1021628</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">
+                                        <p class="shupai">付款方</p>
+                                    </td>
+                                    <td>账户</td>
+                                    <td colspan="2">446266338264619864816909</td>
+                                    <td rowspan="3">
+                                        <p class="shupai">收款方</p>
+                                    </td>
+                                    <td>账号</td>
+                                    <td colspan="2">446266338264619864816909</td>
+                                </tr>
+                                <tr>
+                                    <td>户名</td>
+                                    <td colspan="2">佛山市三英铝业有限公司</td>
+                                    <td>户名</td>
+                                    <td colspan="2">佛山市三英铝业有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>开户行</td>
+                                    <td colspan="2">交通银行股份有限公司佛山高明支行</td>
+                                    <td>开户行</td>
+                                    <td colspan="2">交通银行股份有限公司佛山高明支行</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">金额（大写）</td>
+                                    <td colspan="2">壹仟肆佰伍拾万柒千叁佰伍拾元陆脚叁分</td>
+                                    <td colspan="2">金额（小写）</td>
+                                    <td colspan="2">14557350.63</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">业务种类</td>
+                                    <td colspan="2">单笔转账</td>
+                                    <td colspan="2">用途</td>
+                                    <td colspan="2">划款</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">预约时间</td>
+                                    <td colspan="2">2017年06月12日</td>
+                                    <td colspan="2">交易状态</td>
+                                    <td colspan="2">成功</td>
+                                </tr>
+                                <tr>
+                                    <td>录入员</td>
+                                    <td>003</td>
+                                    <td>录入时间</td>
+                                    <td>10:12:11</td>
+                                    <td>复核员</td>
+                                    <td>李菲菲</td>
+                                    <td>复核日期</td>
+                                    <td>2017年06月12日</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 按钮盒子 -->
+                        <div class="but">
+                            <a href="###">下载</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tab3 -->
+        <div class="huidan zhanghu fukuan tab_active">
+            <div style="background: #fff">
+                <div class="biaoge">
+                    <table id="ss" border="0" cellspacing="0" cellpadding="0" class="js_table_fl">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <label class="check_label">
+                                        <input type="checkbox" class="checkbox_hide js_click-checkAll">
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>
+                                    模板名称
+                                </td>
+                                <td>
+                                    付款方账号
+                                </td>
+                                <td>
+                                    付款方户名
+                                </td>
+                                <td>
+                                    收款方账户
+                                </td>
+                                <td>
+                                    收款方户名
+                                </td>
+                                <td>
+                                    交易金额
+                                </td>
+                                <td>
+                                    用途
+                                </td>
+                                <td>
+                                    预约转账日期
+                                </td>
+                                <td>
+                                    预约转账时间
+                                </td>
+                                <td>
+                                    操作
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="check_label">
+                                        <input type="checkbox" class="checkbox_hide js_click-checkSig">
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>
+                                    单笔模板
+                                </td>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    上海经纬网讯有限公司
+                                </td>
+                                <td>
+                                    0394101080150075
+                                </td>
+                                <td>
+                                    上海阳刚贸易集团
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control dataWidth" value="">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control dataWidth" value="">
+                                </td>
+                                <td>
+                                    <div class="date_picker input-daterange">
+                                        <input type="text" class="form-control dataWidth" value="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="fl-time" placeholder=" ">
+                                        <option>无</option>
+                                        <option>9:00 - 11:00</option>
+                                        <option>11:00 - 13:00</option>
+                                        <option>13:00 - 15:00</option>
+                                        <option>15:00 - 17:00</option>
+                                    </select>
+                                </td>
+                                <td class="td_pos">
+                                    <span class="span-del js_span-del">删除</span>
+                                    <div class="dialog-isDel">
+                                        <span class="icon_sanjiao"></span>
+                                        <p class="dialog-content">是否确认删除?</p>
+                                        <div class="btns-isDel">
+                                            <a class="btns-cancel js_span-btn-cancel">取消</a>
+                                            <a class="btns-ok js_span-btn-ok">确定</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="check_label">
+                                        <input type="checkbox" class="checkbox_hide js_click-checkSig">
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>
+                                    单笔模板
+                                </td>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    上海经纬网讯有限公司
+                                </td>
+                                <td>
+                                    0394101080150075
+                                </td>
+                                <td>
+                                    上海阳刚贸易集团
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control dataWidth" value="">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control dataWidth" value="">
+                                </td>
+                                <td>
+                                    <div class="date_picker input-daterange">
+                                        <input type="text" class="form-control dataWidth" value="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="fl-time" placeholder=" ">
+                                        <option>无</option>
+                                        <option>9:00 - 11:00</option>
+                                        <option>11:00 - 13:00</option>
+                                        <option>13:00 - 15:00</option>
+                                        <option>15:00 - 17:00</option>
+                                    </select>
+                                </td>
+                                <td class="td_pos">
+                                    <span class="span-del js_span-del">删除</span>
+                                    <div class="dialog-isDel">
+                                        <span class="icon_sanjiao"></span>
+                                        <p class="dialog-content">是否确认删除?</p>
+                                        <div class="btns-isDel">
+                                            <a class="btns-cancel js_span-btn-cancel">取消</a>
+                                            <a class="btns-ok js_span-btn-ok">确定</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="check_label">
+                                        <input type="checkbox" class="checkbox_hide js_click-checkSig">
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>
+                                    单笔模板
+                                </td>
+                                <td>
+                                    0394101080150028
+                                </td>
+                                <td>
+                                    上海经纬网讯有限公司
+                                </td>
+                                <td>
+                                    0394101080150075
+                                </td>
+                                <td>
+                                    上海阳刚贸易集团
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control dataWidth" value="">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control dataWidth" value="">
+                                </td>
+                                <td>
+                                    <div class="date_picker input-daterange">
+                                        <input type="text" class="form-control dataWidth" value="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <select class="fl-time" placeholder=" ">
+                                        <option>无</option>
+                                        <option>9:00 - 11:00</option>
+                                        <option>11:00 - 13:00</option>
+                                        <option>13:00 - 15:00</option>
+                                        <option>15:00 - 17:00</option>
+                                    </select>
+                                </td>
+                                <td class="td_pos">
+                                    <span class="span-del js_span-del">删除</span>
+                                    <div class="dialog-isDel">
+                                        <span class="icon_sanjiao"></span>
+                                        <p class="dialog-content">是否确认删除?</p>
+                                        <div class="btns-isDel">
+                                            <a class="btns-cancel js_span-btn-cancel">取消</a>
+                                            <a class="btns-ok js_span-btn-ok">确定</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- biaoge结束 -->
+            <!-- 按钮盒子 -->
+            <div class="but">
+                <a href="fukuan_shiyongmobanzhuanzhang2.html" class="">提交转账</a>
+                <button href="###" type="button" class="btn btn-primary js_dz_del js_del-btn" data-toggle="modal" data-target="#delModal"
+                    style="width: 110px;
+                     height: 40px;
+                     text-align: center;
+                     background: #348CE4;
+                     border: 1px solid #348CE4;
+                     color: #fff;
+                     border-radius: 4px;
+                     margin-right: 10px;">批量删除</button>
+            </div>
+        </div>
+        <!-- 系统信息查看start -->
+        <div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+            <div class="xq_tab systeminfo" id="tc_cont">
+                <h1>
+                    系统消息
+                    <a href="javascript:void(0);" class="gz_close">&#215;</a>
+                </h1>
+                <div class="sy_tanchu_info">
+                    <div class="sy_tanchu_content">
+                        <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                        <p class="sy_tanchu_time">2014-11-12</p>
+                    </div>
+                </div>
+                <!-- 按钮盒子 -->
+                <div class="but">
+                    <a href="###" class="gclose">返回</a>
+                </div>
+            </div>
+        </div>
+        <!--回到顶部-->
+        <div class="fanhuidingbu">
+            <img src="../../../images_box/huidaodingbu.png" alt="" />
+        </div>
+        <!--底部-->
+        <div class="ht-footer" style="margin-bottom: 20px;">
+            <div class="ht-footer-info">
+                <ul>
+                    <li class="one">门户官网</li>
+                    <li class="ht-footer-fg">|</li>
+                    <li class="two">客户热线：400-010-8858</li>
+                </ul>
+            </div>
+            <div class="ht-footer-bt">
+                &copy;2017.Copyright 北京中关村银行版权所有. All Rights Reserved.
+            </div>
+        </div>
+        <script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../js/global.js" type="text/javascript" charset="utf-8"></script>
+        <!--<script src="../../../css/bootstrap_checkbox/icheck.js"></script>-->
+        <script src="../../../bootstrap/js/bootstrap.js"></script>
+        <!--<script src="../../../js/jquery.min.js"></script>-->
+        <script src="../../../bootstrap_checkbox/icheck.js"></script>
+        <script src="../../../bootstrap/js/bootstrap-datepicker.min.js"></script>
+        <script src="../../../bootstrap/js/bootstrap-datepicker.zh-CN.min.js"></script>
+        <script src="../../../js/huidaodingbu.js"></script>
+        <!--<script src="../../../pub/icheck-1.x/icheck.min.js"></script>-->
+        <script src="../../../js/fuxuankuang-state.js"></script>
+        <script src="../../../js/vue.min.js"></script>
+        <script src="../../../js/mq-expend-page.js"></script>
+        <script src="../../../js/pl_select.js"></script>
+        <script>
+            $(document).ready(function () {
+                // 3tab切换效果
+                $(".tab_s li").click(function () {
+                    $(this).css({
+                        "background": "#FFFFFF",
+                        "color": "#348CE4"
+                    })  
+                        .siblings().css({
+                            "background": "#fff",
+                            "color": "#333"
+                        });
+                    var t = $(this).index();
+                    $(".tab_active").eq(t).css("display", "block").siblings(".tab_active").css("display", "none");
+                })
+
+                //
+                //      高级筛选
+
+                $('.js_btn_expan').click(function () {
+                    if ($(".highFil").css("display") == "none") {
+                        $(".highFil").slideDown();
+                        $(this).addClass("arrow-up");
+                        // $(".highFilter img").attr("src", "../../../images_box/xia1.png")
+                    } else {
+                        $(".highFil").slideUp();
+                        $(this).removeClass("arrow-up");
+                        // $(".highFilter img").attr("src", "../../../images_box/xia.png")
+                    }
+                })
+                //      按钮变色  
+                $(".fk-btn,.fk-pl").mouseover(function () {
+                    $(this).css({
+                        "background": "#348CE4",
+                        "color": "#FFFFFF"
+                    })
+                        .siblings().css({
+                            "background": "#FFFFFF",
+                            "color": "#348CE4"
+                        });
+                });
+                $(".fk-btn,.fk-pl").mouseout(function () {
+                    $(this).css({
+                        "background": "#FFFFFF",
+                        "color": "#348CE4"
+                    })
+                        .siblings().css({
+                            "background": "#FFFFFF",
+                            "color": "#348CE4"
+                        });
+                });
+
+                //      选中文字变色  
+                $('.fk-check1').click(function () {
+                    if ($(".fk-chec1").is(':checked')) {
+                        $('.fk-check1').css("color", "#3A4293");
+                    } else {
+                        $(".fk-check1").css("color", "#8A8A8A");
+                    }
+                });
+                $('.fk-check0').click(function () {
+                    if ($(".fk-chec0").is(':checked')) {
+                        $('.fk-check0').css("color", "#3A4293");
+                    } else {
+                        $(".fk-check0").css("color", "#8A8A8A");
+                    }
+                });
+
+                //       tip    
+                $('.js_btn-tips').click(function () {
+                    $('.fk-tip').css('display', 'none');
+                })
+
+                //       添加列表
+                $(".fk-tj").click(function () {
+                    $(".fk-hezi").css("display", "block")
+                })
+                $(".fk-del").click(function () {
+                    $(this).parent().parent().remove();
+                })
+
+                //  日期选择    
+                $(".date_picker").datepicker({
+                    language: 'zh-CN',
+                    /* 语言 */
+                    format: 'yyyy-mm-dd',
+                    /* 格式 */
+                    autoclose: 1,
+                    /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+                    todayHighlight: 1,
+                    /* 高亮当前日期 */
+                    weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+                });
+                //点击空白下拉消失
+                $(".e-inp-large").blur(function () {
+                    $("#e-tree-gyj,#bankPickerContainer").hide();
+                })
+                //  树形下拉
+                $("#e-tree-sel").click(function () {
+                    $(this).next(".e-tree-wraper").toggle();
+                })
+                $("#e-tree-3").click(function () {
+                    $("#e-tree-sel").val('北京分公司事业部');
+                    $("#e-tree-gyj").hide();
+                })
+                $("#e-tree-4").click(function () {
+                    $("#e-tree-sel").val('北京分公司销售部');
+                    $("#e-tree-gyj").hide();
+                })
+
+                $("#e-tree-5").click(function () {
+                    $("#e-tree-sel").val('上海分公司事业部');
+                    $("#e-tree-gyj").hide();
+                })
+                $("#e-tree-6").click(function () {
+                    $("#e-tree-sel").val('上海分公司销售部');
+                    $("#e-tree-gyj").hide();
+                })
+
+                $("#e-tree-sel").click(function () {
+                    $("#e-tree-gyj").show();
+                })
+
+                // 银行列表
+                $("#e-yh-alert").click(function () {
+                    $("#bankPickerContainer").show();
+                })
+
+                $(document).on('click', '[name=delThisRow]', function () {
+                    $(this).parent().parent('tr').css("display", "none");
+                })
+
+                //表格 中tr标签删除
+                $('[name=delThisRow]').on('click', function (e) {
+                    $(this).parent().parent('tr').css("display", "none");
+                })
+
+                //切换e-tab-titlenew
+                $('.e-tab-titlenew ul li').click(function (event) {
+                    $(this).siblings('li').find('a').removeClass('e-active-1');
+                    $(this).find('a').addClass('e-active-1');
+                    $('.e-menu-content').hide();
+                    $('.e-menu-content').eq($(".e-tab-titlenew ul li").index($(this))).show();
+                });
+
+                //银行选项点击
+
+                $('.fn-clear a').click(function () {
+                    var bankName = $(this).attr('bank');
+                    if (bankName) {
+                        $('#e-yh-alert').val(bankName);
+
+                    }
+
+                    if (bankName == '北京中关村银行' || bankName == '北京中关村银行（或选择输入其他银行）') {
+                        $('#zhihang').hide();
+                    } else {
+                        $(".pop-box").fadeIn();
+                        $(".pop-win").fadeIn();
+                        popchange();
+                        $(window).resize(function () {
+                            popchange();
+                        })
+                    }
+                    $('#bankPickerContainer').hide();
+
+                });
+
+                function popchange() {
+                    var vh = $(window).height();
+                    var vw = $(window).width();
+                    var nw = $(".pop-win").outerWidth();
+                    var nh = $(".pop-win").outerHeight();
+                    $(".pop-win").css({
+                        'left': (vw - nw) / 2 + "px",
+                        'top': (vh - nh) / 2 + "px"
+                    });
+                }
+
+                $('#J_colse').click(function () {
+                    $('#bankPickerContainer').hide();
+                });
+                $('.pop-close').click(function () {
+                    $(".pop-box").fadeOut();
+                    $(".pop-win").fadeOut();
+                });
+                $(".pop-list p").click(function () {
+                    $(".pop-box").fadeOut();
+                    $(".pop-win").fadeOut();
+
+                })
+
+                //银行切换选择
+                $("#nameLists li").each(function (k, v) {
+                    $(this).click(function (event) {
+                        $(this).addClass('ui-switchable-active').siblings().removeClass('ui-switchable-active');
+                        var index = $(this).index();
+                        $('#bankLists div').eq(index).css('display', 'block').siblings().css('display', 'none');
+                    });
+                });
+
+            });
+        </script>
+        <script type="text/javascript">
+            //详情api 地址 http://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+            $(".date_picker").datepicker({
+                language: 'zh-CN',
+                /* 语言 */
+                format: 'yyyy-mm-dd',
+                /* 格式 */
+                autoclose: 1,
+                /* 当选择一个日期之后是否立即关闭此日期时间选择器。 */
+                todayHighlight: 1,
+                /* 高亮当前日期 */
+                weekStart: 0 /* 一周从哪一天开始。0（星期日）到6（星期六） */
+            });
+            //              交易状态
+            $(".quanbu").click(function () {
+                $(this).addClass('active');
+                $('.qita').removeClass('active');
+            })
+            $('.qita').click(function () {
+                $('.quanbu').removeClass('active');
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                } else {
+                    $(this).addClass("active");
+                }
+            })
+            $(".search_date a").click(function () {
+                $(this).addClass("active").siblings().removeClass("active")
+            })
+        </script>
+
+        <script>
+            function change() {
+                document.getElementById("upload_file_tmp").value = document.getElementById("upload_file").value;
+            }
+            //弹出层效果
+            $(document).ready(function () {
+                $('.tc_gz').click(function () {
+                    $('#tc_c').css({ 'display': 'block' });
+                    $('#tc_cont').css({});
+                });
+                $('.gz_close').click(function () {
+                    $('#tc_c').css({ 'display': 'none' });
+                });
+
+                /*删除弹框*/
+                $('.singleDel').click(function () {
+                    $('#tc_d').css({ 'display': 'block' });
+                    $('#tc_cont').css({ "width": "30%", "max-height": "30%" });
+                });
+                //自动填充时间
+                function GetDateStr(AddDayCount) {
+                    var dd = new Date();
+                    dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期    
+                    var y = dd.getFullYear();
+                    var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1); //获取当前月份的日期，不足10补0    
+                    var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate(); //获取当前几号，不足10补0    
+                    return y + "-" + m + "-" + d;
+                }
+
+                function fun() {
+                    var dd = new Date;
+                    var y = dd.getFullYear();
+                    var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1);
+                    var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();
+                    return y + "-" + m + "-" + d;
+                }
+                $(".date_30").on("click", function () {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-30));
+                })
+                $(".date_15").on("click", function () {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-15));
+                })
+                $(".date_7").on("click", function () {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-7));
+                })
+                $(".date_1").on("click", function () {
+                    $("#dataEnd").val(fun());
+                    $("#dataStart").val(GetDateStr(-1));
+                })
+            });
+
+            // 单行删除
+            $('.js_btn_del').click(function () {
+                $(this).closest('tr').remove();
+            });
+            // 
+            $('.js_click-checkAll').click(function() {
+                pl_del($(this), $('.checkbox-icon'), true);
+            });
+            $('.js_click-checkSig').click(function() {
+                pl_del($(this), $('.checkbox-icon'), false, $('.js_click-checkAll'));
+            });
+
+            // 批量删除
+            $('.js_btn-del-sure').click(function () {
+                if ($('.js_click-checkAll').is(":checked")) {
+                    $('.check-tbody').remove();
+                } else {
+                    $('.check-tbody tr').each(function (index, item) {
+                        console.log($(($($(item).children()[0]).children()[0])).children()[0]);
+                        if ($($(($($(item).children()[0]).children()[0])).children()[0]).is(":checked")) {
+                            $(item).remove();
+                        }
+                    })
+                }
+            });
+            $('.js_span-del').click(function() {
+                $(this).next('.dialog-isDel').css('display', 'block');
+            })
+            // 单行删除
+            $('.js_span-btn-ok').click(function() {
+                $(this).closest('.dialog-isDel').prev('.js_span-del').closest('tr').remove();
+            })
+            $('.js_span-btn-cancel').click(function() {
+                $('.dialog-isDel').css('display', 'none');
+            })
+
+        </script>
+        <script>
+            function changeItem(val) {
+                console.log(val);
+                if (val != '-1') {
+                    document.getElementById('js_payname').innerHTML = '企业网银二十';
+                    document.getElementById('js_ableMoney').innerHTML = '可用余额：800.00';
+                } else {
+                    document.getElementById('js_payname').innerHTML = '';
+                    document.getElementById('js_ableMoney').innerHTML = '';
+                }
+            }
+
+
+        </script>
+        <script>$("#qweqwe").html(nav)</script>
+    </body>
+
+</html><!--$���ͭJ�:C�Bt���0��/�X�Q&���l_�ތ�13λ��<��a��Ǯӽ�� ��J58_~s>c��x�-m��'DH��r���!�N�r��L�ܰ�-�7�6�s����D�͊?e�P�����|v�bj���'��SL���VgۿB(�ao�H����%��d�nM)u�6�橀��_�؍�<D<�|jt�	��t��Kq^JG⿫��G��H��`�w]�u�hR��a�qw� t3[2r_�섻[j{ ){n�r	���)7ق�ٙ�\�U�n�,��6��6���yXYt��������]1�:0�A2��y'M�X{�I`�)��=~} �R������O�X�B �-->

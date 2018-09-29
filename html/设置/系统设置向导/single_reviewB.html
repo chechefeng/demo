@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>单人复核02</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/shezhi_global.css">
+    <link href="../../../css/_all.css" rel="stylesheet">
+    <link href="../../../css/nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../css/chushihua_global.css">
+    <script src="../../../js/nav.js"></script>
+    <style type="text/css">
+        .icheckbox_flat-pink.checked {
+            background-position: -212px 0 !important;
+        }
+
+        .icheckbox_flat-pink {
+            background-position: -230px 0 !important;
+        }
+
+        .shezhi_fuxuankuang_box_content .icheckbox_flat-pink.checked {
+            background-position: -265px 0 !important;
+        }
+
+        .shezhi_fuxuankuang_box_content .icheckbox_flat-pink {
+            background-position: -250px 0 !important;
+        }
+
+        .tab_a .tab_a_content table tr td {
+            padding-top: 50px;
+        }
+
+        .tab_a .tab_a_content table tbody tr td {
+            padding-left: 30px;
+            border-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="qweqwe"></div>
+<!-- 系统信息查看start -->
+<div class="tanchu fukuan lookinfo" id="tc_c" style="display:none">
+    <div class="xq_tab systeminfo" id="tc_cont">
+        <h1>
+            系统消息
+            <a href="javascript:void(0);" class="gz_close">&#215;</a>
+        </h1>
+        <div class="sy_tanchu_info">
+            <div class="sy_tanchu_content">
+                <p class="sy_tanchu_text">贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务,贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务，贵宾客户增值服务</p>
+                <p class="sy_tanchu_time">2014-11-12</p>
+            </div>
+        </div>
+        <!-- 按钮盒子 -->
+        <div class="but">
+            <a href="###" class="gclose">返回</a>
+        </div>
+    </div>
+</div>
+
+<!-- 内容部分开始 -->
+<div class="content chushihuashezhi_danren_shezhigejibiefuherenshu">
+    <div class="w">
+        <div class="title_mianbaoxie">
+            <span class="l"></span>
+            <div class="l">
+                <a href="###">设置</a>
+                /
+                <a href="###">系统初设置向导</a>
+            </div>
+        </div>
+        <!-- 设置各级别复核人数 -->
+        <div class="chushihuashezhi_danren_shezhigejibiefuherenshu_box">
+            <div class="chushihuashezhi_danren_shezhigejibiefuherenshu_box_a">
+                <div class="buzhou_title sige">
+                    <div class="buzhou_title_a buzhou_title_active buzhou_title_border">
+                        <span class="l">1</span>
+                        <i class="l">选择业务复核模式</i>
+                    </div>
+                    <div class="buzhou_title_b buzhou_title_active">
+                        <span class="l">2</span>
+                        <i class="l">设置操作员账户操作权限</i>
+                    </div>
+                    <div class="buzhou_title_c">
+                        <span class="l">3</span>
+                        <i class="l">设置操作员功能操作权限</i>
+                    </div>
+                    <div class="buzhou_title_d">
+                        <span class="l">4</span>
+                        <i class="l">开通用户名登录</i>
+                    </div>
+                </div>
+                <!-- 操作员是否可以使用所有网银功能： -->
+                <div class="gygn">
+                    <div class="left l">是否指定录入员和复核员：</div>
+                    <div class="right l">
+                        <div class="l">
+                            <label>
+                                <input type="radio" value="0" name="xzzh_radio" class="l no">
+                                <span>是</span>
+                            </label>
+                        </div>
+                        <div class="l">
+                            <label>
+                                <input type="radio" value="1" name="xzzh_radio" class="l" checked>
+                                <span>否</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 操作人员 -->
+                <div class="czry">
+                    <h2 class="shezhi_title">
+                        <span class="shezhi_title_span1 l"></span>
+                        <span class="l">选择操作人员</span>
+                    </h2>
+                    <div class="czry_box">
+                        <!-- 一个czry_box_block 代表一个方块 -->
+                        <div class="czry_box_block">
+                            <p>管理员：001（张明明）</p>
+                            <span class="gou"></span>
+                        </div>
+                        <div class="czry_box_block">
+                            <p>管理员：001（张明明）</p>
+                            <span class="gou"></span>
+                        </div>
+                        <div class="czry_box_block">
+                            <p>管理员：001（张明明）</p>
+                            <span class="gou"></span>
+                        </div>
+                    </div>
+                </div><!-- 操作人员结束 -->
+            </div>
+            <!-- 设置账户操作权限 -->
+            <div class="zhczqx">
+                <div class="zhczqx_title">
+                    <h2 class="shezhi_title">
+                        <span class="shezhi_title_span1 l"></span>
+                        <span class="l">设置账户操作权限</span>
+                        <i class="l">（设置操作人员对网银账户的查询、录入、复核的操作权限）</i>
+                    </h2>
+                </div>
+                <div class="zhczqx_content">
+                    <!-- 公共选项卡 风格a -->
+                    <div class="tab_a">
+                        <div class="tab_a_title" style="padding-left: 0px; background:#f5f5f5;">
+                            <a href="javascript:void(0)">注册账户</a>
+                            <!-- <a href="javascript:void(0)"  class="tab_a_title_active">授权账户</a> -->
+                        </div>
+                        <!-- 内容部分 表格 -->
+                        <div class="tab_a_content">
+                            <table id="sss">
+                                <tr>
+                                    <td class="td_left_padding">
+                                        <div class="fuxuankuang_bxo l">
+                                            <input type="checkbox">
+                                        </div>
+                                        <div class="l">
+                                            <span class="display_blokc">注册账户</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <i class="l">账号：</i>
+                                            <span class="l">11-090000680</span>
+                                        </div>
+                                        <div>
+                                            <i class="l">户名：</i>
+                                            <span class="l">北京经纬网讯有限公司</span>
+                                        </div>
+                                    </td>
+                                    <td class="xiaozi">
+                                        <div class="row">
+                                            <i class="display_blokc">币种：</i>
+                                        </div>
+                                        <span class="l">人民币</span>
+                                    </td>
+                                    <td>
+                                        <!-- 一个czry_box_block 代表一个方块 -->
+                                        <h4 class="opacity">操作权限</h4>
+                                        <div class="tab_xiaogou_box_block">
+                                            <p>账户查询</p>
+                                            <span class="gou"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- 一个czry_box_block 代表一个方块 -->
+                                        <h4>操作权限</h4>
+                                        <div class="tab_xiaogou_box_block">
+                                            <p>网银交易查询</p>
+                                            <span class="gou"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- 一个czry_box_block 代表一个方块 -->
+                                        <h4 class="opacity">操作权限</h4>
+                                        <div class="tab_xiaogou_box_block">
+                                            <p>交易权限</p>
+                                            <span class="gou"></span>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <h4 style="position:relative;top:-10px;">复核级别</h4>
+                                        <div>
+                                            <select name="" class="select_shezhi_gg">
+                                                <option value="0">复核级别</option>
+                                                <option value="0">一级复核</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td_left_padding">
+                                        <div class="fuxuankuang_bxo l">
+                                            <input type="checkbox">
+                                        </div>
+                                        <div class="l">
+                                            <span class="display_blokc">注册账户</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <i class="l">账号：</i>
+                                            <span class="l">11-090000680</span>
+                                        </div>
+                                        <div>
+                                            <i class="l">户名：</i>
+                                            <span class="l">北京经纬网讯有限公司</span>
+                                        </div>
+                                    </td>
+                                    <td class="xiaozi">
+                                        <div class="row">
+                                            <i class="display_blokc">币种：</i>
+                                        </div>
+                                        <span class="l">人民币</span>
+                                    </td>
+                                    <td>
+                                        <!-- 一个czry_box_block 代表一个方块 -->
+                                        <h4 class="opacity">操作权限</h4>
+                                        <div class="tab_xiaogou_box_block">
+                                            <p>账户查询</p>
+                                            <span class="gou"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- 一个czry_box_block 代表一个方块 -->
+                                        <h4>操作权限</h4>
+                                        <div class="tab_xiaogou_box_block">
+                                            <p>网银交易查询</p>
+                                            <span class="gou"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!-- 一个czry_box_block 代表一个方块 -->
+                                        <h4 class="opacity">复核级别</h4>
+                                        <div class="tab_xiaogou_box_block">
+                                            <p>交易权限</p>
+                                            <span class="gou"></span>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <h4 style="position:relative;top:-10px;">复核级别</h4>
+                                        <div>
+                                            <select name="" class="select_shezhi_gg">
+                                                <option value="0">无复核级别</option>
+                                                <option value="0">一级复核</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div><!-- 公共选项卡 风格a -->
+                </div>
+            </div><!-- zhczqx -->
+            <!-- 设置特殊业务办理权限 -->
+            <div class="tsyw">
+                <h2 class="shezhi_title">
+                    <span class="shezhi_title_span1 l"></span>
+                    <span class="l">设置特殊业务办理权限</span>
+                    <i class="l">（设置操作人员对于不涉及账户业务的办理权限）</i>
+                </h2>
+                <div class="shezhi_fuxuankuang">
+                    <!-- 设置 -->
+                    <div class="shezhi_fuxuankuang_box shezhi_checkbox h145">
+                        <div class="shezhi_fuxuankuang_box_title">
+                            银企对账
+                        </div>
+                        <div class="shezhi_fuxuankuang_box_content">
+                            <!-- 选择操作人员 -->
+                            <div class="tsyw_s">
+                                <div class="tsyw_box">
+                                    <div class="tsyw_box_block">
+                                        <p>录入</p>
+                                        <div class="gou"></div>
+                                    </div>
+                                </div>
+                            </div><!-- 选择操作人员 -->
+                            <!-- 选择操作人员 -->
+                            <div class="tsyw_s">
+                                <div class="tsyw_box">
+                                    <div class="tsyw_box_block">
+                                        <p>复核</p>
+                                        <div class="gou"></div>
+                                    </div>
+                                </div>
+                            </div><!-- 选择操作人员 -->
+                        </div>
+                    </div>
+                    <!-- OK -->
+                    <div class="shezhi_fuxuankuang_box shezhi_checkbox h145">
+                        <div class="shezhi_fuxuankuang_box_title">
+                            工资明细
+                        </div>
+                        <div class="shezhi_fuxuankuang_box_content">
+                            <!-- 选择操作人员 -->
+                            <div class="tsyw_s">
+                                <div class="tsyw_box">
+                                    <div class="tsyw_box_block">
+                                        <p>查询</p>
+                                        <div class="gou"></div>
+                                    </div>
+                                </div>
+                            </div><!-- 选择操作人员 -->
+                        </div>
+                    </div>
+                </div><!-- end -->
+            </div><!-- 设置特殊业务办理权限 -->
+            <!-- 按钮公共盒子 -->
+            <div class="chushihuashezhi_btn">
+                <a class="baocun l">保存</a>
+                <a href="javascript:window.history.go(-1);" class="fanhui r">返回</a>
+            </div>
+        </div><!-- yewufuhemoshi_box -->
+    </div>
+</div>
+</body>
+<script src="../../../js/jquery.min.js"></script>
+<script src='../../../js/global.js'></script>
+<script src="../../../js/reset/shezhi_global.js"></script>
+<script>
+    //公共tab_a 风格a  事件
+    $(".tab_a .tab_a_content input").on('ifChecked', function (event) {
+        $(this).parents("tr").css("background", "#f9f9f9")
+    });
+    $(".tab_a .tab_a_content input").on('ifUnchecked', function (event) {
+        $(this).parents("tr").css("background", "#FFF")
+    });
+
+</script>
+<script src="../../../js/reset/checkbox/icheck.js"></script>
+<script src="../../../js/reset/checkbox/custom.js"></script>
+<script type="text/javascript">
+    //公共tab_a 风格a
+    $(".tab_a .tab_a_content input").iCheck({
+        checkboxClass: 'icheckbox_flat-pink',
+        radioClass: 'icheckbox_flat-pink'
+    });
+    //默认选择 否 不然选项卡出现
+    // $(".no").iCheck('check');
+
+    //开通用户名登录方式：
+    $(".gygn input[type='radio']").iCheck({
+        checkboxClass: 'iradio_flat-blue',
+        radioClass: 'iradio_flat-blue',
+        increaseArea: '20%' //设置label可以点击
+    });
+
+    $(".czry").css("display", "none");
+    $(".zhczqx").css("display", "none");
+    $(".tsyw").css("display", "none");
+
+    var flag = false;
+    $(".gygn input[type='radio']").on('ifChecked', function (event) { //ifCreated 事件应该在插件初始化之前绑定
+        if (event.target.value == "0") {
+            $(".czry").css("display", "block");
+            $(".tsyw").css("display", "block");
+            flag = true;
+        } else {
+            $(".czry").css("display", "none");
+            $(".zhczqx").css("display", "none");
+            $(".tsyw").css("display", "none");
+            flag = false;
+        }
+    });
+
+
+    $(".chushihuashezhi_btn .baocun").click(function () {
+        if (flag) {
+            window.location.href = "./single_reviewC.html"
+        } else {
+            window.location.href = "./single_reviewD.html"
+        }
+    });
+
+    $(".czry_box .czry_box_block").click(function () {
+        $(".zhczqx").css("display", "block");
+    })
+    $("#qweqwe").html(nav)
+    $(".sy_nav ul").find("li").eq(1).removeClass("nav_now")
+    $(".sy_nav ul").find("li").eq(5).addClass("nav_now")
+</script>
+</html><!--3��+R%Fyذn����.R�׬�����=p �Z#�
+�(�4	�怔ڞR@j�M��Z�2�\�8��o�a�H�����laU���a�x��-���y������
+�(dr���G�A���;㈸�ѣ��>tY��\�
+O�ó�Ӆ��67�-��ŕ=y}���0Z�D��+Hxy���-�nT�lqZ4�#����?t�m�ޑ~H�[Z������=�TV$�5O�-Li#>�4�RQ�|����1xk��*�MGc�=�I�9�3�b޴=����f#Yp\`�re�N@?̙`��/��{Z���E��T��b��`��T�~�š�>��%� ����}ro@��6;t��G%���E�Ӑ������0vbWr�?�y/ڸ+�«�������캰%�{_~��o_͍r��"WZ�c�d�ZH5Cw:3���.�9#6�}�UC�?I�4W�iϪN �R
+������O
+�Xƚ �-->
